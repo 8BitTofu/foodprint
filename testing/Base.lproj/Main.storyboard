@@ -136,9 +136,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGz-0T-Xhz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGz-0T-Xhz">
                                 <rect key="frame" x="170" y="438" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -146,11 +145,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XEK-0b-nfT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XEK-0b-nfT" firstAttribute="trailing" secondItem="nGz-0T-Xhz" secondAttribute="trailing" constant="170" id="a0r-9k-jd6"/>
+                            <constraint firstItem="nGz-0T-Xhz" firstAttribute="leading" secondItem="XEK-0b-nfT" secondAttribute="leading" constant="170" id="bE5-EP-XBp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbY-AY-xfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061" y="94"/>
+            <point key="canvasLocation" x="3049" y="94"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="oHh-mo-sSB">
@@ -230,6 +233,101 @@
             </objects>
             <point key="canvasLocation" x="1316" y="410"/>
         </scene>
+        <!--Body Measurements View Controller-->
+        <scene sceneID="E6S-br-8ul">
+            <objects>
+                <viewController storyboardIdentifier="bodyMeasurementsVC" title="Body Measurements View Controller" id="UrY-JF-ndS" customClass="BodyMeasurementsViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HOD-NY-c5m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="du1-pP-1w4">
+                                <rect key="frame" x="40" y="144" width="334" height="330"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoe-w8-xML">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="KCr-Ds-4E4"/>
+                                        </constraints>
+                                        <state key="normal" title="Select Age">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickSelectAge:" destination="UrY-JF-ndS" eventType="touchUpInside" id="pAK-md-I1P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCR-Sv-Bo7">
+                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Select Biological Gender">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickSelectGender:" destination="UrY-JF-ndS" eventType="touchUpInside" id="ZoH-Jf-S0v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdy-WJ-Dxy">
+                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Select Weight (lbs)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickSelectWeight:" destination="UrY-JF-ndS" eventType="touchUpInside" id="lFX-xU-HiS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4l-cc-Mud">
+                                        <rect key="frame" x="0.0" y="210" width="334" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Select Height (cm)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickSelectHeight:" destination="UrY-JF-ndS" eventType="touchUpInside" id="rAk-8X-ojj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKp-Jn-hlH">
+                                        <rect key="frame" x="0.0" y="280" width="334" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Select Exercise Amount">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickSelectExercise:" destination="UrY-JF-ndS" eventType="touchUpInside" id="jEa-N0-iMe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yCR-Sv-Bo7" firstAttribute="height" secondItem="aoe-w8-xML" secondAttribute="height" id="3Rb-FZ-fD4"/>
+                                    <constraint firstItem="d4l-cc-Mud" firstAttribute="height" secondItem="aoe-w8-xML" secondAttribute="height" id="6kO-rZ-SMV"/>
+                                    <constraint firstItem="vdy-WJ-Dxy" firstAttribute="height" secondItem="aoe-w8-xML" secondAttribute="height" id="Mqp-ju-q1a"/>
+                                    <constraint firstItem="vdy-WJ-Dxy" firstAttribute="height" secondItem="aoe-w8-xML" secondAttribute="height" id="P6t-PG-HLR"/>
+                                    <constraint firstItem="yKp-Jn-hlH" firstAttribute="height" secondItem="aoe-w8-xML" secondAttribute="height" id="dJ6-vH-uk3"/>
+                                    <constraint firstItem="yCR-Sv-Bo7" firstAttribute="height" secondItem="aoe-w8-xML" secondAttribute="height" id="yFG-Ej-y0V"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P7p-W3-OJm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="du1-pP-1w4" firstAttribute="top" secondItem="P7p-W3-OJm" secondAttribute="top" constant="100" id="Fl2-h2-OuT"/>
+                            <constraint firstItem="du1-pP-1w4" firstAttribute="leading" secondItem="P7p-W3-OJm" secondAttribute="leading" constant="40" id="Zwd-hx-9mT"/>
+                            <constraint firstItem="P7p-W3-OJm" firstAttribute="trailing" secondItem="du1-pP-1w4" secondAttribute="trailing" constant="40" id="u0V-DL-GTk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectAgeButton" destination="aoe-w8-xML" id="bhm-JR-YOU"/>
+                        <outlet property="selectExerciseButton" destination="yKp-Jn-hlH" id="HQp-Ci-67v"/>
+                        <outlet property="selectGenderButton" destination="yCR-Sv-Bo7" id="B7M-Ru-YuN"/>
+                        <outlet property="selectHeightButton" destination="d4l-cc-Mud" id="WQT-nN-GKG"/>
+                        <outlet property="selectWeightButton" destination="vdy-WJ-Dxy" id="b5Y-Y4-gOF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mh-z9-kpO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2106" y="410"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lit-qW-S2o">
             <objects>
@@ -251,6 +349,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

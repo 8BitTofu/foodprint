@@ -11,6 +11,7 @@
 		1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6625CA78360055CE65 /* LoginViewController.swift */; };
 		1F0E0D6A25CA78540055CE65 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6925CA78540055CE65 /* HomeViewController.swift */; };
 		1F2096C025CAB2F000C343CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2096BF25CAB2F000C343CB /* Constants.swift */; };
+		1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */; };
 		1FB2FB5725C8D57100DCD524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5625C8D57100DCD524 /* AppDelegate.swift */; };
 		1FB2FB5925C8D57100DCD524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5825C8D57100DCD524 /* SceneDelegate.swift */; };
 		1FB2FB5B25C8D57100DCD524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5A25C8D57100DCD524 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		1F0E0D6625CA78360055CE65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F0E0D6925CA78540055CE65 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F2096BF25CAB2F000C343CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasurementsViewController.swift; sourceTree = "<group>"; };
 		1FB2FB5325C8D57100DCD524 /* testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB2FB5625C8D57100DCD524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FB2FB5825C8D57100DCD524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */,
 				1F0E0D6625CA78360055CE65 /* LoginViewController.swift */,
 				1F0E0D6925CA78540055CE65 /* HomeViewController.swift */,
+				1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */,
 				1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */,
 				1FB2FB5925C8D57100DCD524 /* SceneDelegate.swift in Sources */,
+				1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */,
 				1F0E0D6A25CA78540055CE65 /* HomeViewController.swift in Sources */,
 				1F2096C025CAB2F000C343CB /* Constants.swift in Sources */,
 			);

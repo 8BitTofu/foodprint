@@ -100,7 +100,7 @@ class SignUpViewController: UIViewController {
                     }
                     
                     // move to home screen
-                    self.transitionToHome()
+                    self.transitionToBM()
                 }
                 
             }
@@ -113,10 +113,10 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
-    func transitionToHome() {
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+    func transitionToBM() {
+        let BodyMeasurementsViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.BodyMeasurementsViewController) as? BodyMeasurementsViewController
         
-        view.window?.rootViewController = homeViewController
+        view.window?.rootViewController = BodyMeasurementsViewController
         view.window?.makeKeyAndVisible()
     }
     
