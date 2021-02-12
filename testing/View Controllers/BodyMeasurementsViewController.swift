@@ -6,131 +6,130 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+import FirebaseFirestore
 
-class CellClass: UITableViewCell {
-    
-}
 
 
 
 class BodyMeasurementsViewController: UIViewController {
     
-    @IBOutlet weak var selectAgeButton: UIButton!
-    @IBOutlet weak var selectGenderButton: UIButton!
-    @IBOutlet weak var selectWeightButton: UIButton!
-    @IBOutlet weak var selectHeightButton: UIButton!
-    @IBOutlet weak var selectExerciseButton: UIButton!
+    @IBOutlet weak var heightTextField: UITextField!
     
-    // dropdown setup
-    let transparentView = UIView()
-    let tableView = UITableView()
+    @IBOutlet weak var weightTextField: UITextField!
     
-    var selectedButton = UIButton()
-    var dataSource = [Int]()
+    @IBOutlet weak var ageTextField: UITextField!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(CellClass.self, forCellReuseIdentifier: "Cells")
+
+        // testing to see if user is signed in
+        if Auth.auth().currentUser != nil {
+          print("A user is signed in right now.")
+        } else {
+          print("No user signed in.")
+        }
+        
+        // access current user data
+        let user = Auth.auth().currentUser
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        
+        print("User ID: " + userID)
+        
         // Do any additional setup after loading the view.
+        setUpElements()
     }
     
-    func addTransparentView(frames: CGRect) {
-        let window = UIApplication.shared.keyWindow
-        transparentView.frame = window?.frame ?? self.view.frame
-        self.view.addSubview(transparentView)
+    func setUpElements() {
+        errorLabel.alpha = 0
+    }
+    
+
+    func validateFields() -> String? {
+        // check if any fields are blank
+        if
+            heightTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+                weightTextField.text?.trimmingCharacters(in:.whitespacesAndNewlines) == "" {
+            return "Please fill in empty fields"
+        }
         
-        tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
-        self.view.addSubview(tableView)
-        tableView.layer.cornerRadius = 5
+        // trim white space and new lines from text fields
+        let cleanedHeight = heightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanedWeight = weightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanedAge = ageTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
-        tableView.reloadData()
+        // convert string to int (unnecessary?)
+        var intHeight = Int(cleanedHeight) ?? 0
+        var intWeight = Int(cleanedWeight) ?? 0
+        var intAge = Int(cleanedAge) ?? 0
         
-        let tapgesture = UITapGestureRecognizer(target: self, action: #selector(removeTransparentView))
-        transparentView.addGestureRecognizer(tapgesture)
-        transparentView.alpha = 0
+        // check if height is valid
+        if Utilities.isHeightValid(intHeight) == false {
+            return "Height given in 'cm' was not within the valid range."
+        }
         
-        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
-            self.transparentView.alpha = 0.5
-            self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height + 5, width: frames.width, height: CGFloat(self.dataSource.count * 50))
-        }, completion: nil)
+        // check if weight is valid
+        if Utilities.isWeightValid(intWeight) == false {
+            return "Weight given in 'lbs' was not within the valid range."
+        }
+        
+        if Utilities.isAgeValid(intAge) == false {
+            return "Age given in 'years' was not within the valid range."
+        }
+        
+        
+        return nil
+    }
+    
+    
+    func showError(_ message:String) {
+        errorLabel.text = message
+        errorLabel.alpha = 1
+    }
+    
+    
+    @IBAction func nextTapped(_ sender: Any) {
+        
+        let error = validateFields()
+        
+        if error != nil {
+            showError(error!)
+        }
+        
+        else {
+            // get data from text fields and trim 
+            let cleanedHeight = heightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let cleanedWeight = weightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let cleanedAge = ageTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
+            // var intHeight = Int(cleanedHeight) ?? 0
+            // var intWeight = Int(cleanedWeight) ?? 0
+            // var intAge = Int(cleanedAge) ?? 0
+            
+            let db = Firestore.firestore()
+            let userID : String = (Auth.auth().currentUser?.uid)!
+            
+            let userRef = db.collection("users").document(userID)
+            
+            userRef.updateData([
+                                "height": cleanedHeight,
+                                "weight": cleanedWeight,
+                                "age": cleanedAge
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                }
+            }
+        }
     }
-    
-    
-    @objc func removeTransparentView() {
-        let frames = selectedButton.frame
-        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
-            self.transparentView.alpha = 0.0
-            self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
-        }, completion: nil)
-    }
-    
-    
-    @IBAction func onClickSelectAge(_ sender: Any) {
-        //dataSource = Constants.intList.ageList
-        selectedButton = selectAgeButton
-        addTransparentView(frames: selectAgeButton.frame)
-    }
-    
-    @IBAction func onClickSelectGender(_ sender: Any) {
-        selectedButton = selectGenderButton
-        addTransparentView(frames: selectGenderButton.frame)
-    }
-    
-    @IBAction func onClickSelectWeight(_ sender: Any) {
-        dataSource = Constants.intList.weightList
-        selectedButton = selectWeightButton
-        addTransparentView(frames: selectWeightButton.frame)
-    }
-    
-    @IBAction func onClickSelectHeight(_ sender: Any) {
-        dataSource = Constants.intList.heightList
-        selectedButton = selectHeightButton
-        addTransparentView(frames: selectHeightButton.frame)
-    }
-    
-    @IBAction func onClickSelectExercise(_ sender: Any) {
-        selectedButton = selectExerciseButton
-        addTransparentView(frames: selectExerciseButton.frame)
-    }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension BodyMeasurementsViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cells", for: indexPath)
-        cell.textLabel?.text = String(dataSource[indexPath.row])
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedButton.setTitle(String(dataSource[indexPath.row]), for: .normal)
-        removeTransparentView()
-    }
-    
-}

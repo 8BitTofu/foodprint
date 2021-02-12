@@ -15,7 +15,7 @@ struct Constants {
         static let BodyMeasurementsViewController = "bodyMeasurementsVC"
     }
     
-    struct intList {
+    struct measureList {
         static let ageList: [Int] = Array(5 ... 100)
         static let weightList: [Int] = Array(4 ... 1000)
         static let heightList: [Int] = Array(50 ... 270)

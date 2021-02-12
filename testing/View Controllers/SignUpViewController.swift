@@ -93,25 +93,46 @@ class SignUpViewController: UIViewController {
                     // user created successfully
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email":email, "uid":result!.user.uid]) { (error) in
+                    // Add a new document with a generated id.
+                    let userTableRef = db.collection("users")
+
+                    let userDoc = userTableRef.document(result!.user.uid)
+                    let dataFields = [
+                        "firstname": firstName,
+                        "lastname": lastName,
+                        "email": email,
+                        "uid": result!.user.uid,
+                        // "docid": userDoc.documentID,
+                        "weight": 0,
+                        "height": 0,
+                        "gender": ""
+                    ] as [String : Any]
+
+                    userDoc.setData(dataFields)
+                    
+                    /*
+                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email":email, "uid":result!.user.uid, "weight":0, "height":0, "gender":""]) { (error) in
                         if error != nil {
                             self.showError("Error: user data couldn't be saved.")
                         }
                     }
+ */
+                    
+                    print("SUCCESS: user was signed up")
                     
                     // move to home screen
                     self.transitionToBM()
                 }
-                
             }
         }
-        
     }
+    
     
     func showError(_ message:String) {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
+    
     
     func transitionToBM() {
         let BodyMeasurementsViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.BodyMeasurementsViewController) as? BodyMeasurementsViewController
@@ -119,6 +140,4 @@ class SignUpViewController: UIViewController {
         view.window?.rootViewController = BodyMeasurementsViewController
         view.window?.makeKeyAndVisible()
     }
-    
-
 }
