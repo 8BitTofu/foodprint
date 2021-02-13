@@ -37,22 +37,18 @@ class BodyMeasurementsViewController: UIViewController {
           print("No user signed in.")
         }
         
-        // access current user data
-        let user = Auth.auth().currentUser
-        let userID : String = (Auth.auth().currentUser?.uid)!
-        
-        print("User ID: " + userID)
-        
         // Do any additional setup after loading the view.
         setUpElements()
     }
     
     func setUpElements() {
+        // set error to blank by default
         errorLabel.alpha = 0
     }
     
 
     func validateFields() -> String? {
+        
         // check if any fields are blank
         if
             heightTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -66,9 +62,9 @@ class BodyMeasurementsViewController: UIViewController {
         let cleanedAge = ageTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         // convert string to int (unnecessary?)
-        var intHeight = Int(cleanedHeight) ?? 0
-        var intWeight = Int(cleanedWeight) ?? 0
-        var intAge = Int(cleanedAge) ?? 0
+        let intHeight = Int(cleanedHeight) ?? 0
+        let intWeight = Int(cleanedWeight) ?? 0
+        let intAge = Int(cleanedAge) ?? 0
         
         // check if height is valid
         if Utilities.isHeightValid(intHeight) == false {
@@ -90,38 +86,44 @@ class BodyMeasurementsViewController: UIViewController {
     
     
     func showError(_ message:String) {
+        // show the error (function)
         errorLabel.text = message
         errorLabel.alpha = 1
     }
     
     
     @IBAction func nextTapped(_ sender: Any) {
-        
+        // (function) when next button is tapped
         let error = validateFields()
         
         if error != nil {
+            // ERROR - show error / no action
             showError(error!)
         }
         
         else {
+            // NO ERROR - update data fields
+            
             // get data from text fields and trim 
             let cleanedHeight = heightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let cleanedWeight = weightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let cleanedAge = ageTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            // var intHeight = Int(cleanedHeight) ?? 0
-            // var intWeight = Int(cleanedWeight) ?? 0
-            // var intAge = Int(cleanedAge) ?? 0
+            // convert string to int
+            let intHeight = Int(cleanedHeight) ?? 0
+            let intWeight = Int(cleanedWeight) ?? 0
+            let intAge = Int(cleanedAge) ?? 0
             
+            // access current user information
             let db = Firestore.firestore()
             let userID : String = (Auth.auth().currentUser?.uid)!
-            
             let userRef = db.collection("users").document(userID)
             
+            // update the height/weight/age of current user (get input)
             userRef.updateData([
-                                "height": cleanedHeight,
-                                "weight": cleanedWeight,
-                                "age": cleanedAge
+                                "height": intHeight,
+                                "weight": intWeight,
+                                "age": intAge
             ]) { err in
                 if let err = err {
                     print("Error updating document: \(err)")

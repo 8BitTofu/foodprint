@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,45 +27,63 @@ class LoginViewController: UIViewController {
         setUpElements()
     }
     
+    
     func setUpElements() {
+        // set error to blank by default
         errorLabel.alpha = 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func showError(_ message:String) {
+        // show the error (function)
+        errorLabel.text = message
+        errorLabel.alpha = 1
     }
-    */
+    
+    
+    func validateFields() -> String? {
+        
+        // check fields if filled
+        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return "Please fill in empty fields."
+        }
+        
+        return nil
+    }
+    
     
     @IBAction func loginTapped(_ sender: Any) {
         
-        // TODO: check if NIL and error messages
+        // check if fields are empty
+        let error = validateFields()
         
-        // cleaned versions
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        if error != nil {
+            // ERROR - show error / no action
+            showError(error!)
+        }
+        else {
+            // cleaned versions
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            if error != nil {
-                self.errorLabel.text = error!.localizedDescription
-                self.errorLabel.alpha = 1
-            }
-            else {
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 
-                self.transitionToHome()
+                if error != nil {
+                    self.errorLabel.text = error!.localizedDescription
+                    self.errorLabel.alpha = 1
+                }
+                else {
+                    
+                    self.transitionToHome()
+                }
             }
         }
-        
     }
     
     
     func transitionToHome() {
+        // transition to home screen
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
         
         view.window?.rootViewController = homeViewController

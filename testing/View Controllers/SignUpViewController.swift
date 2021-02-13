@@ -33,6 +33,7 @@ class SignUpViewController: UIViewController {
     }
     
     func setUpElements() {
+        // set error to default by default
         errorLabel.alpha = 0
     }
     
@@ -74,9 +75,12 @@ class SignUpViewController: UIViewController {
         let error = validateFields()
         
         if error != nil {
+            // ERROR - show error / no action
             showError(error!)
         }
         else {
+            // NO ERROR - create user account
+            
             // get textfield data
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -93,10 +97,12 @@ class SignUpViewController: UIViewController {
                     // user created successfully
                     let db = Firestore.firestore()
                     
-                    // Add a new document with a generated id.
+                    // Add a new document with a generated id
                     let userTableRef = db.collection("users")
 
                     let userDoc = userTableRef.document(result!.user.uid)
+
+                    // show data fields
                     let dataFields = [
                         "firstname": firstName,
                         "lastname": lastName,
@@ -108,16 +114,10 @@ class SignUpViewController: UIViewController {
                         "gender": ""
                     ] as [String : Any]
 
+                    // set the data fields
                     userDoc.setData(dataFields)
                     
-                    /*
-                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email":email, "uid":result!.user.uid, "weight":0, "height":0, "gender":""]) { (error) in
-                        if error != nil {
-                            self.showError("Error: user data couldn't be saved.")
-                        }
-                    }
- */
-                    
+                    // console indicator
                     print("SUCCESS: user was signed up")
                     
                     // move to home screen
@@ -129,12 +129,14 @@ class SignUpViewController: UIViewController {
     
     
     func showError(_ message:String) {
+        // show the error (function)
         errorLabel.text = message
         errorLabel.alpha = 1
     }
     
     
     func transitionToBM() {
+        // transition to the body measurements screen
         let BodyMeasurementsViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.BodyMeasurementsViewController) as? BodyMeasurementsViewController
         
         view.window?.rootViewController = BodyMeasurementsViewController
