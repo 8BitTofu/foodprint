@@ -24,6 +24,9 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,6 +131,12 @@ class SignUpViewController: UIViewController {
     }
     
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.transitionToBase()
+    }
+    
+    
+    
     func showError(_ message:String) {
         // show the error (function)
         errorLabel.text = message
@@ -142,4 +151,15 @@ class SignUpViewController: UIViewController {
         view.window?.rootViewController = BodyMeasurementsViewController
         view.window?.makeKeyAndVisible()
     }
+    
+    
+    func transitionToBase() {
+        // transition to home screen
+        let baseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.baseViewController) as? ViewController
+        
+        view.window?.rootViewController = baseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    
 }

@@ -25,6 +25,8 @@ class BodyMeasurementsViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var backButton: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -80,7 +82,6 @@ class BodyMeasurementsViewController: UIViewController {
             return "Age given in 'years' was not within the valid range."
         }
         
-        
         return nil
     }
     
@@ -133,5 +134,35 @@ class BodyMeasurementsViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        // when clicking back button - delete all previous progress
+        // on making a user account
+        
+        // get current user data
+        let db = Firestore.firestore()
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        
+        // delete user document from users collection on Firebase
+        db.collection("users").document(userID).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        
+        self.transitionToBase()
+    }
+    
+    func transitionToBase() {
+        // transition to home screen
+        let baseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.baseViewController) as? ViewController
+        
+        view.window?.rootViewController = baseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
 }
 

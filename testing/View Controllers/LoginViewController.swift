@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var backButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,5 +91,20 @@ class LoginViewController: UIViewController {
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }
+    
+    
+    func transitionToBase() {
+        // transition to home screen
+        let baseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.baseViewController) as? ViewController
+        
+        view.window?.rootViewController = baseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.transitionToBase()
+    }
+    
 
 }

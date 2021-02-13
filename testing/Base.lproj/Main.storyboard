@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="baseVC" id="BYZ-38-t0r" customClass="ViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,13 +22,16 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojB-VW-KgT">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="A7r-4L-UwM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="Login"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
-                                            <segue destination="MY5-Bn-O3s" kind="show" id="nBQ-i8-Uba"/>
+                                            <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viB-ci-n7j"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urQ-eY-Sc1">
@@ -38,7 +42,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
-                                            <segue destination="Epn-qy-puD" kind="show" id="IYe-ol-tlR"/>
+                                            <action selector="signUpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jvr-Vj-x11"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -68,7 +72,7 @@
         <!--Login View Controller-->
         <scene sceneID="Ph3-Zm-2Da">
             <objects>
-                <viewController id="MY5-Bn-O3s" customClass="LoginViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="MY5-Bn-O3s" customClass="LoginViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EUK-Eb-6Zn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,17 +116,28 @@
                                     <constraint firstItem="YuQ-DR-KFL" firstAttribute="height" secondItem="1hh-hd-G5g" secondAttribute="height" id="tpe-Ah-1cF"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFP-tK-CPv">
+                                <rect key="frame" x="40" y="74" width="38" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="MY5-Bn-O3s" eventType="touchUpInside" id="rr7-Ig-jFS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Nl-j6-69Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="F9w-io-fLX" firstAttribute="top" secondItem="1Nl-j6-69Z" secondAttribute="top" constant="40" id="EeJ-tQ-GfT"/>
+                            <constraint firstItem="F9w-io-fLX" firstAttribute="top" secondItem="1Nl-j6-69Z" secondAttribute="top" constant="278" id="EeJ-tQ-GfT"/>
                             <constraint firstItem="1Nl-j6-69Z" firstAttribute="trailing" secondItem="F9w-io-fLX" secondAttribute="trailing" constant="40" id="NgZ-MK-sF0"/>
                             <constraint firstItem="F9w-io-fLX" firstAttribute="leading" secondItem="1Nl-j6-69Z" secondAttribute="leading" constant="40" id="Q3H-Vw-rSN"/>
+                            <constraint firstItem="oFP-tK-CPv" firstAttribute="top" secondItem="1Nl-j6-69Z" secondAttribute="top" constant="30" id="TqG-PY-C4o"/>
+                            <constraint firstItem="oFP-tK-CPv" firstAttribute="leading" secondItem="1Nl-j6-69Z" secondAttribute="leading" constant="40" id="kiO-k1-i1F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rQL-HS-8DJ"/>
                     <connections>
+                        <outlet property="backButton" destination="oFP-tK-CPv" id="cbB-Nf-dga"/>
                         <outlet property="emailTextField" destination="1hh-hd-G5g" id="KrQ-Fd-RGf"/>
                         <outlet property="errorLabel" destination="ZIZ-Mq-rCr" id="9ch-L3-FqC"/>
                         <outlet property="loginButton" destination="e51-JM-pJL" id="78J-tb-jjF"/>
@@ -163,7 +178,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="oHh-mo-sSB">
             <objects>
-                <viewController id="Epn-qy-puD" customClass="SignUpViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUpVC" id="Epn-qy-puD" customClass="SignUpViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gMd-p4-csC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +223,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voL-rt-w5J">
                                         <rect key="frame" x="0.0" y="350" width="334" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -221,17 +236,29 @@
                                     <constraint firstItem="G8B-ee-ky0" firstAttribute="height" secondItem="2Gz-Sw-gtc" secondAttribute="height" id="oKE-uX-Lue"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXJ-4o-AHT">
+                                <rect key="frame" x="40" y="74" width="38" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="Epn-qy-puD" eventType="touchUpInside" id="XHs-Vw-ac2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P1m-Ao-FNp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KXJ-4o-AHT" firstAttribute="top" secondItem="P1m-Ao-FNp" secondAttribute="top" constant="30" id="DrB-ww-MgF"/>
                             <constraint firstItem="65R-it-ySO" firstAttribute="top" secondItem="P1m-Ao-FNp" secondAttribute="top" constant="200" id="Edw-oL-YuG"/>
                             <constraint firstItem="65R-it-ySO" firstAttribute="leading" secondItem="P1m-Ao-FNp" secondAttribute="leading" constant="40" id="jdF-Lx-xBa"/>
+                            <constraint firstItem="KXJ-4o-AHT" firstAttribute="leading" secondItem="P1m-Ao-FNp" secondAttribute="leading" constant="40" id="tIR-8D-igW"/>
                             <constraint firstItem="P1m-Ao-FNp" firstAttribute="trailing" secondItem="65R-it-ySO" secondAttribute="trailing" constant="40" id="xRf-p9-W6s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kmz-K0-b27"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="KXJ-4o-AHT" id="30C-iU-fIv"/>
                         <outlet property="emailTextField" destination="7Qk-2G-43G" id="dLS-7W-P7f"/>
                         <outlet property="errorLabel" destination="voL-rt-w5J" id="VBh-T2-9ET"/>
                         <outlet property="firstNameTextField" destination="2Gz-Sw-gtc" id="H3J-eX-HAN"/>
@@ -326,7 +353,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG9-Ni-D9f">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -335,6 +362,14 @@
                                     <constraint firstItem="NG9-Ni-D9f" firstAttribute="height" secondItem="tIS-Na-aBI" secondAttribute="height" id="Hz2-kh-ZXr"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GM-O7-VAT">
+                                <rect key="frame" x="40" y="74" width="38" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="UrY-JF-ndS" eventType="touchUpInside" id="RcF-CT-X7A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P7p-W3-OJm"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -343,12 +378,15 @@
                             <constraint firstItem="N4s-aZ-WlZ" firstAttribute="leading" secondItem="P7p-W3-OJm" secondAttribute="leading" constant="40" id="9rl-vI-w99"/>
                             <constraint firstItem="P7p-W3-OJm" firstAttribute="trailing" secondItem="du1-pP-1w4" secondAttribute="trailing" constant="40" id="Bxy-YO-hCI"/>
                             <constraint firstItem="du1-pP-1w4" firstAttribute="leading" secondItem="P7p-W3-OJm" secondAttribute="leading" constant="40" id="RgH-JG-FYg"/>
+                            <constraint firstItem="3GM-O7-VAT" firstAttribute="leading" secondItem="P7p-W3-OJm" secondAttribute="leading" constant="40" id="XBH-Jh-p8A"/>
                             <constraint firstItem="P7p-W3-OJm" firstAttribute="trailing" secondItem="N4s-aZ-WlZ" secondAttribute="trailing" constant="40" id="cU2-Ke-QLr"/>
                             <constraint firstItem="P7p-W3-OJm" firstAttribute="bottom" secondItem="N4s-aZ-WlZ" secondAttribute="bottom" constant="218" id="dYl-KF-HMR"/>
+                            <constraint firstItem="3GM-O7-VAT" firstAttribute="top" secondItem="P7p-W3-OJm" secondAttribute="top" constant="30" id="hhM-4w-oZk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ageTextField" destination="8k5-AP-6rp" id="hgp-fG-Amt"/>
+                        <outlet property="backButton" destination="3GM-O7-VAT" id="QVY-t5-q5p"/>
                         <outlet property="errorLabel" destination="NG9-Ni-D9f" id="aKw-zH-9SE"/>
                         <outlet property="heightTextField" destination="dPw-Yz-PeY" id="WtO-e4-uiL"/>
                         <outlet property="nextButton" destination="tIS-Na-aBI" id="mi5-6n-XKI"/>
@@ -378,6 +416,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
