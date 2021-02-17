@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
     
@@ -23,5 +24,13 @@ struct Constants {
         static let weightList: [Int] = Array(4 ... 1000)
         static let heightList: [Int] = Array(50 ... 270)
         
+    }
+    
+    struct appColors {
+        static let buttonColor = UIColor(red: 180/255, green: 70/255, blue: 30/255, alpha: 1)
+    }
+    
+    struct appFormat {
+        var buttonCornerRadius = 10
     }
 }

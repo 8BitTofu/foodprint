@@ -20,7 +20,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -31,7 +31,16 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        // UI / AESTHETICS
+        nextButton.layer.cornerRadius = 10
+        nextButton.backgroundColor = Constants.appColors.buttonColor
+        
+        nextButton.setTitleColor(.white, for: .normal)
+        backButton.setTitleColor(Constants.appColors.buttonColor, for: .normal)
+        
+        
+        
         setUpElements()
     }
     
@@ -72,8 +81,8 @@ class SignUpViewController: UIViewController {
         return nil
     }
     
-    @IBAction func signUpTapped(_ sender: Any) {
-        
+    
+    @IBAction func nextTapped(_ sender: Any) {
         // Validate the fields
         let error = validateFields()
         
@@ -83,7 +92,6 @@ class SignUpViewController: UIViewController {
         }
         else {
             // NO ERROR - create user account
-            
             // get textfield data
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)

@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import HealthKit
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
+        // UI / AESTHETICS
+        loginButton.layer.cornerRadius = 10 // for some reason, can't get the Constants button radius to work in this situation
+        loginButton.backgroundColor = Constants.appColors.buttonColor
+        
+        signUpButton.layer.cornerRadius = 10
+        signUpButton.layer.borderWidth = 1
+        signUpButton.layer.borderColor = Constants.appColors.buttonColor.cgColor
+        signUpButton.setTitleColor(Constants.appColors.buttonColor, for: .normal)
+         
+        
+        
+        // failed spoonacular code below - REMOVE IF NECESSARY
+        // I ONLY KEPT IT FOR REFERENCE
+        
+        /*
         // URL
         let url = URL(string: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByNutrients?number=3&maxCalories=1000&minCalories=500&limitLicense=false")
         
@@ -78,7 +95,10 @@ class ViewController: UIViewController {
         }
         
         dataTask.resume()
+ 
+        */
     }
+    
     
     func transitionToSignUp() {
         // transition to home screen

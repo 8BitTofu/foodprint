@@ -31,6 +31,15 @@ class BodyMeasurementsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // UI / AESTHETICS
+        nextButton.layer.cornerRadius = 10
+        nextButton.backgroundColor = Constants.appColors.buttonColor
+        
+        nextButton.setTitleColor(.white, for: .normal)
+        backButton.setTitleColor(Constants.appColors.buttonColor, for: .normal)
+        
 
         // testing to see if user is signed in
         if Auth.auth().currentUser != nil {

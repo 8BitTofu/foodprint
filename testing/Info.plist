@@ -53,6 +53,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Use steps in order to help calculate your recommended meal plan.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Use steps in order to update your recommended meal plan.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

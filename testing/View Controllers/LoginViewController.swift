@@ -24,7 +24,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // UI / AESTHETICS
+        loginButton.layer.cornerRadius = 10
+        loginButton.backgroundColor = Constants.appColors.buttonColor
+        loginButton.setTitleColor(.white, for: .normal)
+        
+        backButton.setTitleColor(Constants.appColors.buttonColor, for: .normal)
         
         setUpElements()
     }
