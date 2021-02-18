@@ -153,17 +153,17 @@
             </objects>
             <point key="canvasLocation" x="1316" y="-299"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="2HL-f8-d5u">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="XGZ-Bb-oQf" customClass="HomeViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomeVC" id="XGZ-Bb-oQf" customClass="WelcomeViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aAE-Dc-fdx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGz-0T-Xhz">
-                                <rect key="frame" x="170" y="438" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGz-0T-Xhz">
+                                <rect key="frame" x="40" y="435" width="334" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -171,14 +171,45 @@
                         <viewLayoutGuide key="safeArea" id="XEK-0b-nfT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XEK-0b-nfT" firstAttribute="trailing" secondItem="nGz-0T-Xhz" secondAttribute="trailing" constant="170" id="a0r-9k-jd6"/>
-                            <constraint firstItem="nGz-0T-Xhz" firstAttribute="leading" secondItem="XEK-0b-nfT" secondAttribute="leading" constant="170" id="bE5-EP-XBp"/>
+                            <constraint firstItem="XEK-0b-nfT" firstAttribute="trailing" secondItem="nGz-0T-Xhz" secondAttribute="trailing" constant="40" id="a0r-9k-jd6"/>
+                            <constraint firstItem="nGz-0T-Xhz" firstAttribute="leading" secondItem="XEK-0b-nfT" secondAttribute="leading" constant="40" id="bE5-EP-XBp"/>
+                            <constraint firstItem="XEK-0b-nfT" firstAttribute="bottom" secondItem="nGz-0T-Xhz" secondAttribute="bottom" constant="403" id="n9A-qG-NI8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="nGz-0T-Xhz" id="lgr-7t-QQV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbY-AY-xfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3049" y="94"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="qmr-2K-hkk">
+            <objects>
+                <viewController storyboardIdentifier="homeVC" id="YfW-En-DmC" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qVb-tB-2JB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYL-2o-YjU">
+                                <rect key="frame" x="150" y="246" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Jp-mR-VRZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="IYL-2o-YjU" id="N62-SG-7qp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEh-A9-lQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3948" y="94"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="oHh-mo-sSB">

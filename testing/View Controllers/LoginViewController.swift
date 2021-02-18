@@ -81,19 +81,22 @@ class LoginViewController: UIViewController {
                     self.errorLabel.alpha = 1
                 }
                 else {
+                    // set user state as returning
+                    setReturning()
                     
-                    self.transitionToHome()
+                    // transition to welcome screen
+                    self.transitionToWelcome()
                 }
             }
         }
     }
     
     
-    func transitionToHome() {
-        // transition to home screen
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+    func transitionToWelcome() {
+        // transition to welcome screen
+        let welcomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.welcomeViewController) as? WelcomeViewController
         
-        view.window?.rootViewController = homeViewController
+        view.window?.rootViewController = welcomeViewController
         view.window?.makeKeyAndVisible()
     }
     

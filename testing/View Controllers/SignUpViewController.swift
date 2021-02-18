@@ -131,6 +131,9 @@ class SignUpViewController: UIViewController {
                     // console indicator
                     print("SUCCESS: user was signed up")
                     
+                    // set user state as a new user
+                    setNew()
+                    
                     // move to home screen
                     self.transitionToBM()
                 }
@@ -154,7 +157,7 @@ class SignUpViewController: UIViewController {
     
     func transitionToBM() {
         // transition to the body measurements screen
-        let BodyMeasurementsViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.BodyMeasurementsViewController) as? BodyMeasurementsViewController
+        let BodyMeasurementsViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.bodyMeasurementsViewController) as? BodyMeasurementsViewController
         
         view.window?.rootViewController = BodyMeasurementsViewController
         view.window?.makeKeyAndVisible()

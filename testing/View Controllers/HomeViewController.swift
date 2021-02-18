@@ -2,16 +2,19 @@
 //  HomeViewController.swift
 //  testing
 //
-//  Created by Austin Leung on 2/2/21.
+//  Created by Austin Leung on 2/17/21.
 //
 
 import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var testLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
     }
     

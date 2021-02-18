@@ -28,7 +28,6 @@ class BodyMeasurementsViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +39,8 @@ class BodyMeasurementsViewController: UIViewController {
         nextButton.setTitleColor(.white, for: .normal)
         backButton.setTitleColor(Constants.appColors.buttonColor, for: .normal)
         
-
+        
+        
         // testing to see if user is signed in
         if Auth.auth().currentUser != nil {
           print("A user is signed in right now.")
@@ -141,6 +141,9 @@ class BodyMeasurementsViewController: UIViewController {
                     print("Document successfully updated")
                 }
             }
+            
+            // go to welcome splash screen
+            transitionToWelcome()
         }
     }
     
@@ -170,6 +173,14 @@ class BodyMeasurementsViewController: UIViewController {
         let baseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.baseViewController) as? ViewController
         
         view.window?.rootViewController = baseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToWelcome() {
+        // transition to welcome screen
+        let welcomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.welcomeViewController) as? WelcomeViewController
+        
+        view.window?.rootViewController = welcomeViewController
         view.window?.makeKeyAndVisible()
     }
     

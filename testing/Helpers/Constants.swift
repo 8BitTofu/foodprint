@@ -12,11 +12,12 @@ struct Constants {
     
     struct Storyboard {
         
-        static let homeViewController = "HomeVC"
+        static let welcomeViewController = "welcomeVC"
+        static let homeViewController = "homeVC"
         static let baseViewController = "baseVC"
         static let loginViewController = "loginVC"
         static let signUpViewController = "signUpVC"
-        static let BodyMeasurementsViewController = "bodyMeasurementsVC"
+        static let bodyMeasurementsViewController = "bodyMeasurementsVC"
     }
     
     struct measureList {

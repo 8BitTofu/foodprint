@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0876E125DE09F400CCC9D7 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0876E025DE09F400CCC9D7 /* States.swift */; };
+		1F09443725DD363C006ACEC7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F09443625DD363C006ACEC7 /* WelcomeViewController.swift */; };
+		1F09443B25DD3775006ACEC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F09443A25DD3775006ACEC7 /* HomeViewController.swift */; };
 		1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */; };
 		1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6625CA78360055CE65 /* LoginViewController.swift */; };
-		1F0E0D6A25CA78540055CE65 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6925CA78540055CE65 /* HomeViewController.swift */; };
 		1F2096C025CAB2F000C343CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2096BF25CAB2F000C343CB /* Constants.swift */; };
 		1F6CA10325DA397800C7296A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6CA10225DA397800C7296A /* HealthKit.framework */; };
 		1F6CA10525DA3C5100C7296A /* healthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CA10425DA3C5100C7296A /* healthKit.swift */; };
@@ -27,9 +29,11 @@
 
 /* Begin PBXFileReference section */
 		1092F5901D05FFAEA8C0C8C9 /* Pods-testing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing.debug.xcconfig"; path = "Target Support Files/Pods-testing/Pods-testing.debug.xcconfig"; sourceTree = "<group>"; };
+		1F0876E025DE09F400CCC9D7 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		1F09443625DD363C006ACEC7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1F09443A25DD3775006ACEC7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1F0E0D6625CA78360055CE65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		1F0E0D6925CA78540055CE65 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F2096BF25CAB2F000C343CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1F6CA10125DA397800C7296A /* testing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testing.entitlements; sourceTree = "<group>"; };
 		1F6CA10225DA397800C7296A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -67,9 +71,10 @@
 			children = (
 				1FB2FB5A25C8D57100DCD524 /* ViewController.swift */,
 				1F0E0D6625CA78360055CE65 /* LoginViewController.swift */,
-				1F0E0D6925CA78540055CE65 /* HomeViewController.swift */,
 				1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */,
 				1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */,
+				1F09443625DD363C006ACEC7 /* WelcomeViewController.swift */,
+				1F09443A25DD3775006ACEC7 /* HomeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			children = (
 				1FEFC6A925CAA73A00CE8523 /* Utilities.swift */,
 				1F2096BF25CAB2F000C343CB /* Constants.swift */,
+				1F0876E025DE09F400CCC9D7 /* States.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -254,13 +260,15 @@
 			files = (
 				1FB2FB5B25C8D57100DCD524 /* ViewController.swift in Sources */,
 				1FB2FB5725C8D57100DCD524 /* AppDelegate.swift in Sources */,
+				1F09443725DD363C006ACEC7 /* WelcomeViewController.swift in Sources */,
+				1F0876E125DE09F400CCC9D7 /* States.swift in Sources */,
 				1FEFC6AA25CAA73A00CE8523 /* Utilities.swift in Sources */,
 				1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */,
 				1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */,
 				1FB2FB5925C8D57100DCD524 /* SceneDelegate.swift in Sources */,
+				1F09443B25DD3775006ACEC7 /* HomeViewController.swift in Sources */,
 				1F6CA10525DA3C5100C7296A /* healthKit.swift in Sources */,
 				1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */,
-				1F0E0D6A25CA78540055CE65 /* HomeViewController.swift in Sources */,
 				1F2096C025CAB2F000C343CB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
