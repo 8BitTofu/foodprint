@@ -27,6 +27,7 @@ class WelcomeViewController: UIViewController {
         var firstName : String = ""
         var lastName : String = ""
         
+        // set the welcome text to personalized name
         userRef.getDocument(source: .cache) { (document, error) in
             if let document = document {
                 firstName = document.get("firstname") as! String
@@ -40,7 +41,7 @@ class WelcomeViewController: UIViewController {
         
 
         
-        
+        // after some time change from splash screen to home screen
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
             

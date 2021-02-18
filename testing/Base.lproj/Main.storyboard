@@ -187,7 +187,7 @@
         <!--Home View Controller-->
         <scene sceneID="qmr-2K-hkk">
             <objects>
-                <viewController storyboardIdentifier="homeVC" id="YfW-En-DmC" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="YfW-En-DmC" customClass="HomeViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qVb-tB-2JB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
