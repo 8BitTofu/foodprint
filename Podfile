@@ -11,6 +11,6 @@ pod 'FirebaseAuth'
 pod 'FirebaseCore'
 pod 'FirebaseFirestore'
 pod 'RSSelectionMenu'
-pod 'DropDown'
+pod 'SideMenu'
 
 end
