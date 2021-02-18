@@ -42,10 +42,8 @@ class BodyMeasurementsViewController: UIViewController {
         
         
         // testing to see if user is signed in
-        if Auth.auth().currentUser != nil {
-          print("A user is signed in right now.")
-        } else {
-          print("No user signed in.")
+        if (checkUserIn() == true) {
+            print("user in")
         }
         
         // Do any additional setup after loading the view.

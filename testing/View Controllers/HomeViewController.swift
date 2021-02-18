@@ -12,8 +12,24 @@ class HomeViewController: UIViewController {
     
     var menu: SideMenuNavigationController?
     
+    @IBOutlet weak var calorieProgressBar: UIProgressView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // PROGRESS BAR INITIALIZATION
+        calorieProgressBar.transform = calorieProgressBar.transform.scaledBy(x: 1, y: 2)
+        
+        calorieProgressBar.progress = 0
+        calorieProgressBar.layer.cornerRadius = 10
+        calorieProgressBar.clipsToBounds = true
+        calorieProgressBar.layer.sublayers![1].cornerRadius = 10
+        calorieProgressBar.subviews[1].clipsToBounds = true
+        
+        
+        
         
         menu = SideMenuNavigationController(rootViewController: MenuListController())
         
@@ -34,7 +50,7 @@ class HomeViewController: UIViewController {
 
 class MenuListController: UITableViewController {
     // menu items
-    var menuItems = ["Option 1", "Option 2", "Option 3", "Option 4", "Logout"]
+    var menuItems = ["Option 1", "Option 2", "Option 3", "Account", "Logout"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,4 +83,6 @@ class MenuListController: UITableViewController {
         
         // do something in each button here
     }
+    
+    
 }

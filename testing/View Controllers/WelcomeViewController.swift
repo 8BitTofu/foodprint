@@ -21,7 +21,7 @@ class WelcomeViewController: UIViewController {
         
         // accessing the first name and last name of current user
         let db = Firestore.firestore()
-        let userID : String = (Auth.auth().currentUser?.uid)!
+        let userID : String = getCurrentUserID()
         let userRef = db.collection("users").document(userID)
         
         var firstName : String = ""

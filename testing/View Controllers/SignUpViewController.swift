@@ -119,10 +119,11 @@ class SignUpViewController: UIViewController {
                         "lastname": lastName,
                         "email": email,
                         "uid": result!.user.uid,
-                        // "docid": userDoc.documentID,
                         "weight": 0,
                         "height": 0,
-                        "gender": ""
+                        "gender": "",
+                        "totalCalories": 0,
+                        "caloriesConsumed": 0
                     ] as [String : Any]
 
                     // set the data fields
