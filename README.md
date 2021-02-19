@@ -13,8 +13,6 @@ cocoapods (for installing extensions)
 
 firebase (login authentification)
 
-sidemenu (hamburger menu)
-
 
 
 unfortunately i ended up naming this xcode file "testing" lol
