@@ -43,9 +43,9 @@ class WelcomeViewController: UIViewController {
         
         // after some time change from splash screen to home screen
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+            let tabbedViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabbedViewController) as? TabbedViewController
             
-            self.view.window?.rootViewController = homeViewController
+            self.view.window?.rootViewController = tabbedViewController
             self.view.window?.makeKeyAndVisible()
         }
 

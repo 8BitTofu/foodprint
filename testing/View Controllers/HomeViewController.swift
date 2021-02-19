@@ -10,14 +10,19 @@ import SideMenu
 
 class HomeViewController: UIViewController {
     
-    var menu: SideMenuNavigationController?
-    
     @IBOutlet weak var calorieProgressBar: UIProgressView!
     
-    
+    var menu: SideMenuNavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*
+        self.navigationController?.navigationBar.isHidden = false
+        let vc = HomeViewController()
+        let navigationController = UINavigationController(rootViewController: vc)
+        self.present(navigationController, animated: true, completion: nil)
+ */
         
         // PROGRESS BAR INITIALIZATION
         calorieProgressBar.transform = calorieProgressBar.transform.scaledBy(x: 1, y: 2)
@@ -28,9 +33,8 @@ class HomeViewController: UIViewController {
         calorieProgressBar.layer.sublayers![1].cornerRadius = 10
         calorieProgressBar.subviews[1].clipsToBounds = true
         
-        
-        
-        
+    }
+        /*
         menu = SideMenuNavigationController(rootViewController: MenuListController())
         
         // menu comes from left side
@@ -84,5 +88,5 @@ class MenuListController: UITableViewController {
         // do something in each button here
     }
     
-    
+*/
 }
