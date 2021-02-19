@@ -12,6 +12,8 @@
 		1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */; };
 		1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6625CA78360055CE65 /* LoginViewController.swift */; };
 		1F2096C025CAB2F000C343CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2096BF25CAB2F000C343CB /* Constants.swift */; };
+		1F325D2325DFCCC500AA8ACA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */; };
+		1F325D2625DFCCD300AA8ACA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */; };
 		1F6CA10325DA397800C7296A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6CA10225DA397800C7296A /* HealthKit.framework */; };
 		1F6CA10525DA3C5100C7296A /* healthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CA10425DA3C5100C7296A /* healthKit.swift */; };
 		1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */; };
@@ -35,6 +37,8 @@
 		1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1F0E0D6625CA78360055CE65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F2096BF25CAB2F000C343CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1F6CA10125DA397800C7296A /* testing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testing.entitlements; sourceTree = "<group>"; };
 		1F6CA10225DA397800C7296A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		1F6CA10425DA3C5100C7296A /* healthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthKit.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */,
 				1F09443625DD363C006ACEC7 /* WelcomeViewController.swift */,
 				1FCFB75B25DFC83800259149 /* TabbedViewController.swift */,
+				1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */,
+				1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -266,8 +272,10 @@
 				1F09443725DD363C006ACEC7 /* WelcomeViewController.swift in Sources */,
 				1FC8639425DE9CE0004B4B31 /* currentUser.swift in Sources */,
 				1F0876E125DE09F400CCC9D7 /* States.swift in Sources */,
+				1F325D2325DFCCC500AA8ACA /* HomeViewController.swift in Sources */,
 				1FEFC6AA25CAA73A00CE8523 /* Utilities.swift in Sources */,
 				1FCFB75C25DFC83800259149 /* TabbedViewController.swift in Sources */,
+				1F325D2625DFCCD300AA8ACA /* SettingsViewController.swift in Sources */,
 				1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */,
 				1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */,
 				1FB2FB5925C8D57100DCD524 /* SceneDelegate.swift in Sources */,

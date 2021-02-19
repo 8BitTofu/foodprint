@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  SettingsViewController.swift
 //  testing
 //
 //  Created by Austin Leung on 2/19/21.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // change background color
         self.view.backgroundColor = Constants.appColors.buttonColor
-
+        
         // Do any additional setup after loading the view.
     }
     

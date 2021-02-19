@@ -37,9 +37,7 @@ class BodyMeasurementsViewController: UIViewController {
         nextButton.backgroundColor = Constants.appColors.buttonColor
         
         nextButton.setTitleColor(.white, for: .normal)
-        backButton.setTitleColor(Constants.appColors.buttonColor, for: .normal)
-        
-        
+        backButton.tintColor = Constants.appColors.buttonColor
         
         // testing to see if user is signed in
         if (checkUserIn() == true) {

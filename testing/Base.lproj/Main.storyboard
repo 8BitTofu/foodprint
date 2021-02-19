@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -107,10 +108,12 @@
                                     <constraint firstItem="YuQ-DR-KFL" firstAttribute="height" secondItem="1hh-hd-G5g" secondAttribute="height" id="tpe-Ah-1cF"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFP-tK-CPv">
-                                <rect key="frame" x="40" y="74" width="38" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFP-tK-CPv">
+                                <rect key="frame" x="40" y="74" width="26.333333333333329" height="22"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
+                                </state>
                                 <connections>
                                     <action selector="backButtonTapped:" destination="MY5-Bn-O3s" eventType="touchUpInside" id="rr7-Ig-jFS"/>
                                 </connections>
@@ -151,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAy-MK-ofF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="-299"/>
+            <point key="canvasLocation" x="1315.3846153846152" y="-299.28909952606631"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="2HL-f8-d5u">
@@ -195,7 +198,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="esX-l8-yQB" kind="relationship" relationship="viewControllers" id="MgM-QO-hx1"/>
-                        <segue destination="boo-QG-pEq" kind="relationship" relationship="viewControllers" id="TE9-54-SCC"/>
                         <segue destination="xQA-O7-3Ll" kind="relationship" relationship="viewControllers" id="aMA-7H-0Ka"/>
                     </connections>
                 </tabBarController>
@@ -206,50 +208,34 @@
         <!--Home-->
         <scene sceneID="5CR-X0-OHl">
             <objects>
-                <viewController id="xp7-Gs-Kd6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="xp7-Gs-Kd6" customClass="HomeViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w1i-l4-LVk">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Esp-6B-BkH"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="ZHX-fK-Nt8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZJ-fY-hoD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3785" y="-1394"/>
-        </scene>
-        <!--Second-->
-        <scene sceneID="gOg-sY-Jm7">
-            <objects>
-                <viewController id="KJE-vO-b8i" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Tc1-8Y-bPR">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0Bp-uy-ayn"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Second" id="uOI-Cn-tA5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H0i-jk-hKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4491" y="-1393"/>
+            <point key="canvasLocation" x="4128" y="-1393"/>
         </scene>
         <!--Settings-->
         <scene sceneID="qtv-M3-gKd">
             <objects>
-                <viewController id="WtA-37-Th9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsVC" id="WtA-37-Th9" customClass="SettingsViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CRE-wG-HjY">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="MPj-6l-QOy"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="fLf-25-yBr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSw-vK-Wog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5185" y="-1393"/>
+            <point key="canvasLocation" x="4877" y="-1393"/>
         </scene>
         <!--Home-->
         <scene sceneID="wZF-ce-Yun">
@@ -266,7 +252,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53r-cu-Djq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3785" y="-734"/>
+            <point key="canvasLocation" x="4128" y="-734"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="oHh-mo-sSB">
@@ -322,10 +308,12 @@
                                     <constraint firstItem="G8B-ee-ky0" firstAttribute="height" secondItem="2Gz-Sw-gtc" secondAttribute="height" id="oKE-uX-Lue"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXJ-4o-AHT">
-                                <rect key="frame" x="40" y="74" width="38" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXJ-4o-AHT">
+                                <rect key="frame" x="40" y="74" width="21" height="22"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
+                                </state>
                                 <connections>
                                     <action selector="backButtonTapped:" destination="Epn-qy-puD" eventType="touchUpInside" id="XHs-Vw-ac2"/>
                                 </connections>
@@ -462,10 +450,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GM-O7-VAT">
-                                <rect key="frame" x="40" y="74" width="38" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GM-O7-VAT">
+                                <rect key="frame" x="40" y="74" width="21" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
+                                </state>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="UrY-JF-ndS" eventType="touchUpInside" id="RcF-CT-X7A"/>
                                 </connections>
@@ -529,47 +520,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWA-Pf-2u9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5186" y="-734"/>
-        </scene>
-        <!--Second-->
-        <scene sceneID="9Xh-h1-Rkr">
-            <objects>
-                <navigationController id="boo-QG-pEq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="heart" catalog="system" id="cH0-cn-qm6"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bT0-tX-KTL">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="KJE-vO-b8i" kind="relationship" relationship="rootViewController" id="sEp-Md-YgC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fMH-t8-c8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4492" y="-734"/>
+            <point key="canvasLocation" x="4877" y="-734"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

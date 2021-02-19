@@ -14,6 +14,8 @@ struct Constants {
         
         static let welcomeViewController = "welcomeVC"
         static let tabbedViewController = "tabbedVC"
+        static let homeViewController = "homeVC"
+        static let settingsViewController = "settingsVC"
         static let baseViewController = "baseVC"
         static let loginViewController = "loginVC"
         static let signUpViewController = "signUpVC"

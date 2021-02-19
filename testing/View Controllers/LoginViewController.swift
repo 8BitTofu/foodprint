@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
         loginButton.backgroundColor = Constants.appColors.buttonColor
         loginButton.setTitleColor(.white, for: .normal)
         
-        backButton.setTitleColor(Constants.appColors.buttonColor, for: .normal)
+        backButton.tintColor = Constants.appColors.buttonColor
         
         setUpElements()
     }
