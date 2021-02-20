@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-struct Constants {
+class Constants {
     
-    struct Storyboard {
+    class Storyboard {
         
         static let welcomeViewController = "welcomeVC"
         static let tabbedViewController = "tabbedVC"
@@ -22,14 +22,14 @@ struct Constants {
         static let bodyMeasurementsViewController = "bodyMeasurementsVC"
     }
     
-    struct measureList {
+    class measureList {
         static let ageList: [Int] = Array(5 ... 100)
         static let weightList: [Int] = Array(4 ... 1000)
         static let heightList: [Int] = Array(50 ... 270)
         
     }
     
-    struct appColors {
+    class appColors {
         static let chineseOrange = UIColor(red: 236/255, green: 110/255, blue: 69/255, alpha: 1)
         static let blond = UIColor(red: 255/255, green: 245/255, blue: 194/255, alpha: 1)
         static let mediumSpringBud = UIColor(red: 211/255, green: 227/255, blue: 194/255, alpha: 1)
@@ -41,7 +41,7 @@ struct Constants {
         // static let secondaryWarm = UIColor(red: 210/255, green: 100/255, blue: 60/220, alpha: 1)
     }
     
-    struct appFormat {
+    class appFormat {
         var buttonCornerRadius = 10
     }
 }

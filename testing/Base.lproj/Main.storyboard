@@ -285,23 +285,61 @@
                                     <action selector="signOutTapped:" destination="WtA-37-Th9" eventType="touchUpInside" id="8cz-49-0mx"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jhJ-nG-A7x">
+                                <rect key="frame" x="40" y="258" width="310" height="260"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teE-9h-fIa">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="JPI-x1-K6B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Account"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSM-qw-lbq">
+                                        <rect key="frame" x="0.0" y="70" width="310" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Preferences"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5X-8o-bAd">
+                                        <rect key="frame" x="0.0" y="140" width="310" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buz-xl-02a">
+                                        <rect key="frame" x="0.0" y="210" width="310" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="buz-xl-02a" firstAttribute="height" secondItem="teE-9h-fIa" secondAttribute="height" id="HtC-UC-7it"/>
+                                    <constraint firstItem="fSM-qw-lbq" firstAttribute="height" secondItem="teE-9h-fIa" secondAttribute="height" id="YJs-Du-Y1U"/>
+                                    <constraint firstItem="i5X-8o-bAd" firstAttribute="height" secondItem="teE-9h-fIa" secondAttribute="height" id="bI1-e2-ac1"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MPj-6l-QOy"/>
                         <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="MPj-6l-QOy" firstAttribute="trailing" secondItem="Ubh-vS-IBX" secondAttribute="trailing" constant="40" id="2GK-s0-btp"/>
+                            <constraint firstItem="MPj-6l-QOy" firstAttribute="trailing" secondItem="jhJ-nG-A7x" secondAttribute="trailing" constant="40" id="93r-RK-3V8"/>
                             <constraint firstItem="MPj-6l-QOy" firstAttribute="bottom" secondItem="Ubh-vS-IBX" secondAttribute="bottom" constant="40" id="Od3-ky-TM9"/>
+                            <constraint firstItem="jhJ-nG-A7x" firstAttribute="leading" secondItem="MPj-6l-QOy" secondAttribute="leading" constant="40" id="eru-A5-MUL"/>
+                            <constraint firstItem="jhJ-nG-A7x" firstAttribute="top" secondItem="MPj-6l-QOy" secondAttribute="top" constant="170" id="mO6-WM-Snd"/>
                             <constraint firstItem="Ubh-vS-IBX" firstAttribute="leading" secondItem="MPj-6l-QOy" secondAttribute="leading" constant="40" id="yHv-92-KWk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="fLf-25-yBr"/>
                     <connections>
+                        <outlet property="accountButton" destination="teE-9h-fIa" id="V0o-I3-TaH"/>
+                        <outlet property="preferencesButton" destination="fSM-qw-lbq" id="SQL-Ry-D2X"/>
                         <outlet property="signOutButton" destination="Ubh-vS-IBX" id="KNn-8C-Lsr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSw-vK-Wog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4877" y="-1393"/>
+            <point key="canvasLocation" x="4876.9230769230771" y="-1393.3649289099526"/>
         </scene>
         <!--Home-->
         <scene sceneID="wZF-ce-Yun">

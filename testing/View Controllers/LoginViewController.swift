@@ -30,9 +30,7 @@ class LoginViewController: UIViewController {
         // change background color
         self.view.backgroundColor = Constants.appColors.blond
         
-        loginButton.layer.cornerRadius = 10
-        loginButton.backgroundColor = Constants.appColors.chineseOrange
-        loginButton.setTitleColor(.white, for: .normal)
+        makeSolidButton(button: loginButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
         
         backButton.tintColor = Constants.appColors.chineseOrange
         
