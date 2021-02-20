@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginStack: UIStackView!
     
+    @IBOutlet weak var logoLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class LoginViewController: UIViewController {
         // UI / AESTHETICS
         // change background color
         self.view.backgroundColor = Constants.appColors.blond
+        
+        logoLabel.textColor = Constants.appColors.chineseOrange
         
         makeSolidButton(button: loginButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
         

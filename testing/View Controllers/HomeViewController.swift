@@ -34,22 +34,6 @@ class HomeViewController: UIViewController {
         calorieLabel.textColor = Constants.appColors.softBlack
         calorieCountLabel.textColor = Constants.appColors.softBlack
         
-        // get date/time
-        /*
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
-
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
-        
-        if let date = dateFormatterGet.date(from: "2016-02-29 12:24:26") {
-            print(dateFormatterPrint.string(from: date))
-            dateLabel.text = dateFormatterPrint.string(from: date)
-        } else {
-           print("There was an error decoding the string")
-        }
-        */
-        
         let formatter = DateFormatter()
         //2016-12-08 03:37:22 +0000
         formatter.dateFormat = "MM.dd.yyyy"

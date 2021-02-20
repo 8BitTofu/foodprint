@@ -13,6 +13,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
+    @IBOutlet weak var logoLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -20,6 +21,8 @@ class WelcomeViewController: UIViewController {
         
         // change background color
         self.view.backgroundColor = Constants.appColors.blond
+        
+        logoLabel.textColor = Constants.appColors.chineseOrange
         
         
         // accessing the first name and last name of current user

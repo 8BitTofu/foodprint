@@ -26,6 +26,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var logoLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -35,6 +36,8 @@ class SignUpViewController: UIViewController {
         // UI / AESTHETICS
         // change background color
         self.view.backgroundColor = Constants.appColors.blond
+        
+        logoLabel.textColor = Constants.appColors.chineseOrange
         
         makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
         

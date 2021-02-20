@@ -18,6 +18,11 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var preferencesButton: UIButton!
     
+    @IBOutlet weak var button3: UIButton!
+    
+    @IBOutlet weak var button4: UIButton!
+    
+    @IBOutlet weak var logoLabel: UILabel!
     
     
     
@@ -27,9 +32,15 @@ class SettingsViewController: UIViewController {
         // change background color
         self.view.backgroundColor = Constants.appColors.blond
         
-        makeGhostButton(button: signOutButton, color: Constants.appColors.chineseOrange)
+        logoLabel.textColor = Constants.appColors.chineseOrange
+        
+        
+        makeGhostButton(button: signOutButton, color: Constants.appColors.pearlAqua)
+        
         makeGhostButton(button: accountButton, color: Constants.appColors.chineseOrange)
         makeGhostButton(button: preferencesButton, color: Constants.appColors.chineseOrange)
+        makeGhostButton(button: button3, color: Constants.appColors.chineseOrange)
+        makeGhostButton(button: button4, color: Constants.appColors.chineseOrange)
         
         // Do any additional setup after loading the view.
     }

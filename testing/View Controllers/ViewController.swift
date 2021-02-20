@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var signUpButton: UIButton!
     
+    @IBOutlet weak var logoLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,8 @@ class ViewController: UIViewController {
         // UI / AESTHETICS
         // change background color
         self.view.backgroundColor = Constants.appColors.blond
+        
+        logoLabel.textColor = Constants.appColors.chineseOrange
         
         makeSolidButton(button: loginButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
         makeGhostButton(button: signUpButton, color: Constants.appColors.chineseOrange)

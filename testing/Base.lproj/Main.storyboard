@@ -51,24 +51,37 @@
                                     <constraint firstItem="urQ-eY-Sc1" firstAttribute="height" secondItem="ojB-VW-KgT" secondAttribute="height" id="Ci2-Rj-4qk"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPrint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf8-xo-Hbk">
+                                <rect key="frame" x="40" y="392" width="310" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gzt-Iw-UyY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="61"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="t15-Bo-53T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="A32-PC-iCA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jf8-xo-Hbk" secondAttribute="trailing" constant="40" id="AJy-VL-ogD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t15-Bo-53T" secondAttribute="bottom" constant="40" id="JIc-vd-WpS"/>
+                            <constraint firstItem="Jf8-xo-Hbk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="348" id="qMC-OT-0hL"/>
+                            <constraint firstItem="Jf8-xo-Hbk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="qyi-XR-Vdb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t15-Bo-53T" secondAttribute="trailing" constant="40" id="xZM-vs-9zs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gw8-au-C4f"/>
                     <connections>
                         <outlet property="loginButton" destination="ojB-VW-KgT" id="OPB-FK-C9C"/>
+                        <outlet property="logoLabel" destination="Jf8-xo-Hbk" id="UL3-aO-cyy"/>
                         <outlet property="signUpButton" destination="urQ-eY-Sc1" id="gxm-DL-hOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="94"/>
+            <point key="canvasLocation" x="560" y="93.838862559241704"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Ph3-Zm-2Da">
@@ -129,6 +142,13 @@
                                     <action selector="loginTapped:" destination="MY5-Bn-O3s" eventType="touchUpInside" id="DV1-X8-0mI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELA-OQ-Qax">
+                                <rect key="frame" x="154" y="74" width="82" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Nl-j6-69Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,12 +170,13 @@
                         <outlet property="errorLabel" destination="ZIZ-Mq-rCr" id="9ch-L3-FqC"/>
                         <outlet property="loginButton" destination="e51-JM-pJL" id="78J-tb-jjF"/>
                         <outlet property="loginStack" destination="F9w-io-fLX" id="cf6-Mx-NZ8"/>
+                        <outlet property="logoLabel" destination="ELA-OQ-Qax" id="BJE-J9-2dM"/>
                         <outlet property="passwordTextField" destination="YuQ-DR-KFL" id="sES-I3-3R9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAy-MK-ofF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1315.3846153846152" y="-299.28909952606631"/>
+            <point key="canvasLocation" x="1313.8461538461538" y="-299.28909952606631"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="2HL-f8-d5u">
@@ -171,6 +192,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mE-rv-hIR">
+                                <rect key="frame" x="154" y="83" width="82" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XEK-0b-nfT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -181,6 +209,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logoLabel" destination="6mE-rv-hIR" id="NhK-fk-pJz"/>
                         <outlet property="welcomeLabel" destination="nGz-0T-Xhz" id="lgr-7t-QQV"/>
                     </connections>
                 </viewController>
@@ -318,6 +347,13 @@
                                     <constraint firstItem="i5X-8o-bAd" firstAttribute="height" secondItem="teE-9h-fIa" secondAttribute="height" id="bI1-e2-ac1"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojt-qU-Dbg">
+                                <rect key="frame" x="154" y="176" width="82" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MPj-6l-QOy"/>
                         <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -333,6 +369,9 @@
                     <navigationItem key="navigationItem" title="Settings" id="fLf-25-yBr"/>
                     <connections>
                         <outlet property="accountButton" destination="teE-9h-fIa" id="V0o-I3-TaH"/>
+                        <outlet property="button3" destination="i5X-8o-bAd" id="gG2-fv-B58"/>
+                        <outlet property="button4" destination="buz-xl-02a" id="cQ7-B5-l7i"/>
+                        <outlet property="logoLabel" destination="Ojt-qU-Dbg" id="VrF-V5-OmS"/>
                         <outlet property="preferencesButton" destination="fSM-qw-lbq" id="SQL-Ry-D2X"/>
                         <outlet property="signOutButton" destination="Ubh-vS-IBX" id="KNn-8C-Lsr"/>
                     </connections>
@@ -433,6 +472,13 @@
                                     <action selector="nextTapped:" destination="Epn-qy-puD" eventType="touchUpInside" id="0nL-Rf-x1o"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQB-14-4nu">
+                                <rect key="frame" x="154" y="74" width="82" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P1m-Ao-FNp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -455,6 +501,7 @@
                         <outlet property="errorLabel" destination="voL-rt-w5J" id="VBh-T2-9ET"/>
                         <outlet property="firstNameTextField" destination="2Gz-Sw-gtc" id="H3J-eX-HAN"/>
                         <outlet property="lastNameTextField" destination="5xp-St-cWE" id="uzo-fJ-Ljk"/>
+                        <outlet property="logoLabel" destination="OQB-14-4nu" id="MnT-Qx-UdH"/>
                         <outlet property="nextButton" destination="9qS-U2-8aY" id="aKN-KV-ixP"/>
                         <outlet property="passwordTextField" destination="G8B-ee-ky0" id="Vfs-Es-0f6"/>
                     </connections>
@@ -565,6 +612,13 @@
                                     <action selector="backButtonPressed:" destination="UrY-JF-ndS" eventType="touchUpInside" id="RcF-CT-X7A"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFf-S9-lmx">
+                                <rect key="frame" x="154" y="74" width="82" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P7p-W3-OJm"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -584,6 +638,7 @@
                         <outlet property="backButton" destination="3GM-O7-VAT" id="QVY-t5-q5p"/>
                         <outlet property="errorLabel" destination="NG9-Ni-D9f" id="aKw-zH-9SE"/>
                         <outlet property="heightTextField" destination="dPw-Yz-PeY" id="WtO-e4-uiL"/>
+                        <outlet property="logoLabel" destination="VFf-S9-lmx" id="Eg9-wC-ywv"/>
                         <outlet property="nextButton" destination="tIS-Na-aBI" id="mi5-6n-XKI"/>
                         <outlet property="weightTextField" destination="OWs-hP-DGo" id="W2Z-BI-OrX"/>
                     </connections>
