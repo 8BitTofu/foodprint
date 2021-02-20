@@ -33,11 +33,14 @@ class SignUpViewController: UIViewController {
 
         
         // UI / AESTHETICS
+        // change background color
+        self.view.backgroundColor = Constants.appColors.blond
+        
         nextButton.layer.cornerRadius = 10
-        nextButton.backgroundColor = Constants.appColors.buttonColor
+        nextButton.backgroundColor = Constants.appColors.chineseOrange
         
         nextButton.setTitleColor(.white, for: .normal)
-        backButton.tintColor = Constants.appColors.buttonColor
+        backButton.tintColor = Constants.appColors.chineseOrange
         
         
         

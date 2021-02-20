@@ -18,6 +18,9 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidAppear(true)
         
+        // change background color
+        self.view.backgroundColor = Constants.appColors.blond
+        
         
         // accessing the first name and last name of current user
         let db = Firestore.firestore()
@@ -42,7 +45,7 @@ class WelcomeViewController: UIViewController {
 
         
         // after some time change from splash screen to home screen
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             let tabbedViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabbedViewController) as? TabbedViewController
             
             self.view.window?.rootViewController = tabbedViewController

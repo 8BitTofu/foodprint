@@ -149,6 +149,7 @@
                         <outlet property="emailTextField" destination="1hh-hd-G5g" id="KrQ-Fd-RGf"/>
                         <outlet property="errorLabel" destination="ZIZ-Mq-rCr" id="9ch-L3-FqC"/>
                         <outlet property="loginButton" destination="e51-JM-pJL" id="78J-tb-jjF"/>
+                        <outlet property="loginStack" destination="F9w-io-fLX" id="cf6-Mx-NZ8"/>
                         <outlet property="passwordTextField" destination="YuQ-DR-KFL" id="sES-I3-3R9"/>
                     </connections>
                 </viewController>
@@ -212,14 +213,58 @@
                     <view key="view" contentMode="scaleToFill" id="w1i-l4-LVk">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m04-XK-g3S">
+                                <rect key="frame" x="0.0" y="88" width="390" height="193"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="560 / 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSu-zZ-p5t">
+                                        <rect key="frame" x="99" y="87" width="192" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="60"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YKz-KG-fz5">
+                                        <rect key="frame" x="-1" y="0.0" width="390" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DATE HERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsZ-EQ-ubl">
+                                                <rect key="frame" x="111" y="15" width="168" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="23"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CALORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Io-jA-Hm4">
+                                        <rect key="frame" x="159" y="155" width="70" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="23"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Esp-6B-BkH"/>
                         <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="ZHX-fK-Nt8"/>
+                    <connections>
+                        <outlet property="calorieCountLabel" destination="YSu-zZ-p5t" id="9pu-Hx-Q2e"/>
+                        <outlet property="calorieLabel" destination="0Io-jA-Hm4" id="cvK-Jm-CDc"/>
+                        <outlet property="dateLabel" destination="HsZ-EQ-ubl" id="gbt-qi-sdQ"/>
+                        <outlet property="topBackground" destination="m04-XK-g3S" id="Re7-rS-KZr"/>
+                        <outlet property="topBar" destination="YKz-KG-fz5" id="rRP-Ov-O4A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZJ-fY-hoD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4128" y="-1393"/>
+            <point key="canvasLocation" x="4127.6923076923076" y="-1393.3649289099526"/>
         </scene>
         <!--Settings-->
         <scene sceneID="qtv-M3-gKd">
@@ -228,10 +273,31 @@
                     <view key="view" contentMode="scaleToFill" id="CRE-wG-HjY">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubh-vS-IBX">
+                                <rect key="frame" x="40" y="671" width="310" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uCG-fx-0k6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="WtA-37-Th9" eventType="touchUpInside" id="8cz-49-0mx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MPj-6l-QOy"/>
                         <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="MPj-6l-QOy" firstAttribute="trailing" secondItem="Ubh-vS-IBX" secondAttribute="trailing" constant="40" id="2GK-s0-btp"/>
+                            <constraint firstItem="MPj-6l-QOy" firstAttribute="bottom" secondItem="Ubh-vS-IBX" secondAttribute="bottom" constant="40" id="Od3-ky-TM9"/>
+                            <constraint firstItem="Ubh-vS-IBX" firstAttribute="leading" secondItem="MPj-6l-QOy" secondAttribute="leading" constant="40" id="yHv-92-KWk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="fLf-25-yBr"/>
+                    <connections>
+                        <outlet property="signOutButton" destination="Ubh-vS-IBX" id="KNn-8C-Lsr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSw-vK-Wog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -536,6 +602,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

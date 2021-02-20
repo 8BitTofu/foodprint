@@ -22,13 +22,16 @@ class ViewController: UIViewController {
         
         
         // UI / AESTHETICS
+        // change background color
+        self.view.backgroundColor = Constants.appColors.blond
+        
         loginButton.layer.cornerRadius = 10 // for some reason, can't get the Constants button radius to work in this situation
-        loginButton.backgroundColor = Constants.appColors.buttonColor
+        loginButton.backgroundColor = Constants.appColors.chineseOrange
         
         signUpButton.layer.cornerRadius = 10
         signUpButton.layer.borderWidth = 1
-        signUpButton.layer.borderColor = Constants.appColors.buttonColor.cgColor
-        signUpButton.setTitleColor(Constants.appColors.buttonColor, for: .normal)
+        signUpButton.layer.borderColor = Constants.appColors.chineseOrange.cgColor
+        signUpButton.setTitleColor(Constants.appColors.chineseOrange, for: .normal)
     }
     
     

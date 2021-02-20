@@ -20,16 +20,21 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var loginStack: UIStackView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // UI / AESTHETICS
+        // change background color
+        self.view.backgroundColor = Constants.appColors.blond
+        
         loginButton.layer.cornerRadius = 10
-        loginButton.backgroundColor = Constants.appColors.buttonColor
+        loginButton.backgroundColor = Constants.appColors.chineseOrange
         loginButton.setTitleColor(.white, for: .normal)
         
-        backButton.tintColor = Constants.appColors.buttonColor
+        backButton.tintColor = Constants.appColors.chineseOrange
         
         setUpElements()
     }
