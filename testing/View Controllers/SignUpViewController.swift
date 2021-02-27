@@ -129,6 +129,7 @@ class SignUpViewController: UIViewController {
                         "weight": 0,
                         "height": 0,
                         "gender": "",
+                        "exerciseAmt": "",
                         "totalCalories": 0,
                         "caloriesConsumed": 0
                     ] as [String : Any]
@@ -143,7 +144,7 @@ class SignUpViewController: UIViewController {
                     setNew()
                     
                     // move to home screen
-                    self.transitionToBM2()
+                    self.transitionToGender()
                 }
             }
         }
@@ -157,11 +158,11 @@ class SignUpViewController: UIViewController {
 
     // MARK: Transitions
     
-    func transitionToBM2() {
+    func transitionToGender() {
         // transition to the body measurements screen
-        let BodyMeasurements2ViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.bodyMeasurements2ViewController) as? BodyMeasurements2ViewController
+        let GenderViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.genderViewController) as? GenderViewController
         
-        view.window?.rootViewController = BodyMeasurements2ViewController
+        view.window?.rootViewController = GenderViewController
         view.window?.makeKeyAndVisible()
     }
     

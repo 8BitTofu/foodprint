@@ -20,7 +20,8 @@ class Constants {
         static let loginViewController = "loginVC"
         static let signUpViewController = "signUpVC"
         static let bodyMeasurementsViewController = "bodyMeasurementsVC"
-        static let bodyMeasurements2ViewController = "bodyMeasurements2VC"
+        static let genderViewController = "genderVC"
+        static let exerciseViewController = "exerciseVC"
     }
     
     class measureList {

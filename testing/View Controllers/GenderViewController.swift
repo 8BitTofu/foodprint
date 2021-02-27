@@ -12,7 +12,7 @@ import FirebaseFirestore
 
 
 
-class BodyMeasurements2ViewController: UIViewController {
+class GenderViewController: UIViewController {
 
     @IBOutlet weak var radioButtonMale: UIButton!
     
@@ -159,7 +159,7 @@ class BodyMeasurements2ViewController: UIViewController {
     
     
 
-    // MARK: Radio Buttons - Gender
+    // MARK: Radio Button Actions
     
     @IBAction func radioButtonAction(_ sender: UIButton) {
         if sender.tag == 1 {
