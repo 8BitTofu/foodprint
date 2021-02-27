@@ -42,6 +42,9 @@ class LoginViewController: UIViewController {
     }
     
     
+    
+    // MARK: Setup
+    
     func setUpElements() {
         // set error to blank by default
         errorLabel.alpha = 0
@@ -66,6 +69,9 @@ class LoginViewController: UIViewController {
         return nil
     }
     
+    
+    
+    // MARK: Button Actions
     
     @IBAction func loginTapped(_ sender: Any) {
         
@@ -99,6 +105,14 @@ class LoginViewController: UIViewController {
     }
     
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.transitionToBase()
+    }
+    
+    
+    
+    // MARK: Transitions
+    
     func transitionToWelcome() {
         // transition to welcome screen
         let welcomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.welcomeViewController) as? WelcomeViewController
@@ -115,11 +129,4 @@ class LoginViewController: UIViewController {
         view.window?.rootViewController = baseViewController
         view.window?.makeKeyAndVisible()
     }
-    
-    
-    @IBAction func backButtonTapped(_ sender: Any) {
-        self.transitionToBase()
-    }
-    
-
 }

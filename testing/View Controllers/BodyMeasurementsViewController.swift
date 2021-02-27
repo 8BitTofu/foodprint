@@ -53,6 +53,10 @@ class BodyMeasurementsViewController: UIViewController {
         setUpElements()
     }
     
+    
+    
+    // MARK: Setup
+    
     func setUpElements() {
         // set error to blank by default
         errorLabel.alpha = 0
@@ -102,6 +106,9 @@ class BodyMeasurementsViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
+    
+    
+    // MARK: Button Actions
     
     @IBAction func nextTapped(_ sender: Any) {
         // (function) when next button is tapped
@@ -168,6 +175,10 @@ class BodyMeasurementsViewController: UIViewController {
         
         self.transitionToBase()
     }
+    
+    
+    
+    // MARK: Transitions
     
     func transitionToBase() {
         // transition to home screen

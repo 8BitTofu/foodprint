@@ -59,6 +59,8 @@ class WelcomeViewController: UIViewController {
     }
     
 
+    
+    // MARK: Setup
 
     func setWelcomeName(firstName:String, lastName:String) -> Void {
         var welcomeText = "Welcome "

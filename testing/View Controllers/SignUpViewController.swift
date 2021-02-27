@@ -48,21 +48,15 @@ class SignUpViewController: UIViewController {
         setUpElements()
     }
     
+    
+    
+    // MARK: Setup
+    
     func setUpElements() {
         // set error to default by default
         errorLabel.alpha = 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func validateFields() -> String? {
         
@@ -85,6 +79,15 @@ class SignUpViewController: UIViewController {
         return nil
     }
     
+    
+    func showError(_ message:String) {
+        // show the error (function)
+        errorLabel.text = message
+        errorLabel.alpha = 1
+    }
+    
+    
+    // MARK: Button Actions
     
     @IBAction func nextTapped(_ sender: Any) {
         // Validate the fields
@@ -151,14 +154,8 @@ class SignUpViewController: UIViewController {
         self.transitionToBase()
     }
     
-    
-    
-    func showError(_ message:String) {
-        // show the error (function)
-        errorLabel.text = message
-        errorLabel.alpha = 1
-    }
-    
+
+    // MARK: Transitions
     
     func transitionToBM2() {
         // transition to the body measurements screen

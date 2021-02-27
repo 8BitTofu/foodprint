@@ -52,6 +52,8 @@ class BodyMeasurements2ViewController: UIViewController {
     }
     
     
+    // MARK: Setup
+    
     func setUpElements() {
         // set error to blank by default
         errorLabel.alpha = 0

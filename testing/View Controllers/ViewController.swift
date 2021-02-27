@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     }
     
     
+    // MARK: Transitions
+    
     func transitionToSignUp() {
         // transition to home screen
         let signUpViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.signUpViewController) as? SignUpViewController
@@ -50,6 +52,8 @@ class ViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
+    
+    // MARK: Button Actions
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         self.transitionToLogin()
