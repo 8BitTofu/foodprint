@@ -45,6 +45,9 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    // MARK: Button Actions
 
     @IBAction func signOutTapped(_ sender: Any) {
         // log out
@@ -55,6 +58,9 @@ class SettingsViewController: UIViewController {
         self.transitionToBase()
     }
     
+    
+    
+    // MARK: Transitions
     
     func transitionToBase() {
         // transition to home screen

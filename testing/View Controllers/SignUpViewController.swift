@@ -140,7 +140,7 @@ class SignUpViewController: UIViewController {
                     setNew()
                     
                     // move to home screen
-                    self.transitionToBM()
+                    self.transitionToBM2()
                 }
             }
         }
@@ -160,11 +160,11 @@ class SignUpViewController: UIViewController {
     }
     
     
-    func transitionToBM() {
+    func transitionToBM2() {
         // transition to the body measurements screen
-        let BodyMeasurementsViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.bodyMeasurementsViewController) as? BodyMeasurementsViewController
+        let BodyMeasurements2ViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.bodyMeasurements2ViewController) as? BodyMeasurements2ViewController
         
-        view.window?.rootViewController = BodyMeasurementsViewController
+        view.window?.rootViewController = BodyMeasurements2ViewController
         view.window?.makeKeyAndVisible()
     }
     

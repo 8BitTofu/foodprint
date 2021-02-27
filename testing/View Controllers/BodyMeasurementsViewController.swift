@@ -177,6 +177,7 @@ class BodyMeasurementsViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
+    
     func transitionToWelcome() {
         // transition to welcome screen
         let welcomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.welcomeViewController) as? WelcomeViewController
