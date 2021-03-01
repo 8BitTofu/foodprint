@@ -1,9 +1,7 @@
 //
 //  Utilities.swift
-//  customauth
 //
-//  Created by Christopher Ching on 2019-05-09.
-//  Copyright © 2019 Christopher Ching. All rights reserved.
+//  Password authentication created by Christopher Chin on 2019-05-09
 //
 
 import Foundation

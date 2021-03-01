@@ -25,34 +25,46 @@ class BodyMeasurementsViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var logoLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        // UI / AESTHETICS
+        // change background color
+        self.view.backgroundColor = Constants.appColors.blond
+        
+        logoLabel.textColor = Constants.appColors.chineseOrange
+        
+        makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
+        
+        backButton.tintColor = Constants.appColors.chineseOrange
+        
         // testing to see if user is signed in
-        if Auth.auth().currentUser != nil {
-          print("A user is signed in right now.")
-        } else {
-          print("No user signed in.")
+        if (checkUserIn() == true) {
+            print("user in")
         }
-        
-        // access current user data
-        let user = Auth.auth().currentUser
-        let userID : String = (Auth.auth().currentUser?.uid)!
-        
-        print("User ID: " + userID)
         
         // Do any additional setup after loading the view.
         setUpElements()
     }
     
+    
+    
+    // MARK: Setup
+    
     func setUpElements() {
+        // set error to blank by default
         errorLabel.alpha = 0
     }
     
 
     func validateFields() -> String? {
+        
         // check if any fields are blank
         if
             heightTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -66,9 +78,9 @@ class BodyMeasurementsViewController: UIViewController {
         let cleanedAge = ageTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         // convert string to int (unnecessary?)
-        var intHeight = Int(cleanedHeight) ?? 0
-        var intWeight = Int(cleanedWeight) ?? 0
-        var intAge = Int(cleanedAge) ?? 0
+        let intHeight = Int(cleanedHeight) ?? 0
+        let intWeight = Int(cleanedWeight) ?? 0
+        let intAge = Int(cleanedAge) ?? 0
         
         // check if height is valid
         if Utilities.isHeightValid(intHeight) == false {
@@ -84,44 +96,52 @@ class BodyMeasurementsViewController: UIViewController {
             return "Age given in 'years' was not within the valid range."
         }
         
-        
         return nil
     }
     
     
     func showError(_ message:String) {
+        // show the error (function)
         errorLabel.text = message
         errorLabel.alpha = 1
     }
     
     
+    
+    // MARK: Button Actions
+    
     @IBAction func nextTapped(_ sender: Any) {
-        
+        // (function) when next button is tapped
         let error = validateFields()
         
         if error != nil {
+            // ERROR - show error / no action
             showError(error!)
         }
         
         else {
+            // NO ERROR - update data fields
+            
             // get data from text fields and trim 
             let cleanedHeight = heightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let cleanedWeight = weightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let cleanedAge = ageTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            // var intHeight = Int(cleanedHeight) ?? 0
-            // var intWeight = Int(cleanedWeight) ?? 0
-            // var intAge = Int(cleanedAge) ?? 0
+            // convert string to int
+            let intHeight = Int(cleanedHeight) ?? 0
+            let intWeight = Int(cleanedWeight) ?? 0
+            let intAge = Int(cleanedAge) ?? 0
             
+            // access current user information
             let db = Firestore.firestore()
             let userID : String = (Auth.auth().currentUser?.uid)!
-            
             let userRef = db.collection("users").document(userID)
             
+            // update the height/weight/age of current user (get input)
             userRef.updateData([
-                                "height": cleanedHeight,
-                                "weight": cleanedWeight,
-                                "age": cleanedAge
+                                "height": intHeight,
+                                "weight": intWeight,
+                                "age": intAge
             ]) { err in
                 if let err = err {
                     print("Error updating document: \(err)")
@@ -129,7 +149,53 @@ class BodyMeasurementsViewController: UIViewController {
                     print("Document successfully updated")
                 }
             }
+            
+            // go to welcome splash screen
+            transitionToExercise()
         }
     }
+    
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        // when clicking back button - delete all previous progress
+        // on making a user account
+        
+        // get current user data
+        let db = Firestore.firestore()
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        
+        // delete user document from users collection on Firebase
+        db.collection("users").document(userID).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        
+        self.transitionToBase()
+    }
+    
+    
+    
+    // MARK: Transitions
+    
+    func transitionToBase() {
+        // transition to home screen
+        let baseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.baseViewController) as? ViewController
+        
+        view.window?.rootViewController = baseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    
+    func transitionToExercise() {
+        // transition to welcome screen
+        let exerciseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.exerciseViewController) as? ExerciseViewController
+        
+        view.window?.rootViewController = exerciseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
 }
 

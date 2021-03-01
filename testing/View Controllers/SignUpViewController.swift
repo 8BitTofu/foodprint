@@ -20,32 +20,43 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
+    
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var logoLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        // UI / AESTHETICS
+        // change background color
+        self.view.backgroundColor = Constants.appColors.blond
+        
+        logoLabel.textColor = Constants.appColors.chineseOrange
+        
+        makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
+        
+        backButton.tintColor = Constants.appColors.chineseOrange
+        
+        
+        
         setUpElements()
     }
     
+    
+    
+    // MARK: Setup
+    
     func setUpElements() {
+        // set error to default by default
         errorLabel.alpha = 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func validateFields() -> String? {
         
@@ -68,15 +79,26 @@ class SignUpViewController: UIViewController {
         return nil
     }
     
-    @IBAction func signUpTapped(_ sender: Any) {
-        
+    
+    func showError(_ message:String) {
+        // show the error (function)
+        errorLabel.text = message
+        errorLabel.alpha = 1
+    }
+    
+    
+    // MARK: Button Actions
+    
+    @IBAction func nextTapped(_ sender: Any) {
         // Validate the fields
         let error = validateFields()
         
         if error != nil {
+            // ERROR - show error / no action
             showError(error!)
         }
         else {
+            // NO ERROR - create user account
             // get textfield data
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -93,51 +115,65 @@ class SignUpViewController: UIViewController {
                     // user created successfully
                     let db = Firestore.firestore()
                     
-                    // Add a new document with a generated id.
+                    // Add a new document with a generated id
                     let userTableRef = db.collection("users")
 
                     let userDoc = userTableRef.document(result!.user.uid)
+
+                    // show data fields
                     let dataFields = [
                         "firstname": firstName,
                         "lastname": lastName,
                         "email": email,
                         "uid": result!.user.uid,
-                        // "docid": userDoc.documentID,
                         "weight": 0,
                         "height": 0,
-                        "gender": ""
+                        "gender": "",
+                        "exerciseAmt": "",
+                        "totalCalories": 0,
+                        "caloriesConsumed": 0
                     ] as [String : Any]
 
+                    // set the data fields
                     userDoc.setData(dataFields)
                     
-                    /*
-                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email":email, "uid":result!.user.uid, "weight":0, "height":0, "gender":""]) { (error) in
-                        if error != nil {
-                            self.showError("Error: user data couldn't be saved.")
-                        }
-                    }
- */
-                    
+                    // console indicator
                     print("SUCCESS: user was signed up")
                     
+                    // set user state as a new user
+                    setNew()
+                    
                     // move to home screen
-                    self.transitionToBM()
+                    self.transitionToGender()
                 }
             }
         }
     }
     
     
-    func showError(_ message:String) {
-        errorLabel.text = message
-        errorLabel.alpha = 1
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.transitionToBase()
     }
     
+
+    // MARK: Transitions
     
-    func transitionToBM() {
-        let BodyMeasurementsViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.BodyMeasurementsViewController) as? BodyMeasurementsViewController
+    func transitionToGender() {
+        // transition to the body measurements screen
+        let GenderViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.genderViewController) as? GenderViewController
         
-        view.window?.rootViewController = BodyMeasurementsViewController
+        view.window?.rootViewController = GenderViewController
         view.window?.makeKeyAndVisible()
     }
+    
+    
+    func transitionToBase() {
+        // transition to home screen
+        let baseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.baseViewController) as? ViewController
+        
+        view.window?.rootViewController = baseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    
 }

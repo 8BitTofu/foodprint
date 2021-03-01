@@ -10,7 +10,5 @@ pod 'Firebase'
 pod 'FirebaseAuth'
 pod 'FirebaseCore'
 pod 'FirebaseFirestore'
-pod 'RSSelectionMenu'
-pod 'DropDown'
 
 end
