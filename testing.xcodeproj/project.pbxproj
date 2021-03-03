@@ -18,6 +18,8 @@
 		1F5FAC1725EA19A8005BDC12 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FAC1625EA19A8005BDC12 /* GenderViewController.swift */; };
 		1F6CA10325DA397800C7296A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6CA10225DA397800C7296A /* HealthKit.framework */; };
 		1F6CA10525DA3C5100C7296A /* healthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CA10425DA3C5100C7296A /* healthKit.swift */; };
+		1F6F176325EF76F50046BC44 /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F176225EF76F50046BC44 /* CategoryInfo.swift */; };
+		1F73C10A25EF8F5F0022F84B /* categories.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F73C10925EF8F5F0022F84B /* categories.txt */; };
 		1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */; };
 		1FB2FB5725C8D57100DCD524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5625C8D57100DCD524 /* AppDelegate.swift */; };
 		1FB2FB5925C8D57100DCD524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5825C8D57100DCD524 /* SceneDelegate.swift */; };
@@ -49,6 +51,8 @@
 		1F6CA10125DA397800C7296A /* testing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testing.entitlements; sourceTree = "<group>"; };
 		1F6CA10225DA397800C7296A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		1F6CA10425DA3C5100C7296A /* healthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthKit.swift; sourceTree = "<group>"; };
+		1F6F176225EF76F50046BC44 /* CategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfo.swift; sourceTree = "<group>"; };
+		1F73C10925EF8F5F0022F84B /* categories.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = categories.txt; sourceTree = "<group>"; };
 		1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasurementsViewController.swift; sourceTree = "<group>"; };
 		1FB2FB5325C8D57100DCD524 /* testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB2FB5625C8D57100DCD524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,17 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		1F6F176125EF76B40046BC44 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				4488C76A25ED04E3005A32FC /* DBHelper.swift */,
+				4488C78225ED059F005A32FC /* Recipe.swift */,
+				1F6F176225EF76F50046BC44 /* CategoryInfo.swift */,
+				1F73C10925EF8F5F0022F84B /* categories.txt */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		1FB2FB4A25C8D57100DCD524 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +138,7 @@
 				1F6CA10125DA397800C7296A /* testing.entitlements */,
 				1FB2FB5625C8D57100DCD524 /* AppDelegate.swift */,
 				1FB2FB5825C8D57100DCD524 /* SceneDelegate.swift */,
+				1F6F176125EF76B40046BC44 /* Database */,
 				1FEFC6AC25CAA74100CE8523 /* Helpers */,
 				1F0E0D6C25CA786F0055CE65 /* View Controllers */,
 				1FB2FB5C25C8D57100DCD524 /* Main.storyboard */,
@@ -140,8 +156,6 @@
 			children = (
 				1FEFC6A925CAA73A00CE8523 /* Utilities.swift */,
 				1F2096BF25CAB2F000C343CB /* Constants.swift */,
-				4488C76A25ED04E3005A32FC /* DBHelper.swift */,
-				4488C78225ED059F005A32FC /* Recipe.swift */,
 				1F0876E025DE09F400CCC9D7 /* States.swift */,
 				1FC8639325DE9CE0004B4B31 /* currentUser.swift */,
 				1FB5050D25E0B5C300531682 /* formatting.swift */,
@@ -227,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB2FB6325C8D57400DCD524 /* LaunchScreen.storyboard in Resources */,
+				1F73C10A25EF8F5F0022F84B /* categories.txt in Resources */,
 				1FD4460A25CA9704009CEF4A /* GoogleService-Info.plist in Resources */,
 				1FB2FB6025C8D57400DCD524 /* Assets.xcassets in Resources */,
 				1FB2FB5E25C8D57100DCD524 /* Main.storyboard in Resources */,
@@ -287,6 +302,7 @@
 				1F09443725DD363C006ACEC7 /* WelcomeViewController.swift in Sources */,
 				1FC8639425DE9CE0004B4B31 /* currentUser.swift in Sources */,
 				1F0876E125DE09F400CCC9D7 /* States.swift in Sources */,
+				1F6F176325EF76F50046BC44 /* CategoryInfo.swift in Sources */,
 				1F325D2325DFCCC500AA8ACA /* HomeViewController.swift in Sources */,
 				1FB5050E25E0B5C300531682 /* formatting.swift in Sources */,
 				1FEFC6AA25CAA73A00CE8523 /* Utilities.swift in Sources */,
@@ -299,7 +315,6 @@
 				1F6CA10525DA3C5100C7296A /* healthKit.swift in Sources */,
 				1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */,
 				4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */,
-				1F0E0D6A25CA78540055CE65 /* HomeViewController.swift in Sources */,
 				1F4496C625EA5456000DFADD /* ExerciseViewController.swift in Sources */,
 				1F2096C025CAB2F000C343CB /* Constants.swift in Sources */,
 				4488C78325ED059F005A32FC /* Recipe.swift in Sources */,

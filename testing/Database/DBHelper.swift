@@ -8,6 +8,7 @@
 import Foundation
 import SQLite3
 
+/*
 class DBHelper
 {
     init()
@@ -51,3 +52,4 @@ class DBHelper
         sqlite3_finalize(createTableStatement)
     }
 }
+*/
