@@ -324,16 +324,16 @@ PODS:
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
-  - RSSelectionMenu (7.1.2)
-  - SideMenu (6.5.0)
+  - sqlite3 (3.34.1):
+    - sqlite3/common (= 3.34.1)
+  - sqlite3/common (3.34.1)
 
 DEPENDENCIES:
   - Firebase
   - FirebaseAuth
   - FirebaseCore
   - FirebaseFirestore
-  - RSSelectionMenu
-  - SideMenu
+  - sqlite3
 
 SPEC REPOS:
   trunk:
@@ -355,8 +355,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
-    - RSSelectionMenu
-    - SideMenu
+    - sqlite3
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -377,9 +376,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  RSSelectionMenu: f803d0936e074b2fdac2c41bf1d0a5b0c7fdc3e1
-  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  sqlite3: 5326fbc03d1cc5b07e968504b0ab17ec784926b7
 
-PODFILE CHECKSUM: 658f75966e2aacaa9da1844273aa1f1eddcea1af
+PODFILE CHECKSUM: 418ebd18a9e81960f082d7d0120f0d6f81d1632f
 
 COCOAPODS: 1.10.1

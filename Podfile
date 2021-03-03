@@ -10,5 +10,6 @@ pod 'Firebase'
 pod 'FirebaseAuth'
 pod 'FirebaseCore'
 pod 'FirebaseFirestore'
+pod 'sqlite3'
 
 end
