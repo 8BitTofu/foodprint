@@ -36,13 +36,13 @@ class BodyMeasurementsViewController: UIViewController {
         
         // UI / AESTHETICS
         // change background color
-        self.view.backgroundColor = Constants.appColors.blond
+        self.view.backgroundColor = .white
         
-        logoLabel.textColor = Constants.appColors.chineseOrange
+        logoLabel.textColor = Constants.appColors.orangeRed
         
-        makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
+        makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         
-        backButton.tintColor = Constants.appColors.chineseOrange
+        backButton.tintColor = Constants.appColors.mustard
         
         // testing to see if user is signed in
         if (checkUserIn() == true) {

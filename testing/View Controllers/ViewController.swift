@@ -25,12 +25,12 @@ class ViewController: UIViewController {
         
         // UI / AESTHETICS
         // change background color
-        self.view.backgroundColor = Constants.appColors.blond
+        self.view.backgroundColor = .white
         
-        logoLabel.textColor = Constants.appColors.chineseOrange
+        logoLabel.textColor = Constants.appColors.orangeRed
         
-        makeSolidButton(button: loginButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
-        makeGhostButton(button: signUpButton, color: Constants.appColors.chineseOrange)
+        makeSolidButton(button: loginButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        makeGhostButton(button: signUpButton, color: Constants.appColors.orangeRed)
     }
     
     

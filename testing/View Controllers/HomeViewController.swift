@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         // change background color
-        self.view.backgroundColor = Constants.appColors.blond
+        self.view.backgroundColor = .white
         topBackground.backgroundColor = Constants.appColors.pearlAqua
         topBar.backgroundColor = Constants.appColors.chineseOrange
 

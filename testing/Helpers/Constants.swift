@@ -38,9 +38,9 @@ class Constants {
         static let pearlAqua = UIColor(red: 141/255, green: 204/255, blue: 193/255, alpha: 1)
         static let softBlack = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
         
-        static let brightRed = UIColor(red: 254/255, green: 64/255, blue: 64/255, alpha: 1)
+        static let orangeRed = UIColor(red: 245/255, green: 70/255, blue: 4/255, alpha: 1)
         
-        static let mustard = UIColor(red: 255/255, green: 206/255, blue: 0/255, alpha: 1)
+        static let mustard = UIColor(red: 243/255, green: 216/255, blue: 3/255, alpha: 1)
         
         // static let primaryWarm = UIColor(red: 255/255, green: 69/255, blue: 0/255, alpha: 1)
         // UIColor(red: 180/255, green: 70/255, blue: 30/255, alpha: 1)

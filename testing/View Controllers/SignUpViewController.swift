@@ -35,13 +35,13 @@ class SignUpViewController: UIViewController {
         
         // UI / AESTHETICS
         // change background color
-        self.view.backgroundColor = Constants.appColors.blond
+        self.view.backgroundColor = .white
         
-        logoLabel.textColor = Constants.appColors.chineseOrange
+        logoLabel.textColor = Constants.appColors.orangeRed
         
-        makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
+        makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         
-        backButton.tintColor = Constants.appColors.chineseOrange
+        backButton.tintColor = Constants.appColors.mustard
         
         
         
@@ -129,7 +129,7 @@ class SignUpViewController: UIViewController {
                         "weight": 0,
                         "height": 0,
                         "gender": "",
-                        "exerciseAmt": "",
+                        "weightChange": "",
                         "totalCalories": 0,
                         "caloriesConsumed": 0
                     ] as [String : Any]

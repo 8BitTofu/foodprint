@@ -5,6 +5,9 @@
 //  Created by Austin Leung on 2/27/21.
 //
 
+//  This file has been changed from exercise amount to WEIGHT CHANGE
+
+
 import UIKit
 import FirebaseAuth
 import Firebase
@@ -34,8 +37,8 @@ class ExerciseViewController: UIViewController{
     
     // define exercise state
     // 1: low, 2: medium, 3: high
-    var exerciseState = -1
-    var exercise = ""
+    var weightState = -1
+    var weightChange = ""
     
     
     override func viewDidLoad() {
@@ -43,7 +46,7 @@ class ExerciseViewController: UIViewController{
 
         // UI / AESTHETICS
         // change background color
-        self.view.backgroundColor = Constants.appColors.blond
+        self.view.backgroundColor = .white
         
         logoLabel.textColor = Constants.appColors.chineseOrange
         
@@ -73,7 +76,7 @@ class ExerciseViewController: UIViewController{
     
     
     func validateFields() -> String? {
-        if exerciseState == -1 {
+        if weightState == -1 {
             return "Please choose one of the options above."
         }
         
@@ -113,16 +116,16 @@ class ExerciseViewController: UIViewController{
         }
         
         else {
-            if exerciseState == 1 {
-                exercise = "Low"
+            if weightState == 1 {
+                weightChange = "Lose"
             }
             
-            else if exerciseState == 2 {
-                exercise = "Medium"
+            else if weightState == 2 {
+                weightChange = "Maintain"
             }
             
-            else if exerciseState == 3 {
-                exercise = "High"
+            else if weightState == 3 {
+                weightChange = "Gain"
             }
             
             
@@ -133,12 +136,12 @@ class ExerciseViewController: UIViewController{
             
             // update the height/weight/age of current user (get input)
             userRef.updateData([
-                                "exerciseAmt": exercise
+                                "weightChange": weightChange
             ]) { err in
                 if let err = err {
-                    print("Error updating exercise amount: \(err)")
+                    print("Error updating weight change type: \(err)")
                 } else {
-                    print("Exercise amount successfully updated")
+                    print("Weight change type successfully updated")
                 }
             }
             
@@ -177,24 +180,24 @@ class ExerciseViewController: UIViewController{
             radioButtonLow.isSelected = true
             radioButtonMedium.isSelected = false
             radioButtonHigh.isSelected = false
-            print("Low Exercise Selected")
-            exerciseState = 1
+            print("Lose Weight Selected")
+            weightState = 1
         }
         
         else if sender.tag == 2 {
             radioButtonLow.isSelected = false
             radioButtonMedium.isSelected = true
             radioButtonHigh.isSelected = false
-            print("Medium Exercise Selected")
-            exerciseState = 2
+            print("Maintain Weight Selected")
+            weightState = 2
         }
         
         else if sender.tag == 3 {
             radioButtonLow.isSelected = false
             radioButtonMedium.isSelected = false
             radioButtonHigh.isSelected = true
-            print("High Exercise Selected")
-            exerciseState = 3
+            print("Gain Weight Selected")
+            weightState = 3
         }
     }
     

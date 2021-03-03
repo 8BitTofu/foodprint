@@ -20,9 +20,9 @@ class WelcomeViewController: UIViewController {
         super.viewDidAppear(true)
         
         // change background color
-        self.view.backgroundColor = Constants.appColors.blond
+        self.view.backgroundColor = .white
         
-        logoLabel.textColor = Constants.appColors.chineseOrange
+        logoLabel.textColor = Constants.appColors.orangeRed
         
         
         // accessing the first name and last name of current user

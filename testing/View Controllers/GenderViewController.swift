@@ -39,7 +39,7 @@ class GenderViewController: UIViewController {
 
         // UI / AESTHETICS
         // change background color
-        self.view.backgroundColor = Constants.appColors.blond
+        self.view.backgroundColor = .white
         
         logoLabel.textColor = Constants.appColors.chineseOrange
         
