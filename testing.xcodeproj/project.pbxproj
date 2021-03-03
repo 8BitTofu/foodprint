@@ -12,6 +12,7 @@
 		1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */; };
 		1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6625CA78360055CE65 /* LoginViewController.swift */; };
 		1F2096C025CAB2F000C343CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2096BF25CAB2F000C343CB /* Constants.swift */; };
+		1F31525D25F60F5C00A9641C /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */; };
 		1F325D2325DFCCC500AA8ACA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */; };
 		1F325D2625DFCCD300AA8ACA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */; };
 		1F4496C625EA5456000DFADD /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4496C525EA5456000DFADD /* WeightViewController.swift */; };
@@ -48,6 +49,7 @@
 		1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1F0E0D6625CA78360055CE65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F2096BF25CAB2F000C343CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1F4496C525EA5456000DFADD /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				1F64ED8325F2215700676682 /* DeleteAccountViewController.swift */,
 				1FF6913F25F2521900E06C5C /* AddMealViewController.swift */,
 				1FF1ABE025F2674400E8D25C /* UpdateBMViewController.swift */,
+				1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */,
 				1F64ED8425F2215700676682 /* DeleteAccountViewController.swift in Sources */,
 				4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */,
+				1F31525D25F60F5C00A9641C /* PreferencesViewController.swift in Sources */,
 				1F4496C625EA5456000DFADD /* WeightViewController.swift in Sources */,
 				1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */,
 				1F2096C025CAB2F000C343CB /* Constants.swift in Sources */,
