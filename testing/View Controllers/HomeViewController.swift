@@ -8,6 +8,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class HomeViewController: UIViewController {
     
@@ -25,11 +27,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // UI / AESTHETICS
         // change background color
         self.view.backgroundColor = .white
         topBackground.backgroundColor = Constants.appColors.pearlAqua
         topBar.backgroundColor = Constants.appColors.chineseOrange
 
+        // DATETIME
         dateLabel.textColor = Constants.appColors.softBlack
         calorieLabel.textColor = Constants.appColors.softBlack
         calorieCountLabel.textColor = Constants.appColors.softBlack
@@ -43,10 +47,35 @@ class HomeViewController: UIViewController {
         
         dateLabel.text = dateString
         
-        // Do any additional setup after loading the view.
+        
+        
+        // Personalizing Calorie Count
+        var totalCalories = ""
+        var caloriesConsumed = ""
+        
+        let db = Firestore.firestore()
+        let userID : String = getCurrentUserID()
+        let userRef = db.collection("users").document(userID)
+        
+        userRef.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                totalCalories = document.get("totalCalories") as! String
+                caloriesConsumed = document.get("caloriesConsumed") as! String
+                
+                self.setCalories(totalCalories: totalCalories, caloriesConsumed: caloriesConsumed)
+            } else {
+                print("Cannot access current user's calorie count / consumed")
+            }
+        }
     }
     
 
+    func setCalories(totalCalories: String, caloriesConsumed: String) -> Void {
+        var calText = ""
+        
+        calText += caloriesConsumed + " / " + totalCalories + "!"
+        calorieLabel.text = calText
+    }
 }
 
 

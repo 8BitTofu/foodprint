@@ -41,11 +41,11 @@ class GenderViewController: UIViewController {
         // change background color
         self.view.backgroundColor = .white
         
-        logoLabel.textColor = Constants.appColors.chineseOrange
+        logoLabel.textColor = Constants.appColors.orangeRed
         
-        makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.chineseOrange, textColor: .white)
+        makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         
-        backButton.tintColor = Constants.appColors.chineseOrange
+        backButton.tintColor = Constants.appColors.mustard
         
         
         setUpElements()
