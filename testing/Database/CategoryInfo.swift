@@ -23,6 +23,8 @@ import Foundation
 
 
 class foodCategories {
+    
+    
     // MARK: Assorted Categories
 
     let sweets = ["Dessert Recipes", "Specialty Dessert Recipes"]
