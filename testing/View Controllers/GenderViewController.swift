@@ -134,6 +134,15 @@ class GenderViewController: UIViewController {
             }
         }
         
+        // delete user account from authentification side
+        Auth.auth().currentUser?.delete(completion: { err in
+            if let err = err {
+                print("Error removing user: \(err)")
+            } else {
+                print("User successfully removed!")
+            }
+        })
+        
         self.transitionToBase()
     }
     
