@@ -13,10 +13,6 @@ import FirebaseFirestore
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var topBackground: UIView!
-    
-    @IBOutlet weak var topBar: UIView!
-    
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var calorieCountLabel: UILabel!
@@ -30,13 +26,17 @@ class HomeViewController: UIViewController {
         // UI / AESTHETICS
         // change background color
         self.view.backgroundColor = .white
-        topBackground.backgroundColor = Constants.appColors.pearlAqua
-        topBar.backgroundColor = Constants.appColors.chineseOrange
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "fp_homepage")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
 
         // DATETIME
-        dateLabel.textColor = Constants.appColors.softBlack
-        calorieLabel.textColor = Constants.appColors.softBlack
-        calorieCountLabel.textColor = Constants.appColors.softBlack
+        dateLabel.textColor = Constants.appColors.orangeRed
+        calorieLabel.textColor = Constants.appColors.softGrey
+        calorieCountLabel.textColor = Constants.appColors.orangeRed
         
         let formatter = DateFormatter()
         //2016-12-08 03:37:22 +0000

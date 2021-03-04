@@ -27,6 +27,12 @@ class ViewController: UIViewController {
         // change background color
         self.view.backgroundColor = .white
         
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "foodShot")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+        
         logoLabel.textColor = Constants.appColors.orangeRed
         
         makeSolidButton(button: loginButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
