@@ -130,6 +130,7 @@ class SignUpViewController: UIViewController {
                         "height": 0,
                         "gender": "",
                         "weightChange": "",
+                        "exerciseAmt": "Medium", // TEMPORARY CHANGE LATER
                         "totalCalories": 0,
                         "caloriesConsumed": 0
                     ] as [String : Any]

@@ -9,8 +9,9 @@
 
 import Foundation
 import FirebaseAuth
-import Firebase
 import FirebaseFirestore
+
+
 
 func getCurrentUserID() -> String {
     // returns current user's userID as a string
@@ -18,6 +19,7 @@ func getCurrentUserID() -> String {
     
     return userID
 }
+
 
 
 func checkUserIn() -> Bool {
@@ -32,6 +34,9 @@ func checkUserIn() -> Bool {
 }
 
 
+
+// MARK: Calorie Management
+
 // COMPUTING CALORIE TOTAL
 // Harris-Benedict Equation
 
@@ -39,7 +44,9 @@ func calcMaleCalories(weightLB: Int,  heightCM: Int, ageYR: Int, exerciseAmt: St
     // calculate male calories total
     
     let weightKG = Double(weightLB) / 2.205
-    var BMR = (10 * weightKG) + (6.25 * Double(heightCM)) - (5 * Double(ageYR)) + 5
+    
+    // BMR : Basal Metabolic Rate
+    let BMR = (10 * weightKG) + (6.25 * Double(heightCM)) - (5 * Double(ageYR)) + 5
     var calorieTotal = -1.00
     
     switch exerciseAmt {
@@ -56,11 +63,13 @@ func calcMaleCalories(weightLB: Int,  heightCM: Int, ageYR: Int, exerciseAmt: St
     return calorieTotal
 }
 
+
+
 func calcFemaleCalories(weightLB: Int, heightCM: Int, ageYR: Int, exerciseAmt: String) -> Double {
     // calculate female calories total
     
     let weightKG = Double(weightLB) / 2.205
-    var BMR = (10 * weightKG) + (6.25 * Double(heightCM)) - (5 * Double(ageYR)) - 161
+    let BMR = (10 * weightKG) + (6.25 * Double(heightCM)) - (5 * Double(ageYR)) - 161
     var calorieTotal = -1.00
     
     switch exerciseAmt {

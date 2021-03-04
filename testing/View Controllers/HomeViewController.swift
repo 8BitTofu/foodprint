@@ -50,8 +50,8 @@ class HomeViewController: UIViewController {
         
         
         // Personalizing Calorie Count
-        var totalCalories = ""
-        var caloriesConsumed = ""
+        var totalCalories = 0
+        var caloriesConsumed = 0
         
         let db = Firestore.firestore()
         let userID : String = getCurrentUserID()
@@ -59,8 +59,8 @@ class HomeViewController: UIViewController {
         
         userRef.getDocument(source: .cache) { (document, error) in
             if let document = document {
-                totalCalories = document.get("totalCalories") as! String
-                caloriesConsumed = document.get("caloriesConsumed") as! String
+                totalCalories = document.get("totalCalories") as! Int
+                caloriesConsumed = document.get("caloriesConsumed") as! Int
                 
                 self.setCalories(totalCalories: totalCalories, caloriesConsumed: caloriesConsumed)
             } else {
@@ -70,11 +70,11 @@ class HomeViewController: UIViewController {
     }
     
 
-    func setCalories(totalCalories: String, caloriesConsumed: String) -> Void {
+    func setCalories(totalCalories: Int, caloriesConsumed: Int) -> Void {
         var calText = ""
         
-        calText += caloriesConsumed + " / " + totalCalories + "!"
-        calorieLabel.text = calText
+        calText += String(caloriesConsumed) + " / " + String(totalCalories)
+        calorieCountLabel.text = calText
     }
 }
 
