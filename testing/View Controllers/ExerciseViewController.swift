@@ -32,7 +32,13 @@ class ExerciseViewController: UIViewController{
     
     @IBOutlet weak var logoLabel: UILabel!
     
+    @IBOutlet weak var selectLabel: UILabel!
     
+    @IBOutlet weak var optionLowLabel: UILabel!
+    
+    @IBOutlet weak var optionMediumLabel: UILabel!
+    
+    @IBOutlet weak var optionHighLabel: UILabel!
     
     
     // define exercise state
@@ -53,6 +59,11 @@ class ExerciseViewController: UIViewController{
         makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         
         backButton.tintColor = Constants.appColors.mustard
+        
+        selectLabel.textColor = Constants.appColors.orangeRed
+        optionLowLabel.textColor = Constants.appColors.softBlack
+        optionMediumLabel.textColor = Constants.appColors.softBlack
+        optionHighLabel.textColor = Constants.appColors.softBlack
         
         
         setUpElements()

@@ -21,3 +21,10 @@ func makeSolidButton(button: UIButton, backgroundColor: UIColor, textColor: UICo
     
     button.setTitleColor(textColor, for: .normal)
 }
+
+func makeSolidLabel(label: UILabel, backgroundColor: UIColor, textColor: UIColor) {
+    // label.layer.cornerRadius = 10
+    label.backgroundColor = backgroundColor
+    
+    label.textColor = textColor
+}

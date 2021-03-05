@@ -686,7 +686,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="cIA-5v-P1C"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -770,10 +770,13 @@
                     <connections>
                         <outlet property="backButton" destination="sGI-aU-JZ2" id="K5b-im-TDp"/>
                         <outlet property="errorLabel" destination="xLJ-fp-7f2" id="Uw6-kY-5fA"/>
+                        <outlet property="femaleLabel" destination="nHK-fU-bZA" id="zeH-jG-BNp"/>
                         <outlet property="logoLabel" destination="3dQ-ZW-lNA" id="JcV-ug-Ot5"/>
+                        <outlet property="maleLabel" destination="owW-4O-Xyv" id="O4N-3p-W7p"/>
                         <outlet property="nextButton" destination="YAx-aS-zj0" id="P9g-c3-va5"/>
                         <outlet property="radioButtonFemale" destination="UWC-1v-WxQ" id="2qG-lo-CbD"/>
                         <outlet property="radioButtonMale" destination="2bX-zw-AfF" id="Hwu-UU-HF9"/>
+                        <outlet property="selectGenderLabel" destination="kEC-dy-0ZS" id="xqz-pS-tf8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uP-vX-UMh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -858,7 +861,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="oPi-K6-Lwy"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -970,9 +973,13 @@
                         <outlet property="exerciseLabel" destination="XKc-uO-uZN" id="OU1-5Y-nwz"/>
                         <outlet property="logoLabel" destination="rNJ-b8-G96" id="mLb-SA-Egn"/>
                         <outlet property="nextButton" destination="lDI-kq-ORb" id="CJP-Tj-Bg9"/>
+                        <outlet property="optionHighLabel" destination="r4r-gx-spJ" id="A4S-SH-VB4"/>
+                        <outlet property="optionLowLabel" destination="huw-14-Tia" id="m0Z-uy-iE1"/>
+                        <outlet property="optionMediumLabel" destination="2Kw-Qs-gaP" id="mde-cl-aq1"/>
                         <outlet property="radioButtonHigh" destination="0g3-Ja-rUn" id="ypz-QY-7ms"/>
                         <outlet property="radioButtonLow" destination="YGH-28-Vyo" id="5DV-As-eKz"/>
                         <outlet property="radioButtonMedium" destination="RFV-aY-2tt" id="S0h-d4-GSS"/>
+                        <outlet property="selectLabel" destination="XKc-uO-uZN" id="nVm-Ya-Mpv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aen-4E-UAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

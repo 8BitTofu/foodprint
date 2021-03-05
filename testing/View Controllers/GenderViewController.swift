@@ -26,6 +26,12 @@ class GenderViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var selectGenderLabel: UILabel!
+    
+    @IBOutlet weak var maleLabel: UILabel!
+    
+    @IBOutlet weak var femaleLabel: UILabel!
+    
     
     // define gender state
     // let 0 = male
@@ -44,6 +50,11 @@ class GenderViewController: UIViewController {
         logoLabel.textColor = Constants.appColors.orangeRed
         
         makeSolidButton(button: nextButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        
+        selectGenderLabel.text = "Select Biological Gender"
+        selectGenderLabel.textColor = Constants.appColors.orangeRed
+        maleLabel.textColor = Constants.appColors.softBlack
+        femaleLabel.textColor = Constants.appColors.softBlack
         
         backButton.tintColor = Constants.appColors.mustard
         
