@@ -43,14 +43,24 @@ class HomeViewController: UIViewController {
         calorieLabel.textColor = Constants.appColors.softGrey
         calorieCountLabel.textColor = Constants.appColors.orangeRed
         
-        let formatter = DateFormatter()
-        //2016-12-08 03:37:22 +0000
-        formatter.dateFormat = "MM.dd.yyyy"
-        let now = Date()
-        let dateString = formatter.string(from:now)
-        NSLog("%@", dateString)
+        let dateString = Utilities.getDate()
         
         dateLabel.text = dateString
+        
+        
+        // MARK: Checking Same Day
+        
+        if lastDate != dateString {
+            lastDate = dateString
+            sameDay = false
+        }
+        else {
+            print("lastDate: " + lastDate)
+            print("today: " + dateString)
+            sameDay = true
+        }
+        
+        
         
         
         
@@ -64,12 +74,48 @@ class HomeViewController: UIViewController {
         
         userRef.getDocument(source: .cache) { (document, error) in
             if let document = document {
-                totalCalories = document.get("totalCalories") as! Int
-                caloriesConsumed = document.get("caloriesConsumed") as! Int
+                let height = document.get("height") as! Int
+                let weight = document.get("weight") as! Int
+                let age = document.get("age") as! Int
+                let exerciseAmt = document.get("exerciseAmt") as! String
+                let gender = document.get("gender") as! String
+                let caloriesConsumed = document.get("caloriesConsumed") as! Int
+                
+                if (gender == "Male") {
+                    totalCalories = Int(calcMaleCalories(weightLB: weight, heightCM: height, ageYR: age, exerciseAmt: exerciseAmt))
+                }
+                
+                if (gender == "Female") {
+                    totalCalories = Int(calcFemaleCalories(weightLB: weight, heightCM: height, ageYR: age, exerciseAmt: exerciseAmt))
+                }
+                
+                
+                // update totalCalories data field in user
+                userRef.updateData([
+                                    "totalCalories": totalCalories
+                ]) { err in
+                    if let err = err {
+                        print("Error updating total calories: \(err)")
+                    } else {
+                        print("Total calories successfully updated")
+                    }
+                }
+                
+                
+                // if new day, reset calories consumed
+                if sameDay == false {
+                    userRef.updateData([
+                        "caloriesConsumed": 0
+                    ]) { err in
+                        if err != nil {
+                            print("Error resetting calories consumed due to new day")
+                        } else {
+                            print("Calories consumed reset due to new day")
+                        }
+                    }
+                }
                 
                 self.setCalories(totalCalories: totalCalories, caloriesConsumed: caloriesConsumed)
-            } else {
-                print("Cannot access current user's calorie count / consumed")
             }
         }
     }
@@ -102,5 +148,3 @@ class HomeViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
 }
-
-

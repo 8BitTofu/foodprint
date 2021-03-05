@@ -34,6 +34,7 @@
 		1FCFB75C25DFC83800259149 /* TabbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCFB75B25DFC83800259149 /* TabbedViewController.swift */; };
 		1FD4460A25CA9704009CEF4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FD4460925CA9704009CEF4A /* GoogleService-Info.plist */; };
 		1FEFC6AA25CAA73A00CE8523 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEFC6A925CAA73A00CE8523 /* Utilities.swift */; };
+		1FF1ABE125F2674400E8D25C /* UpdateBMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1ABE025F2674400E8D25C /* UpdateBMViewController.swift */; };
 		1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6913F25F2521900E06C5C /* AddMealViewController.swift */; };
 		4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C76A25ED04E3005A32FC /* DBHelper.swift */; };
 		4488C78325ED059F005A32FC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C78225ED059F005A32FC /* Recipe.swift */; };
@@ -72,6 +73,7 @@
 		1FCFB75B25DFC83800259149 /* TabbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedViewController.swift; sourceTree = "<group>"; };
 		1FD4460925CA9704009CEF4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FEFC6A925CAA73A00CE8523 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		1FF1ABE025F2674400E8D25C /* UpdateBMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBMViewController.swift; sourceTree = "<group>"; };
 		1FF6913F25F2521900E06C5C /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
 		4488C76A25ED04E3005A32FC /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		4488C78225ED059F005A32FC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				1F64ED6A25F2133B00676682 /* AccountViewController.swift */,
 				1F64ED8325F2215700676682 /* DeleteAccountViewController.swift */,
 				1FF6913F25F2521900E06C5C /* AddMealViewController.swift */,
+				1FF1ABE025F2674400E8D25C /* UpdateBMViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB2FB5B25C8D57100DCD524 /* ViewController.swift in Sources */,
+				1FF1ABE125F2674400E8D25C /* UpdateBMViewController.swift in Sources */,
 				1FB2FB5725C8D57100DCD524 /* AppDelegate.swift in Sources */,
 				1F09443725DD363C006ACEC7 /* WelcomeViewController.swift in Sources */,
 				1FC8639425DE9CE0004B4B31 /* currentUser.swift in Sources */,

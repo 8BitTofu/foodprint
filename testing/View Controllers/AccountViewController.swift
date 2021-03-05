@@ -128,23 +128,29 @@ class AccountViewController: UIViewController {
     
     @IBAction func updateWeightButtonTapped(_ sender: Any) {
         updating = true
+        updateBM = "weight"
+        transitionToUpdateBM()
     }
     
     @IBAction func updateHeightButtonTapped(_ sender: Any) {
         updating = true
+        updateBM = "height"
+        transitionToUpdateBM()
     }
     
     @IBAction func updateAgeButtonTapped(_ sender: Any) {
         updating = true
+        updateBM = "age"
+        transitionToUpdateBM()
     }
     
     @IBAction func updateWeightOptionButtonTapped(_ sender: Any) {
         updating = true
+        transitionToExercise()
     }
     
     @IBAction func updateExerciseButtonTapped(_ sender: Any) {
         updating = true
-        transitionToExercise()
     }
     
     
@@ -184,6 +190,14 @@ class AccountViewController: UIViewController {
         let exerciseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.exerciseViewController) as? ExerciseViewController
         
         view.window?.rootViewController = exerciseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToUpdateBM() {
+        // transition to welcome screen
+        let updateBMViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.updateBMViewController) as? UpdateBMViewController
+        
+        view.window?.rootViewController = updateBMViewController
         view.window?.makeKeyAndVisible()
     }
     

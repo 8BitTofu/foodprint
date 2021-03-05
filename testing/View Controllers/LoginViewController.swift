@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -98,6 +98,22 @@ class LoginViewController: UIViewController {
                 else {
                     // set user state as returning
                     setReturning()
+                    
+                    let db = Firestore.firestore()
+                    let userID : String = (Auth.auth().currentUser?.uid)!
+                    let userRef = db.collection("users").document(userID)
+                    
+                    // update the height/weight/age of current user (get input)
+                    userRef.updateData([
+                        "lastLogin": Utilities.getDate()
+                    ]) { err in
+                        if let err = err {
+                            print("Error updating last login time: \(err)")
+                        } else {
+                            print("Last login successfully updated")
+                        }
+                    }
+                    
                     
                     // transition to welcome screen
                     self.transitionToWelcome()

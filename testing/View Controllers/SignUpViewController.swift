@@ -45,6 +45,7 @@ class SignUpViewController: UIViewController {
         
         backButton.tintColor = Constants.appColors.mustard
         
+    
         
         
         setUpElements()
@@ -121,6 +122,7 @@ class SignUpViewController: UIViewController {
                     let userTableRef = db.collection("users")
 
                     let userDoc = userTableRef.document(result!.user.uid)
+                    
 
                     // show data fields
                     let dataFields = [
@@ -134,7 +136,8 @@ class SignUpViewController: UIViewController {
                         "weightChange": "",
                         "exerciseAmt": "Medium", // TEMPORARY CHANGE LATER
                         "totalCalories": 0,
-                        "caloriesConsumed": 0
+                        "caloriesConsumed": 0,
+                        "lastLogin": Utilities.getDate()
                     ] as [String : Any]
 
                     // set the data fields

@@ -25,6 +25,7 @@ class Constants {
         static let accountViewController = "accountVC"
         static let deleteAccountViewController = "deleteAccountVC"
         static let addMealViewController = "addMealVC"
+        static let updateBMViewController = "updateBMVC"
         
     }
     
