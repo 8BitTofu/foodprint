@@ -76,6 +76,7 @@ class WelcomeViewController: UIViewController {
                     exerciseAmt = document.get("exerciseAmt") as! String
                     gender = document.get("gender") as! String
                     
+                    print(firstName)
                     
                     // if user is new, calculate the calorie total
                     
@@ -117,6 +118,7 @@ class WelcomeViewController: UIViewController {
                 }
                 
                 
+                print("firstName: " + firstName)
                 self.setWelcomeName(firstName: firstName, lastName: lastName)
             } else {
                 print("Cannot access current user's firstname and lastname")

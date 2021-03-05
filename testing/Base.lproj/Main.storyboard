@@ -66,7 +66,6 @@
                         <constraints>
                             <constraint firstItem="t15-Bo-53T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="A32-PC-iCA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jf8-xo-Hbk" secondAttribute="trailing" constant="40" id="AJy-VL-ogD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jf8-xo-Hbk" secondAttribute="trailing" constant="40" id="GsZ-CE-joU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t15-Bo-53T" secondAttribute="bottom" constant="40" id="JIc-vd-WpS"/>
                             <constraint firstItem="Jf8-xo-Hbk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="dIq-eC-Cp5"/>
                             <constraint firstItem="t15-Bo-53T" firstAttribute="top" secondItem="Jf8-xo-Hbk" secondAttribute="bottom" constant="158" id="h2b-aQ-8tq"/>
@@ -240,6 +239,208 @@
             </objects>
             <point key="canvasLocation" x="4491" y="-39"/>
         </scene>
+        <!--Add Meal View Controller-->
+        <scene sceneID="L0r-U8-5ug">
+            <objects>
+                <viewController storyboardIdentifier="addMealVC" id="Rka-il-2B8" customClass="AddMealViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xp9-7S-WMb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WI4-oR-5i0">
+                                <rect key="frame" x="154" y="74" width="82" height="29"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeI-L7-g6u">
+                                <rect key="frame" x="40" y="74" width="26.333333333333329" height="22"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="hUH-rp-8hP" eventType="touchUpInside" id="1wN-hP-iJc"/>
+                                    <action selector="backButtonTapped:" destination="Rka-il-2B8" eventType="touchUpInside" id="ErN-lb-oQ2"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cgL-bM-2GD">
+                                <rect key="frame" x="40" y="199" width="310" height="384"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of food was it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHF-N9-3mY">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvS-UZ-PoI">
+                                        <rect key="frame" x="0.0" y="44" width="310" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4w7-hn-DZV">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="0vM-VV-Mqe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Button" image="circle" catalog="system"/>
+                                                <state key="selected" image="circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="radioButtonTapped:" destination="Rka-il-2B8" eventType="touchUpInside" id="oZ5-t8-DrJ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUU-LM-6j1">
+                                                <rect key="frame" x="50" y="0.0" width="260" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MK-M3-BOQ">
+                                        <rect key="frame" x="0.0" y="88" width="310" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGz-mE-9FZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="bTt-es-wez"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Button" image="circle" catalog="system"/>
+                                                <state key="selected" image="circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="radioButtonTapped:" destination="Rka-il-2B8" eventType="touchUpInside" id="J0C-Bv-AFn"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-jM-nMq">
+                                                <rect key="frame" x="50" y="0.0" width="260" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AcN-h3-ofb">
+                                        <rect key="frame" x="0.0" y="132" width="310" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQY-Bp-kbL">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="nHt-7Z-RHA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Button" image="circle" catalog="system"/>
+                                                <state key="selected" image="circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="radioButtonTapped:" destination="Rka-il-2B8" eventType="touchUpInside" id="MpH-KB-Yc5"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBI-G8-ECj">
+                                                <rect key="frame" x="50" y="0.0" width="260" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKk-51-TaL">
+                                        <rect key="frame" x="0.0" y="176" width="310" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oj-pS-om5">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="UeE-26-5o7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Button" image="circle" catalog="system"/>
+                                                <state key="selected" image="circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="radioButtonTapped:" destination="Rka-il-2B8" eventType="touchUpInside" id="ekH-lo-Vg0"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUB-WU-GAw">
+                                                <rect key="frame" x="50" y="0.0" width="260" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many calories?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsd-ka-fTB">
+                                        <rect key="frame" x="0.0" y="220" width="310" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number of Calories" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVZ-ZP-aFg">
+                                        <rect key="frame" x="0.0" y="264" width="310" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8tB-HF-ooP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkG-FE-q85">
+                                        <rect key="frame" x="0.0" y="334" width="310" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5hT-DW-NuE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bco-Bs-3dW">
+                                <rect key="frame" x="40" y="710" width="310" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CNv-8t-s11"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Meal"/>
+                                <connections>
+                                    <action selector="addMealTapped:" destination="Rka-il-2B8" eventType="touchUpInside" id="wE0-M4-GFq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RYM-Cs-K2F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BeI-L7-g6u" firstAttribute="leading" secondItem="RYM-Cs-K2F" secondAttribute="leading" constant="40" id="75x-Hp-LUn"/>
+                            <constraint firstItem="WI4-oR-5i0" firstAttribute="top" secondItem="RYM-Cs-K2F" secondAttribute="top" constant="30" id="8Ec-da-TFl"/>
+                            <constraint firstItem="RYM-Cs-K2F" firstAttribute="trailing" secondItem="WI4-oR-5i0" secondAttribute="trailing" constant="154" id="BT8-rK-iM3"/>
+                            <constraint firstItem="RYM-Cs-K2F" firstAttribute="trailing" secondItem="cgL-bM-2GD" secondAttribute="trailing" constant="40" id="JCe-zD-rfz"/>
+                            <constraint firstItem="Bco-Bs-3dW" firstAttribute="leading" secondItem="RYM-Cs-K2F" secondAttribute="leading" constant="40" id="M0A-bF-hB0"/>
+                            <constraint firstItem="RYM-Cs-K2F" firstAttribute="bottom" secondItem="Bco-Bs-3dW" secondAttribute="bottom" constant="50" id="NAJ-4Q-NY0"/>
+                            <constraint firstItem="RYM-Cs-K2F" firstAttribute="trailing" secondItem="Bco-Bs-3dW" secondAttribute="trailing" constant="40" id="TvO-tx-ZDV"/>
+                            <constraint firstItem="cgL-bM-2GD" firstAttribute="leading" secondItem="RYM-Cs-K2F" secondAttribute="leading" constant="40" id="o76-uO-N41"/>
+                            <constraint firstItem="RYM-Cs-K2F" firstAttribute="trailing" secondItem="WI4-oR-5i0" secondAttribute="trailing" constant="154" id="ozo-Po-0iJ"/>
+                            <constraint firstItem="cgL-bM-2GD" firstAttribute="centerX" secondItem="WI4-oR-5i0" secondAttribute="centerX" id="pq2-jg-56S"/>
+                            <constraint firstItem="BeI-L7-g6u" firstAttribute="top" secondItem="RYM-Cs-K2F" secondAttribute="top" constant="30" id="s61-AT-ho2"/>
+                            <constraint firstItem="cgL-bM-2GD" firstAttribute="top" secondItem="WI4-oR-5i0" secondAttribute="bottom" constant="96" id="uyu-Sh-1rE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addMealButton" destination="Bco-Bs-3dW" id="JxA-d6-h14"/>
+                        <outlet property="backButton" destination="BeI-L7-g6u" id="xcL-b9-7Dm"/>
+                        <outlet property="breakfastLabel" destination="uUU-LM-6j1" id="JYb-bk-bdJ"/>
+                        <outlet property="breakfastRadioButton" destination="4w7-hn-DZV" id="LS5-Nz-xf7"/>
+                        <outlet property="caloriesTextField" destination="MVZ-ZP-aFg" id="aPl-bU-hvN"/>
+                        <outlet property="dinnerLabel" destination="wBI-G8-ECj" id="KYE-rY-7CG"/>
+                        <outlet property="dinnerRadioButton" destination="zQY-Bp-kbL" id="I3j-gz-NgK"/>
+                        <outlet property="errorLabel" destination="wkG-FE-q85" id="Vce-7d-bfz"/>
+                        <outlet property="howCaloriesLabel" destination="lsd-ka-fTB" id="tCC-mX-D51"/>
+                        <outlet property="logoLabel" destination="WI4-oR-5i0" id="qs6-bo-fyS"/>
+                        <outlet property="lunchLabel" destination="5LE-jM-nMq" id="oK5-vy-Lzl"/>
+                        <outlet property="lunchRadioButton" destination="BGz-mE-9FZ" id="k5F-Wk-AYS"/>
+                        <outlet property="otherLabel" destination="hUB-WU-GAw" id="ASZ-Ke-hJF"/>
+                        <outlet property="otherRadioButton" destination="2oj-pS-om5" id="ea5-6y-O7m"/>
+                        <outlet property="whatFoodLabel" destination="CHF-N9-3mY" id="tx9-9p-fJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dBM-je-iY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3380" y="-1393"/>
+        </scene>
         <!--Home-->
         <scene sceneID="5CR-X0-OHl">
             <objects>
@@ -248,33 +449,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DATE HERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsZ-EQ-ubl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DATE HERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsZ-EQ-ubl">
                                 <rect key="frame" x="111" y="135" width="168" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="23"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="560 / 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSu-zZ-p5t">
-                                <rect key="frame" x="99" y="228" width="192" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="560 / 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSu-zZ-p5t">
+                                <rect key="frame" x="75" y="228" width="240" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="6Ja-U0-jyv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="60"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CALORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Io-jA-Hm4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Io-jA-Hm4">
                                 <rect key="frame" x="160" y="288" width="70" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="23"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7M-hF-3VF">
+                                <rect key="frame" x="40" y="680" width="310" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4f0-HN-4UG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Meal"/>
+                                <connections>
+                                    <action selector="addMealTapped:" destination="xp7-Gs-Kd6" eventType="touchUpInside" id="SR7-65-vX3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Esp-6B-BkH"/>
                         <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="YSu-zZ-p5t" firstAttribute="top" secondItem="HsZ-EQ-ubl" secondAttribute="bottom" constant="70" id="7NW-Oc-Ztn"/>
+                            <constraint firstItem="Esp-6B-BkH" firstAttribute="trailing" secondItem="E7M-hF-3VF" secondAttribute="trailing" constant="40" id="BXS-Jz-pco"/>
+                            <constraint firstItem="YSu-zZ-p5t" firstAttribute="top" secondItem="w1i-l4-LVk" secondAttribute="top" constant="228" id="Hb6-RH-ieD"/>
+                            <constraint firstItem="YSu-zZ-p5t" firstAttribute="centerX" secondItem="0Io-jA-Hm4" secondAttribute="centerX" id="KVM-pN-dF0"/>
+                            <constraint firstItem="0Io-jA-Hm4" firstAttribute="top" secondItem="YSu-zZ-p5t" secondAttribute="bottom" id="RCf-RK-08P"/>
+                            <constraint firstItem="YSu-zZ-p5t" firstAttribute="centerX" secondItem="HsZ-EQ-ubl" secondAttribute="centerX" id="SsA-bP-pfP"/>
+                            <constraint firstItem="E7M-hF-3VF" firstAttribute="leading" secondItem="Esp-6B-BkH" secondAttribute="leading" constant="40" id="lIX-3W-6Gh"/>
+                            <constraint firstItem="Esp-6B-BkH" firstAttribute="bottom" secondItem="E7M-hF-3VF" secondAttribute="bottom" constant="31" id="nK5-Ry-5JG"/>
+                            <constraint firstItem="YSu-zZ-p5t" firstAttribute="centerX" secondItem="E7M-hF-3VF" secondAttribute="centerX" id="pdW-FR-PYK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="ZHX-fK-Nt8"/>
                     <connections>
+                        <outlet property="addMealButton" destination="E7M-hF-3VF" id="1l3-Ak-pRb"/>
                         <outlet property="calorieCountLabel" destination="YSu-zZ-p5t" id="9pu-Hx-Q2e"/>
                         <outlet property="calorieLabel" destination="0Io-jA-Hm4" id="cvK-Jm-CDc"/>
                         <outlet property="dateLabel" destination="HsZ-EQ-ubl" id="gbt-qi-sdQ"/>

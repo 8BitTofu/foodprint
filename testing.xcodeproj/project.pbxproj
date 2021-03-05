@@ -34,6 +34,7 @@
 		1FCFB75C25DFC83800259149 /* TabbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCFB75B25DFC83800259149 /* TabbedViewController.swift */; };
 		1FD4460A25CA9704009CEF4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FD4460925CA9704009CEF4A /* GoogleService-Info.plist */; };
 		1FEFC6AA25CAA73A00CE8523 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEFC6A925CAA73A00CE8523 /* Utilities.swift */; };
+		1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6913F25F2521900E06C5C /* AddMealViewController.swift */; };
 		4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C76A25ED04E3005A32FC /* DBHelper.swift */; };
 		4488C78325ED059F005A32FC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C78225ED059F005A32FC /* Recipe.swift */; };
 		80DD2799A2FD38377CE3AD21 /* Pods_testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D049976888F907BB8A4DD87 /* Pods_testing.framework */; };
@@ -71,6 +72,7 @@
 		1FCFB75B25DFC83800259149 /* TabbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedViewController.swift; sourceTree = "<group>"; };
 		1FD4460925CA9704009CEF4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FEFC6A925CAA73A00CE8523 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		1FF6913F25F2521900E06C5C /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
 		4488C76A25ED04E3005A32FC /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		4488C78225ED059F005A32FC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5D049976888F907BB8A4DD87 /* Pods_testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 				1F4496C525EA5456000DFADD /* ExerciseViewController.swift */,
 				1F64ED6A25F2133B00676682 /* AccountViewController.swift */,
 				1F64ED8325F2215700676682 /* DeleteAccountViewController.swift */,
+				1FF6913F25F2521900E06C5C /* AddMealViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				1F64ED8425F2215700676682 /* DeleteAccountViewController.swift in Sources */,
 				4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */,
 				1F4496C625EA5456000DFADD /* ExerciseViewController.swift in Sources */,
+				1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */,
 				1F2096C025CAB2F000C343CB /* Constants.swift in Sources */,
 				4488C78325ED059F005A32FC /* Recipe.swift in Sources */,
 			);

@@ -21,12 +21,15 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var calorieLabel: UILabel!
     
+    @IBOutlet weak var addMealButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // MARK: UI / Aesthetics
         
+        makeSolidButton(button: addMealButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         self.view.backgroundColor = .white
         
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -71,12 +74,32 @@ class HomeViewController: UIViewController {
         }
     }
     
-
+    
+    // MARK: Button Actions
+    
+    @IBAction func addMealTapped(_ sender: Any) {
+        transitionToAddMeal()
+    }
+    
+    
+    
+    
+    // MARK: Set Calories
+    
     func setCalories(totalCalories: Int, caloriesConsumed: Int) -> Void {
         var calText = ""
         
         calText += String(caloriesConsumed) + " / " + String(totalCalories)
         calorieCountLabel.text = calText
+    }
+    
+    
+    func transitionToAddMeal() {
+        // transition to account screen
+        let addMealViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.addMealViewController) as? AddMealViewController
+        
+        view.window?.rootViewController = addMealViewController
+        view.window?.makeKeyAndVisible()
     }
 }
 
