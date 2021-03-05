@@ -67,6 +67,17 @@ class ExerciseViewController: UIViewController{
         optionHighLabel.textColor = Constants.appColors.softBlack
         
         
+        // MARK: Updating Check
+        
+        if (updating == true) {
+            nextButton.setTitle("Update", for: .normal)
+        }
+        
+        else {
+            nextButton.setTitle("Next", for: .normal)
+        }
+        
+        
         setUpElements()
     }
     
@@ -103,29 +114,35 @@ class ExerciseViewController: UIViewController{
         // when clicking back button - delete all previous progress
         // on making a user account
         
-        // get current user data
-        let db = Firestore.firestore()
-        let userID : String = (Auth.auth().currentUser?.uid)!
-        
-        // delete user document from users collection on Firebase
-        db.collection("users").document(userID).delete() { err in
-            if let err = err {
-                print("Error removing document: \(err)")
-            } else {
-                print("Document successfully removed!")
-            }
+        if (updating == true) {
+            transitionToAccount()
         }
         
-        // delete user account from authentification side
-        Auth.auth().currentUser?.delete(completion: { err in
-            if let err = err {
-                print("Error removing user: \(err)")
-            } else {
-                print("User successfully removed!")
+        else {
+            // get current user data
+            let db = Firestore.firestore()
+            let userID : String = (Auth.auth().currentUser?.uid)!
+            
+            // delete user document from users collection on Firebase
+            db.collection("users").document(userID).delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                }
             }
-        })
-        
-        self.transitionToBase()
+            
+            // delete user account from authentification side
+            Auth.auth().currentUser?.delete(completion: { err in
+                if let err = err {
+                    print("Error removing user: \(err)")
+                } else {
+                    print("User successfully removed!")
+                }
+            })
+            
+            self.transitionToBase()
+        }
     }
     
     
@@ -166,8 +183,19 @@ class ExerciseViewController: UIViewController{
                 }
             }
             
+            // updating check
+            if (updating == true) {
+                nextButton.setTitle("Success!", for: .normal)
+                makeSolidButton(button: nextButton, backgroundColor: .green, textColor: .white)
+                
+                updating = false
+                transitionToAccount()
+            }
+            
             // go to welcome splash screen
-            transitionToWelcome()
+            else {
+                transitionToWelcome()
+            }
         }
     }
     
@@ -189,6 +217,14 @@ class ExerciseViewController: UIViewController{
         let welcomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.welcomeViewController) as? WelcomeViewController
         
         view.window?.rootViewController = welcomeViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToAccount() {
+        // transition to home screen
+        let accountViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.accountViewController) as? AccountViewController
+        
+        view.window?.rootViewController = accountViewController
         view.window?.makeKeyAndVisible()
     }
     

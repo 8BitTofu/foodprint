@@ -127,18 +127,24 @@ class AccountViewController: UIViewController {
     // MARK: Update Button Tapped
     
     @IBAction func updateWeightButtonTapped(_ sender: Any) {
+        updating = true
     }
     
     @IBAction func updateHeightButtonTapped(_ sender: Any) {
+        updating = true
     }
     
     @IBAction func updateAgeButtonTapped(_ sender: Any) {
+        updating = true
     }
     
     @IBAction func updateWeightOptionButtonTapped(_ sender: Any) {
+        updating = true
     }
     
     @IBAction func updateExerciseButtonTapped(_ sender: Any) {
+        updating = true
+        transitionToExercise()
     }
     
     
@@ -155,6 +161,8 @@ class AccountViewController: UIViewController {
     }
     
     
+    // MARK: Transitions
+    
     func transitionToHome() {
         // transition to home screen
         let tabbedViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabbedViewController) as? TabbedViewController
@@ -168,6 +176,14 @@ class AccountViewController: UIViewController {
         let deleteAccountViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.deleteAccountViewController) as? DeleteAccountViewController
         
         view.window?.rootViewController = deleteAccountViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToExercise() {
+        // transition to welcome screen
+        let exerciseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.exerciseViewController) as? ExerciseViewController
+        
+        view.window?.rootViewController = exerciseViewController
         view.window?.makeKeyAndVisible()
     }
     

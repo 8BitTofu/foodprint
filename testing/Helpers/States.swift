@@ -45,3 +45,8 @@ func setNew() -> Void {
 
 var lastDate = ""
 var sameDay: Bool = true
+
+
+// MARK: Update States
+ 
+var updating: Bool = false
