@@ -12,6 +12,8 @@ import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
     
+    // MARK: Buttons / Labels
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -33,8 +35,8 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         
-        // UI / AESTHETICS
-        // change background color
+        // MARK: UI / Aesthetics
+        
         self.view.backgroundColor = .white
         
         logoLabel.textColor = Constants.appColors.orangeRed

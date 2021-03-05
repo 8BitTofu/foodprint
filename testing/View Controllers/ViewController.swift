@@ -11,6 +11,8 @@ import HealthKit
 
 class ViewController: UIViewController {
 
+    // MARK: Buttons / Labels
+    
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var signUpButton: UIButton!
@@ -23,8 +25,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        // UI / AESTHETICS
-        // change background color
+        // MARK: UI / Aesthetics
+        
         self.view.backgroundColor = .white
         
         /*

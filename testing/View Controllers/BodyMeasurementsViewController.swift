@@ -15,6 +15,8 @@ import FirebaseFirestore
 
 class BodyMeasurementsViewController: UIViewController {
     
+    // MARK: Buttons / Labels
+    
     @IBOutlet weak var heightTextField: UITextField!
     
     @IBOutlet weak var weightTextField: UITextField!
@@ -34,8 +36,8 @@ class BodyMeasurementsViewController: UIViewController {
         super.viewDidLoad()
         
         
-        // UI / AESTHETICS
-        // change background color
+        // MARK: UI / Aesthetics
+        
         self.view.backgroundColor = .white
         
         logoLabel.textColor = Constants.appColors.orangeRed

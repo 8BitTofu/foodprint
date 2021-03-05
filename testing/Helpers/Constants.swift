@@ -22,6 +22,9 @@ class Constants {
         static let bodyMeasurementsViewController = "bodyMeasurementsVC"
         static let genderViewController = "genderVC"
         static let exerciseViewController = "exerciseVC"
+        static let accountViewController = "accountVC"
+        static let deleteAccountViewController = "deleteAccountVC"
+        
     }
     
     class measureList {

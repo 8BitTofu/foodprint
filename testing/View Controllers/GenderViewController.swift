@@ -14,6 +14,8 @@ import FirebaseFirestore
 
 class GenderViewController: UIViewController {
 
+    // MARK: Buttons / Labels
+    
     @IBOutlet weak var radioButtonMale: UIButton!
     
     @IBOutlet weak var radioButtonFemale: UIButton!
@@ -43,8 +45,8 @@ class GenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // UI / AESTHETICS
-        // change background color
+        // MARK: UI / Aesthetics
+        
         self.view.backgroundColor = .white
         
         logoLabel.textColor = Constants.appColors.orangeRed

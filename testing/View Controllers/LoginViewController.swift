@@ -10,6 +10,8 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
+    // MARK: Buttons / Labels
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -28,8 +30,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // UI / AESTHETICS
-        // change background color
+        // MARK: UI / Aesthetics
+        
         self.view.backgroundColor = .white
         
         logoLabel.textColor = Constants.appColors.orangeRed

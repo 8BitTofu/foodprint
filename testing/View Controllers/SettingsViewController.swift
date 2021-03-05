@@ -12,6 +12,8 @@ import FirebaseFirestore
 
 class SettingsViewController: UIViewController {
     
+    // MARK: Buttons / Labels
+    
     @IBOutlet weak var signOutButton: UIButton!
     
     @IBOutlet weak var accountButton: UIButton!
@@ -29,7 +31,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // change background color
+        // MARK: UI / Aesthetics
+        
         self.view.backgroundColor = .white
         
         logoLabel.textColor = Constants.appColors.chineseOrange
@@ -42,7 +45,6 @@ class SettingsViewController: UIViewController {
         makeGhostButton(button: button3, color: Constants.appColors.chineseOrange)
         makeGhostButton(button: button4, color: Constants.appColors.chineseOrange)
         
-        // Do any additional setup after loading the view.
     }
     
     
@@ -58,6 +60,9 @@ class SettingsViewController: UIViewController {
         self.transitionToBase()
     }
     
+    @IBAction func accountTapped(_ sender: Any) {
+        transitionToAccount()
+    }
     
     
     // MARK: Transitions
@@ -67,6 +72,15 @@ class SettingsViewController: UIViewController {
         let baseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.baseViewController) as? ViewController
         
         view.window?.rootViewController = baseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    
+    func transitionToAccount() {
+        // transition to account screen
+        let accountViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.accountViewController) as? AccountViewController
+        
+        view.window?.rootViewController = accountViewController
         view.window?.makeKeyAndVisible()
     }
     

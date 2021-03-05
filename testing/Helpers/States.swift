@@ -8,6 +8,8 @@
 import Foundation
 
 
+// MARK: Welcome States
+
 var welcomeState = -1
         
 func isReturning() -> Bool {
@@ -37,3 +39,9 @@ func setNew() -> Void {
     // set user as a new user
     welcomeState = 0
 }
+
+
+// MARK: Datetime States
+
+var lastDate = ""
+var sameDay: Bool = true

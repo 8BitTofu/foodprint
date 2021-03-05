@@ -313,6 +313,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Account"/>
+                                        <connections>
+                                            <action selector="accountTapped:" destination="WtA-37-Th9" eventType="touchUpInside" id="vR3-AG-cjn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSM-qw-lbq">
                                         <rect key="frame" x="0.0" y="70" width="310" height="50"/>
@@ -368,6 +371,303 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSw-vK-Wog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4876.9230769230771" y="-1393.3649289099526"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="Wc2-rJ-2Qo">
+            <objects>
+                <viewController storyboardIdentifier="accountVC" id="hUH-rp-8hP" customClass="AccountViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tHd-Hk-uDx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h1-PB-6Gz">
+                                <rect key="frame" x="40" y="74" width="26.333333333333329" height="22"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="hUH-rp-8hP" eventType="touchUpInside" id="Rr2-Hc-NuV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STf-pM-ASb">
+                                <rect key="frame" x="40" y="710" width="310" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EkS-DB-ncp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Delete Account"/>
+                                <connections>
+                                    <action selector="deleteAccountButtonTapped:" destination="hUH-rp-8hP" eventType="touchUpInside" id="YDc-wS-8Xv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKi-h6-2Tv">
+                                <rect key="frame" x="154" y="74" width="82" height="29"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vie-Ca-gGl">
+                                <rect key="frame" x="40" y="167" width="310" height="480"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Weight (lbs)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vp-yo-GMN">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R57-qI-ZPU">
+                                        <rect key="frame" x="0.0" y="44" width="310" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jO-fE-YYY">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="GaQ-0B-bFh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQF-vb-7kC">
+                                                <rect key="frame" x="150" y="0.0" width="160" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Update"/>
+                                                <connections>
+                                                    <action selector="updateWeightButtonTapped:" destination="hUH-rp-8hP" eventType="touchUpInside" id="vhh-59-DIT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Height (cm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbH-Kd-fHK">
+                                        <rect key="frame" x="0.0" y="100" width="310" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-e9-dEp">
+                                        <rect key="frame" x="0.0" y="144" width="310" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvv-1w-LEb">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="O4S-gp-3rs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOq-EU-yyu">
+                                                <rect key="frame" x="150" y="0.0" width="160" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Update"/>
+                                                <connections>
+                                                    <action selector="updateHeightButtonTapped:" destination="hUH-rp-8hP" eventType="touchUpInside" id="cRn-BA-vY7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uu2-00-FyV">
+                                        <rect key="frame" x="0.0" y="200" width="310" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnS-UE-7k8">
+                                        <rect key="frame" x="0.0" y="244" width="310" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loF-kj-HI0">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cnl-3l-VEK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpY-04-k8C">
+                                                <rect key="frame" x="150" y="0.0" width="160" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Update"/>
+                                                <connections>
+                                                    <action selector="updateAgeButtonTapped:" destination="hUH-rp-8hP" eventType="touchUpInside" id="lcl-BQ-X9W"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Weight Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wng-m5-eDD">
+                                        <rect key="frame" x="0.0" y="300" width="310" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llf-D6-OEV">
+                                        <rect key="frame" x="0.0" y="344" width="310" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEIGHTOPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL9-Qm-NxR">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="WZC-rI-yTB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ES3-69-pe0">
+                                                <rect key="frame" x="150" y="0.0" width="160" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Update"/>
+                                                <connections>
+                                                    <action selector="updateWeightOptionButtonTapped:" destination="hUH-rp-8hP" eventType="touchUpInside" id="Knp-uB-5e0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Exercise Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udp-sj-1hf">
+                                        <rect key="frame" x="0.0" y="400" width="310" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkj-Wo-gqo">
+                                        <rect key="frame" x="0.0" y="444" width="310" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ve-1A-S7G">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="6xu-7v-MNu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drj-hS-G0a">
+                                                <rect key="frame" x="150" y="0.0" width="160" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Update"/>
+                                                <connections>
+                                                    <action selector="updateExerciseButtonTapped:" destination="hUH-rp-8hP" eventType="touchUpInside" id="81g-hF-urx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4bb-kH-86n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lKi-h6-2Tv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4h1-PB-6Gz" secondAttribute="trailing" constant="8" symbolic="YES" id="1uw-74-qAm"/>
+                            <constraint firstItem="vie-Ca-gGl" firstAttribute="leading" secondItem="4bb-kH-86n" secondAttribute="leading" constant="40" id="72t-oo-mgU"/>
+                            <constraint firstItem="4bb-kH-86n" firstAttribute="bottom" secondItem="STf-pM-ASb" secondAttribute="bottom" constant="50" id="FY4-3k-np4"/>
+                            <constraint firstItem="4h1-PB-6Gz" firstAttribute="leading" secondItem="4bb-kH-86n" secondAttribute="leading" constant="40" id="Oky-A5-AYg"/>
+                            <constraint firstItem="4bb-kH-86n" firstAttribute="trailing" secondItem="vie-Ca-gGl" secondAttribute="trailing" constant="40" id="VS9-oM-kHD"/>
+                            <constraint firstItem="4bb-kH-86n" firstAttribute="trailing" secondItem="lKi-h6-2Tv" secondAttribute="trailing" constant="154" id="aeb-01-WxJ"/>
+                            <constraint firstItem="vie-Ca-gGl" firstAttribute="top" secondItem="lKi-h6-2Tv" secondAttribute="bottom" constant="63.999999999999886" id="ezr-uE-DQI"/>
+                            <constraint firstItem="lKi-h6-2Tv" firstAttribute="top" secondItem="4bb-kH-86n" secondAttribute="top" constant="30" id="iY9-ts-QZC"/>
+                            <constraint firstItem="STf-pM-ASb" firstAttribute="leading" secondItem="4bb-kH-86n" secondAttribute="leading" constant="40" id="im6-B7-fD1"/>
+                            <constraint firstItem="4h1-PB-6Gz" firstAttribute="top" secondItem="4bb-kH-86n" secondAttribute="top" constant="30" id="mED-Jf-Owh"/>
+                            <constraint firstItem="4bb-kH-86n" firstAttribute="trailing" secondItem="STf-pM-ASb" secondAttribute="trailing" constant="40" id="reF-DF-XpG"/>
+                            <constraint firstItem="vie-Ca-gGl" firstAttribute="centerX" secondItem="lKi-h6-2Tv" secondAttribute="centerX" id="t0y-n3-kMP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageDescLabel" destination="uu2-00-FyV" id="VOz-Gf-M0T"/>
+                        <outlet property="backButton" destination="4h1-PB-6Gz" id="sdS-g9-Oqx"/>
+                        <outlet property="dAgeLabel" destination="loF-kj-HI0" id="TTh-6z-X6G"/>
+                        <outlet property="dExerciseLabel" destination="6Ve-1A-S7G" id="IWg-2R-L2p"/>
+                        <outlet property="dHeightLabel" destination="Hvv-1w-LEb" id="qui-Hm-fnl"/>
+                        <outlet property="dWeightLabel" destination="3jO-fE-YYY" id="CJt-oR-X8t"/>
+                        <outlet property="dWeightOptionLabel" destination="oL9-Qm-NxR" id="plf-YC-DZn"/>
+                        <outlet property="deleteAccountButton" destination="STf-pM-ASb" id="8cQ-6R-jQI"/>
+                        <outlet property="exerciseDescLabel" destination="Udp-sj-1hf" id="XlK-OB-Ojf"/>
+                        <outlet property="heightDescLabel" destination="tbH-Kd-fHK" id="RZx-zV-V64"/>
+                        <outlet property="logoLabel" destination="lKi-h6-2Tv" id="pA8-QP-0wo"/>
+                        <outlet property="updateAgeButton" destination="bpY-04-k8C" id="jUB-1d-gla"/>
+                        <outlet property="updateExerciseButton" destination="drj-hS-G0a" id="Ce7-Zj-n2e"/>
+                        <outlet property="updateHeightButton" destination="OOq-EU-yyu" id="0BM-Uf-LDY"/>
+                        <outlet property="updateWeightButton" destination="CQF-vb-7kC" id="xAk-c6-Voz"/>
+                        <outlet property="updateWeightOptionButton" destination="ES3-69-pe0" id="3bi-a2-gHM"/>
+                        <outlet property="weightDescLabel" destination="7vp-yo-GMN" id="qCT-4B-K3B"/>
+                        <outlet property="weightOptionDescLabel" destination="Wng-m5-eDD" id="59F-TR-9es"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rp7-Ed-RUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5625" y="-1393"/>
+        </scene>
+        <!--Delete Account View Controller-->
+        <scene sceneID="jLh-PH-lQi">
+            <objects>
+                <viewController storyboardIdentifier="deleteAccountVC" id="LsH-fN-BZt" customClass="DeleteAccountViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6EU-GE-6Bz">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KL3-k3-ODR">
+                                <rect key="frame" x="154.33333333333334" y="74" width="81.666666666666657" height="29"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-Pd-Cs8">
+                                <rect key="frame" x="40" y="294" width="300" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDV-lG-dgp">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="hS2-Xo-erO"/>
+                                        </constraints>
+                                        <string key="text">Are you sure you want 
+to delete your account?</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNd-P0-ggQ">
+                                        <rect key="frame" x="0.0" y="68" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Aao-tF-Q5A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="No.  I want to keep it."/>
+                                        <connections>
+                                            <action selector="keepButtonTapped:" destination="LsH-fN-BZt" eventType="touchUpInside" id="BU6-M3-ci2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27C-VH-6H8">
+                                        <rect key="frame" x="0.0" y="138" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SUG-Ze-6go"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="deleteButtonTapped:" destination="LsH-fN-BZt" eventType="touchUpInside" id="Dvt-bK-mvk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UKe-5M-eCE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UKe-5M-eCE" firstAttribute="trailing" secondItem="KL3-k3-ODR" secondAttribute="trailing" constant="154" id="BQT-k0-2me"/>
+                            <constraint firstItem="oIL-Pd-Cs8" firstAttribute="leading" secondItem="UKe-5M-eCE" secondAttribute="leading" constant="40" id="aFP-Lb-dVJ"/>
+                            <constraint firstItem="UKe-5M-eCE" firstAttribute="bottom" secondItem="oIL-Pd-Cs8" secondAttribute="bottom" constant="328" id="eO3-Xp-C00"/>
+                            <constraint firstItem="KL3-k3-ODR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UKe-5M-eCE" secondAttribute="leading" symbolic="YES" id="wci-Nq-7kR"/>
+                            <constraint firstItem="KL3-k3-ODR" firstAttribute="top" secondItem="UKe-5M-eCE" secondAttribute="top" constant="30" id="zC4-OF-cbe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="27C-VH-6H8" id="mHt-bq-Gi4"/>
+                        <outlet property="keepButton" destination="WNd-P0-ggQ" id="1ug-ph-wGQ"/>
+                        <outlet property="logoLabel" destination="KL3-k3-ODR" id="EE4-No-nZm"/>
+                        <outlet property="promptLabel" destination="yDV-lG-dgp" id="aST-Ur-e1U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkz-EF-V3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6353.8461538461534" y="-1393.3649289099526"/>
         </scene>
         <!--Home-->
         <scene sceneID="wZF-ce-Yun">

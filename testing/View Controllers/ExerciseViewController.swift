@@ -15,6 +15,7 @@ import FirebaseFirestore
 
 class ExerciseViewController: UIViewController{
 
+    // MARK: Buttons / Labels
     
     @IBOutlet weak var exerciseLabel: UILabel!
     
@@ -50,8 +51,8 @@ class ExerciseViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // UI / AESTHETICS
-        // change background color
+        // MARK: UI / Aesthetics
+        
         self.view.backgroundColor = .white
         
         logoLabel.textColor = Constants.appColors.orangeRed

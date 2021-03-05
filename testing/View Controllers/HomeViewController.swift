@@ -13,6 +13,8 @@ import FirebaseFirestore
 
 class HomeViewController: UIViewController {
     
+    // MARK: Buttons / Labels
+    
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var calorieCountLabel: UILabel!
@@ -23,8 +25,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // UI / AESTHETICS
-        // change background color
+        // MARK: UI / Aesthetics
+        
         self.view.backgroundColor = .white
         
         UIGraphicsBeginImageContext(self.view.frame.size)
