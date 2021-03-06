@@ -137,7 +137,7 @@ class AddMealViewController: UIViewController {
             dinnerRadioButton.isSelected = false
             otherRadioButton.isSelected = false
             print("Lunch Selected")
-            mealState = 1
+            mealState = 2
         }
         
         else if sender.tag == 3 {
@@ -192,6 +192,47 @@ class AddMealViewController: UIViewController {
                             print("New meal successfully added")
                         }
                     }
+                    
+                    
+                    // update which meal has been eaten
+                    
+                    if (self.mealState == 1) {
+                        userRef.updateData([
+                            "hadBreakfast": true
+                        ]) { err in
+                            if let err = err {
+                                print("Error updating hadBreakfast: \(err)")
+                            } else {
+                                print("hadBreakfast successfully updated")
+                            }
+                        }
+                    }
+                    
+                    if (self.mealState == 2) {
+                        userRef.updateData([
+                            "hadLunch": true
+                        ]) { err in
+                            if let err = err {
+                                print("Error updating hadLunch: \(err)")
+                            } else {
+                                print("hadLunch successfully updated")
+                            }
+                        }
+                    }
+                    
+                    if (self.mealState == 3) {
+                        userRef.updateData([
+                            "hadDinner": true
+                        ]) { err in
+                            if let err = err {
+                                print("Error updating hadDinner: \(err)")
+                            } else {
+                                print("hadDinner successfully updated")
+                            }
+                        }
+                    }
+                    
+                    
                 } else {
                     print("Cannot access current user's calorie consumed")
                 }

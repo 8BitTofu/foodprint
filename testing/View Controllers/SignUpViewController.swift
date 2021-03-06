@@ -137,7 +137,10 @@ class SignUpViewController: UIViewController {
                         "exerciseAmt": "Medium", // TEMPORARY CHANGE LATER
                         "totalCalories": 0,
                         "caloriesConsumed": 0,
-                        "lastLogin": Utilities.getDate()
+                        "lastLogin": Utilities.getDate(),
+                        "hadBreakfast": false,
+                        "hadLunch": false,
+                        "hadDinner": false
                     ] as [String : Any]
 
                     // set the data fields

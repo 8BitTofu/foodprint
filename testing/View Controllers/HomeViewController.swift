@@ -50,15 +50,47 @@ class HomeViewController: UIViewController {
         
         // MARK: Checking Same Day
         
-        if lastDate != dateString {
-            lastDate = dateString
-            sameDay = false
+        let db = Firestore.firestore()
+        let userID : String = getCurrentUserID()
+        let userRef = db.collection("users").document(userID)
+        
+        userRef.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                let lastLogin = document.get("lastLogin") as! String
+                
+                if lastLogin != dateString {
+                    // print("lastDate: " + lastLogin)
+                    // print("today: " + dateString)
+                    
+                    userRef.updateData([
+                                        "lastLogin": dateString
+                    ]) { err in
+                        if let err = err {
+                            print("Error updating last login date: \(err)")
+                        } else {
+                            print("Last login date successfully updated")
+                        }
+                    }
+                    
+                    sameDay = false
+                }
+                else {
+                    sameDay = true
+                }
+            } else {
+                print("Cannot access current user for last login datetime")
+            }
         }
-        else {
-            print("lastDate: " + lastDate)
-            print("today: " + dateString)
-            sameDay = true
+        
+        switch (sameDay) {
+        case true:
+            print("SAME DAY")
+        case false:
+            print("NEW/DIFFERENT DAY")
         }
+        
+        
+
         
         
         
@@ -66,11 +98,6 @@ class HomeViewController: UIViewController {
         
         // Personalizing Calorie Count
         var totalCalories = 0
-        var caloriesConsumed = 0
-        
-        let db = Firestore.firestore()
-        let userID : String = getCurrentUserID()
-        let userRef = db.collection("users").document(userID)
         
         userRef.getDocument(source: .cache) { (document, error) in
             if let document = document {
@@ -105,7 +132,10 @@ class HomeViewController: UIViewController {
                 // if new day, reset calories consumed
                 if sameDay == false {
                     userRef.updateData([
-                        "caloriesConsumed": 0
+                        "caloriesConsumed": 0,
+                        "hadBreakfast": false,
+                        "hadLunch": false,
+                        "hadDinner": false
                     ]) { err in
                         if err != nil {
                             print("Error resetting calories consumed due to new day")

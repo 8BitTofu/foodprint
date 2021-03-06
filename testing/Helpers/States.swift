@@ -43,7 +43,6 @@ func setNew() -> Void {
 
 // MARK: Datetime States
 
-var lastDate = ""
 var sameDay: Bool = true
 
 
