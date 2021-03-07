@@ -146,7 +146,7 @@ class AccountViewController: UIViewController {
     
     @IBAction func updateWeightOptionButtonTapped(_ sender: Any) {
         updating = true
-        transitionToExercise()
+        transitionToWeight()
     }
     
     @IBAction func updateExerciseButtonTapped(_ sender: Any) {
@@ -185,11 +185,11 @@ class AccountViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
-    func transitionToExercise() {
+    func transitionToWeight() {
         // transition to welcome screen
-        let exerciseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.exerciseViewController) as? ExerciseViewController
+        let weightViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.weightViewController) as? WeightViewController
         
-        view.window?.rootViewController = exerciseViewController
+        view.window?.rootViewController = weightViewController
         view.window?.makeKeyAndVisible()
     }
     

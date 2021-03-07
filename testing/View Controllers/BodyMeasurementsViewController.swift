@@ -153,7 +153,7 @@ class BodyMeasurementsViewController: UIViewController {
             }
             
             // go to welcome splash screen
-            transitionToExercise()
+            transitionToWeight()
         }
     }
     
@@ -200,11 +200,11 @@ class BodyMeasurementsViewController: UIViewController {
     }
     
     
-    func transitionToExercise() {
+    func transitionToWeight() {
         // transition to welcome screen
-        let exerciseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.exerciseViewController) as? ExerciseViewController
+        let weightViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.weightViewController) as? WeightViewController
         
-        view.window?.rootViewController = exerciseViewController
+        view.window?.rootViewController = weightViewController
         view.window?.makeKeyAndVisible()
     }
     

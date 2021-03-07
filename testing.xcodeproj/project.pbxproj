@@ -14,7 +14,7 @@
 		1F2096C025CAB2F000C343CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2096BF25CAB2F000C343CB /* Constants.swift */; };
 		1F325D2325DFCCC500AA8ACA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */; };
 		1F325D2625DFCCD300AA8ACA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */; };
-		1F4496C625EA5456000DFADD /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4496C525EA5456000DFADD /* ExerciseViewController.swift */; };
+		1F4496C625EA5456000DFADD /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4496C525EA5456000DFADD /* WeightViewController.swift */; };
 		1F5FAC1725EA19A8005BDC12 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FAC1625EA19A8005BDC12 /* GenderViewController.swift */; };
 		1F64ED6B25F2133B00676682 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F64ED6A25F2133B00676682 /* AccountViewController.swift */; };
 		1F64ED8425F2215700676682 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F64ED8325F2215700676682 /* DeleteAccountViewController.swift */; };
@@ -50,7 +50,7 @@
 		1F2096BF25CAB2F000C343CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		1F4496C525EA5456000DFADD /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		1F4496C525EA5456000DFADD /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		1F5FAC1625EA19A8005BDC12 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		1F64ED6A25F2133B00676682 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		1F64ED8325F2215700676682 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */,
 				1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */,
 				1F5FAC1625EA19A8005BDC12 /* GenderViewController.swift */,
-				1F4496C525EA5456000DFADD /* ExerciseViewController.swift */,
+				1F4496C525EA5456000DFADD /* WeightViewController.swift */,
 				1F64ED6A25F2133B00676682 /* AccountViewController.swift */,
 				1F64ED8325F2215700676682 /* DeleteAccountViewController.swift */,
 				1FF6913F25F2521900E06C5C /* AddMealViewController.swift */,
@@ -330,7 +330,7 @@
 				1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */,
 				1F64ED8425F2215700676682 /* DeleteAccountViewController.swift in Sources */,
 				4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */,
-				1F4496C625EA5456000DFADD /* ExerciseViewController.swift in Sources */,
+				1F4496C625EA5456000DFADD /* WeightViewController.swift in Sources */,
 				1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */,
 				1F2096C025CAB2F000C343CB /* Constants.swift in Sources */,
 				4488C78325ED059F005A32FC /* Recipe.swift in Sources */,

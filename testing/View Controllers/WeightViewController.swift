@@ -13,11 +13,11 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
-class ExerciseViewController: UIViewController{
+class WeightViewController: UIViewController{
 
     // MARK: Buttons / Labels
     
-    @IBOutlet weak var exerciseLabel: UILabel!
+    @IBOutlet weak var logoLabel: UILabel!
     
     @IBOutlet weak var backButton: UIButton!
     
@@ -30,8 +30,6 @@ class ExerciseViewController: UIViewController{
     @IBOutlet weak var errorLabel: UILabel!
     
     @IBOutlet weak var nextButton: UIButton!
-    
-    @IBOutlet weak var logoLabel: UILabel!
     
     @IBOutlet weak var selectLabel: UILabel!
     
@@ -146,6 +144,7 @@ class ExerciseViewController: UIViewController{
     }
     
     
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         let error = validateFields()
         
@@ -231,7 +230,7 @@ class ExerciseViewController: UIViewController{
     
     
     // MARK: Radio Button Actions
-
+    
     @IBAction func radioButtonAction(_ sender: UIButton) {
         if sender.tag == 1 {
             radioButtonLow.isSelected = true
@@ -258,5 +257,4 @@ class ExerciseViewController: UIViewController{
         }
     }
     
-
 }

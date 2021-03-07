@@ -1437,10 +1437,10 @@ to delete your account?</string>
             </objects>
             <point key="canvasLocation" x="5625" y="-734"/>
         </scene>
-        <!--Exercise View Controller-->
+        <!--Weight View Controller-->
         <scene sceneID="eer-gF-SFT">
             <objects>
-                <viewController storyboardIdentifier="exerciseVC" id="E5z-1W-OXI" customClass="ExerciseViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="weightVC" title="Weight View Controller" id="E5z-1W-OXI" customClass="WeightViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ypK-pd-dct">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1453,7 +1453,7 @@ to delete your account?</string>
                                     <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonTapped:" destination="E5z-1W-OXI" eventType="touchUpInside" id="6tp-7A-zNQ"/>
+                                    <action selector="backButtonTapped:" destination="E5z-1W-OXI" eventType="touchUpInside" id="toK-f6-Mp0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNJ-b8-G96">
@@ -1470,7 +1470,7 @@ to delete your account?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="E5z-1W-OXI" eventType="touchUpInside" id="S59-i9-Hv5"/>
+                                    <action selector="nextButtonTapped:" destination="E5z-1W-OXI" eventType="touchUpInside" id="pzp-KK-3qM"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W15-BD-v2g">
@@ -1496,7 +1496,7 @@ to delete your account?</string>
                                                 <state key="normal" title="Button" image="circle" catalog="system"/>
                                                 <state key="selected" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="radioButtonAction:" destination="E5z-1W-OXI" eventType="touchUpInside" id="LGr-db-VDD"/>
+                                                    <action selector="radioButtonAction:" destination="E5z-1W-OXI" eventType="touchUpInside" id="YfO-m7-VQ9"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lose Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huw-14-Tia">
@@ -1521,7 +1521,7 @@ to delete your account?</string>
                                                 <state key="normal" title="Button" image="circle" catalog="system"/>
                                                 <state key="selected" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="radioButtonAction:" destination="E5z-1W-OXI" eventType="touchUpInside" id="sIU-Dm-RPM"/>
+                                                    <action selector="radioButtonAction:" destination="E5z-1W-OXI" eventType="touchUpInside" id="wsr-9s-ZZt"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maintain Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Kw-Qs-gaP">
@@ -1546,7 +1546,7 @@ to delete your account?</string>
                                                 <state key="normal" title="Button" image="circle" catalog="system"/>
                                                 <state key="selected" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="radioButtonAction:" destination="E5z-1W-OXI" eventType="touchUpInside" id="lOm-kB-0i2"/>
+                                                    <action selector="radioButtonAction:" destination="E5z-1W-OXI" eventType="touchUpInside" id="GGa-9U-CTL"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gain Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4r-gx-spJ">
@@ -1588,23 +1588,22 @@ to delete your account?</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="6Wo-1g-apd" id="eRl-Od-1QM"/>
-                        <outlet property="errorLabel" destination="t0Q-Ch-xFr" id="OYR-TO-LRn"/>
-                        <outlet property="exerciseLabel" destination="XKc-uO-uZN" id="OU1-5Y-nwz"/>
-                        <outlet property="logoLabel" destination="rNJ-b8-G96" id="mLb-SA-Egn"/>
-                        <outlet property="nextButton" destination="lDI-kq-ORb" id="CJP-Tj-Bg9"/>
-                        <outlet property="optionHighLabel" destination="r4r-gx-spJ" id="A4S-SH-VB4"/>
-                        <outlet property="optionLowLabel" destination="huw-14-Tia" id="m0Z-uy-iE1"/>
-                        <outlet property="optionMediumLabel" destination="2Kw-Qs-gaP" id="mde-cl-aq1"/>
-                        <outlet property="radioButtonHigh" destination="0g3-Ja-rUn" id="ypz-QY-7ms"/>
-                        <outlet property="radioButtonLow" destination="YGH-28-Vyo" id="5DV-As-eKz"/>
-                        <outlet property="radioButtonMedium" destination="RFV-aY-2tt" id="S0h-d4-GSS"/>
-                        <outlet property="selectLabel" destination="XKc-uO-uZN" id="nVm-Ya-Mpv"/>
+                        <outlet property="backButton" destination="6Wo-1g-apd" id="I8B-BZ-RNa"/>
+                        <outlet property="errorLabel" destination="t0Q-Ch-xFr" id="9Cv-zT-AYJ"/>
+                        <outlet property="logoLabel" destination="rNJ-b8-G96" id="7TR-Rb-iLU"/>
+                        <outlet property="nextButton" destination="lDI-kq-ORb" id="n6w-1B-A4S"/>
+                        <outlet property="optionHighLabel" destination="r4r-gx-spJ" id="GQL-Nt-q0D"/>
+                        <outlet property="optionLowLabel" destination="huw-14-Tia" id="BNR-r4-KwF"/>
+                        <outlet property="optionMediumLabel" destination="2Kw-Qs-gaP" id="ifL-dq-wdo"/>
+                        <outlet property="radioButtonHigh" destination="0g3-Ja-rUn" id="Oz0-d2-zgN"/>
+                        <outlet property="radioButtonLow" destination="YGH-28-Vyo" id="2YT-Jm-21C"/>
+                        <outlet property="radioButtonMedium" destination="RFV-aY-2tt" id="qkb-aU-dN2"/>
+                        <outlet property="selectLabel" destination="XKc-uO-uZN" id="2tX-7X-bT4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aen-4E-UAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3562" y="409"/>
+            <point key="canvasLocation" x="3561.5384615384614" y="408.76777251184831"/>
         </scene>
     </scenes>
     <resources>
