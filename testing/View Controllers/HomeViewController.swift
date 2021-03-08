@@ -24,12 +24,57 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var addMealButton: UIButton!
     
     
+    
+    
+    // MARK: Recommendation Buttons / Labels
+    
+    @IBOutlet weak var rec1Image: UIImageView!
+    
+    @IBOutlet weak var rec2Image: UIImageView!
+    
+    @IBOutlet weak var rec3Image: UIImageView!
+    
+    @IBOutlet weak var rec1NameLabel: UILabel!
+    
+    @IBOutlet weak var rec2NameLabel: UILabel!
+    
+    @IBOutlet weak var rec3NameLabel: UILabel!
+    
+    @IBOutlet weak var rec1CalorieLabel: UILabel!
+    
+    @IBOutlet weak var rec2CalorieLabel: UILabel!
+    
+    @IBOutlet weak var rec3CalorieLabel: UILabel!
+    
+    @IBOutlet weak var rec1InfoButton: UIButton!
+    
+    @IBOutlet weak var rec2InfoButton: UIButton!
+    
+    @IBOutlet weak var rec3InfoButton: UIButton!
+
+    @IBOutlet weak var rec1Stack: UIStackView!
+    
+    @IBOutlet weak var rec2Stack: UIStackView!
+    
+    @IBOutlet weak var rec3Stack: UIStackView!
+    
+    @IBOutlet weak var refreshButton: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // MARK: UI / Aesthetics
         
         makeSolidButton(button: addMealButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        makeSolidButton(button: rec1InfoButton, backgroundColor: Constants.appColors.mustard, textColor: .white)
+        makeSolidButton(button: rec2InfoButton, backgroundColor: Constants.appColors.mustard, textColor: .white)
+        makeSolidButton(button: rec3InfoButton, backgroundColor: Constants.appColors.mustard, textColor: .white)
+        makeGhostButton(button: refreshButton, color: Constants.appColors.mustard)
+        
+        
         self.view.backgroundColor = .white
         
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -38,6 +83,8 @@ class HomeViewController: UIViewController {
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
 
+        
+        
         // DATETIME
         dateLabel.textColor = Constants.appColors.orangeRed
         calorieLabel.textColor = Constants.appColors.softGrey
@@ -46,6 +93,7 @@ class HomeViewController: UIViewController {
         let dateString = Utilities.getDate()
         
         dateLabel.text = dateString
+        
         
         
         // MARK: Checking Same Day
