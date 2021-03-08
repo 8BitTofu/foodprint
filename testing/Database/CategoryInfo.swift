@@ -39,9 +39,9 @@ class foodCategories {
 
     let baked = ["Pies", "Muffin Recipes", "Scone Recipes", "Cobbler Recipes", "Bar Cookie Recipes", "Potato Casserole", "Zucchini Bread Recipes", "Pot Pie Recipes", "Snickerdoodle Recipes", "Cherry Crisps and Crumbles Recipes", "Cookies", "Rhubarb Crisps and Crumbles Recipes", "Gingersnap Recipes", "Sweet Potato Casserole Recipes", "Coffee Cake", "Crumb Crusts", "Corn Muffin Recipes", "Pumpkin Muffin Recipes", "Spinach Casserole", "Lasagna Recipes", "Apple Cobbler Recipes", "Spice Cake Recipes", "Fruit Pie Recipes", "Chicken Pie Recipes", "Upside-Down Cake Recipes", "Cake Mix Cake Recipes"]
 
-    let cheese = ["Cheese", "Grilled Cheese"]
+    // let cheese = ["Cheese", "Grilled Cheese"]
 
-    let roasted = ["Roasted"]
+    // let roasted = ["Roasted"]
 
     let vegetables = ["Vegetables", "Vegetable", "Vegetable Soup Recipes", "Squash", "Fruits and Vegetables", "Potato Side Dish Recipes", "Beans and Peas", "Cauliflower"]
 
@@ -49,29 +49,27 @@ class foodCategories {
 
     let meats = ["Beef","Meat and Poultry", "Turkey", "Steaks", "Chicken", "Chicken Breast Recipes", "Pork", "Pork Chop Recipes", "Ham"]
 
-    let pastas = ["Tetrazzini Recipes", "Pasta Appetizer Recipes", "Ravioli Recipes"]
+    let pastas = ["Pasta", "Pasta Salad Recipes", "Tetrazzini Recipes", "Pasta Appetizer Recipes", "Ravioli Recipes"]
 
     let bread = ["Bread", "Quick Bread Recipes", "Yeast Bread Recipes"]
 
     let healthy = ["Healthy", "Quinoa Salad Recipes"]
 
-    let pork = ["Pork", "Pork Chop Recipes"]
+    // let pork = ["Pork", "Pork Chop Recipes"]
 
-    let beef = ["Beef", "Steaks"]
+    // let beef = ["Beef", "Steaks"]
 
-    let chicken = ["Chicken", "Chicken Breast Recipes"]
+    // let chicken = ["Chicken", "Chicken Breast Recipes"]
 
-    let dips = ["Dips and Spreads Recipes"]
+    // let dips = ["Dips and Spreads Recipes"]
 
-    let eggs = ["Eggs"]
+    // let eggs = ["Eggs"]
 
-    let pies = ["Pies"]
+    // let pies = ["Pies"]
 
-    let pasta = ["Pasta", "Pasta Salad Recipes"]
+    // let sandwich = ["Sandwich Recipes"]
 
-    let sandwich = ["Sandwich Recipes"]
-
-    let wrapsRolls = ["Wraps and Rolls"]
+    // let wrapsRolls = ["Wraps and Rolls"]
 
 
 
@@ -83,7 +81,7 @@ class foodCategories {
 
     let asian = ["Asian", "Chinese", "Thai", "Filipino", "Japanese", "Korean"]
 
-    let irish = ["Irish"]
+    // let irish = ["Irish"]
 
     let caribbean = ["Caribbean"]
 

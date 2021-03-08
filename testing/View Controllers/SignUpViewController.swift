@@ -140,7 +140,8 @@ class SignUpViewController: UIViewController {
                         "lastLogin": Utilities.getDate(),
                         "hadBreakfast": false,
                         "hadLunch": false,
-                        "hadDinner": false
+                        "hadDinner": false,
+                        "preferences": [String]()
                     ] as [String : Any]
 
                     // set the data fields
