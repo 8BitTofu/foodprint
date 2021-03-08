@@ -39,6 +39,7 @@
 		1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6913F25F2521900E06C5C /* AddMealViewController.swift */; };
 		4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C76A25ED04E3005A32FC /* DBHelper.swift */; };
 		4488C78325ED059F005A32FC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C78225ED059F005A32FC /* Recipe.swift */; };
+		627B10BE25F65426004B1AF5 /* xdddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B10BD25F65426004B1AF5 /* xdddViewController.swift */; };
 		80DD2799A2FD38377CE3AD21 /* Pods_testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D049976888F907BB8A4DD87 /* Pods_testing.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		4488C76A25ED04E3005A32FC /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		4488C78225ED059F005A32FC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5D049976888F907BB8A4DD87 /* Pods_testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		627B10BD25F65426004B1AF5 /* xdddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xdddViewController.swift; sourceTree = "<group>"; };
 		E31C65D13771AB2FD875A54D /* Pods-testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing.release.xcconfig"; path = "Target Support Files/Pods-testing/Pods-testing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				1FF6913F25F2521900E06C5C /* AddMealViewController.swift */,
 				1FF1ABE025F2674400E8D25C /* UpdateBMViewController.swift */,
 				1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */,
+				627B10BD25F65426004B1AF5 /* xdddViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */,
 				1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */,
 				1FB2FB5925C8D57100DCD524 /* SceneDelegate.swift in Sources */,
+				627B10BE25F65426004B1AF5 /* xdddViewController.swift in Sources */,
 				1F6CA10525DA3C5100C7296A /* healthKit.swift in Sources */,
 				1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */,
 				1F64ED8425F2215700676682 /* DeleteAccountViewController.swift in Sources */,
