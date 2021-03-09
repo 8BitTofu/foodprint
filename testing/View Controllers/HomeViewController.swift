@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var addMealButton: UIButton!
     
+    @IBOutlet weak var addStepometerButton: UIButton!
     
     
     
@@ -69,6 +70,7 @@ class HomeViewController: UIViewController {
         // MARK: UI / Aesthetics
         
         makeSolidButton(button: addMealButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+       // makeSolidButton(button: addStepometerButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         makeSolidButton(button: rec1InfoButton, backgroundColor: Constants.appColors.mustard, textColor: .white)
         makeSolidButton(button: rec2InfoButton, backgroundColor: Constants.appColors.mustard, textColor: .white)
         makeSolidButton(button: rec3InfoButton, backgroundColor: Constants.appColors.mustard, textColor: .white)
@@ -205,6 +207,9 @@ class HomeViewController: UIViewController {
         transitionToAddMeal()
     }
     
+    @IBAction func addStepometerTapped(_ sender: Any) {
+        transitionToStepometerView()
+    }
     
     
     
@@ -225,4 +230,11 @@ class HomeViewController: UIViewController {
         view.window?.rootViewController = addMealViewController
         view.window?.makeKeyAndVisible()
     }
-}
+    
+    func transitionToStepometerView() {
+        // transition to account screen
+        let stepometerViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.stepometerViewController) as? StepometerViewController
+        
+        view.window?.rootViewController = stepometerViewController
+        view.window?.makeKeyAndVisible()
+    }}

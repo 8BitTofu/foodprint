@@ -869,6 +869,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Refresh"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qu-Sa-f0w">
+                                <rect key="frame" x="160" y="654" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stepometer"/>
+                                <connections>
+                                    <action selector="addStepometerTapped:" destination="xp7-Gs-Kd6" eventType="touchUpInside" id="51c-wy-dJG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Esp-6B-BkH"/>
                         <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -918,6 +926,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZJ-fY-hoD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4127.6923076923076" y="-1393.3649289099526"/>
+        </scene>
+        <!--Stepometer View Controller-->
+        <scene sceneID="QSk-Xd-kyV">
+            <objects>
+                <viewController storyboardIdentifier="stepometerVC" interfaceStyle="light" id="cL2-bE-MYG" customClass="StepometerViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKo-Qd-W6g">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WKd-Us-TGb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLD-uy-hvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4149" y="-2055"/>
         </scene>
         <!--Settings-->
         <scene sceneID="qtv-M3-gKd">
