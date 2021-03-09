@@ -103,13 +103,13 @@
                                             <constraint firstAttribute="height" constant="50" id="dk8-qE-5Zu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YuQ-DR-KFL">
                                         <rect key="frame" x="0.0" y="70" width="310" height="50"/>
                                         <color key="backgroundColor" red="0.97620100830000001" green="0.97620100830000001" blue="0.97620100830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIZ-Mq-rCr">
                                         <rect key="frame" x="0.0" y="140" width="310" height="50"/>
@@ -123,8 +123,8 @@
                                     <constraint firstItem="YuQ-DR-KFL" firstAttribute="height" secondItem="1hh-hd-G5g" secondAttribute="height" id="tpe-Ah-1cF"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFP-tK-CPv">
-                                <rect key="frame" x="40" y="74" width="26.333333333333329" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFP-tK-CPv">
+                                <rect key="frame" x="40" y="74" width="26.666666666666671" height="22"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal">
                                     <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
@@ -144,8 +144,8 @@
                                     <action selector="loginTapped:" destination="MY5-Bn-O3s" eventType="touchUpInside" id="DV1-X8-0mI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELA-OQ-Qax">
-                                <rect key="frame" x="154" y="74" width="82" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELA-OQ-Qax">
+                                <rect key="frame" x="154.33333333333334" y="74" width="81.666666666666657" height="29"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1348,7 +1348,7 @@ to delete your account?</string>
                                         <rect key="frame" x="0.0" y="140" width="310" height="50"/>
                                         <color key="backgroundColor" red="0.97620100830000001" green="0.97620100830000001" blue="0.97620100830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G8B-ee-ky0">
                                         <rect key="frame" x="0.0" y="210" width="310" height="50"/>
@@ -1455,7 +1455,7 @@ to delete your account?</string>
                                                     <constraint firstAttribute="height" constant="50" id="tEb-pG-PNB"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biC-y3-Iuu">
                                                 <rect key="frame" x="120" y="0.0" width="34" height="50"/>
@@ -1467,7 +1467,7 @@ to delete your account?</string>
                                                 <rect key="frame" x="164" y="0.0" width="110" height="50"/>
                                                 <color key="backgroundColor" red="0.97620100830000001" green="0.97620100830000001" blue="0.97620100830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="lbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXe-r6-hB4">
                                                 <rect key="frame" x="284" y="0.0" width="26" height="50"/>
@@ -1493,7 +1493,7 @@ to delete your account?</string>
                                                     <constraint firstAttribute="height" constant="50" id="QFX-gJ-pPR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
