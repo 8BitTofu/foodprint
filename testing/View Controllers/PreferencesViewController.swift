@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PreferencesViewController: UIViewController {
 
@@ -65,6 +66,10 @@ class PreferencesViewController: UIViewController {
     
     let prefList = ["sweetsButton", "seafoodButton", "nutsButton", "fruitsButton", "soupsButton", "bakedButton", "healthyButton", "breadButton", "vegetablesButton", "saladsButton", "meatsButton", "pastasButton", "mexicanButton", "asianButton", "europeanButton", "caribbeanButton", "persianButton", "latinButton"]
     
+    var sweetsSelected = false
+    var seafoodSelected = false
+    var nutsSelected = false
+    
     
     
     override func viewDidLoad() {
@@ -93,9 +98,102 @@ class PreferencesViewController: UIViewController {
         makeGhostButton(button: persianButton, color: Constants.appColors.mustard)
         makeGhostButton(button: latinButton, color: Constants.appColors.mustard)
         
+    }
+    
+    
+    // MARK: Selected Button
+
+    @IBAction func selectSweetsButton(_ sender: UIButton) {
+        if (sweetsSelected == false) {
+            makeSolidButton(button: sweetsButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            sweetsSelected = true
+        }
+        else {
+            makeGhostButton(button: sweetsButton, color: Constants.appColors.mustard)
+            sweetsSelected = false
+        }
+    }
+    
+    @IBAction func selectSeafoodButton(_ sender: UIButton) {
+        if (seafoodSelected == false) {
+            makeSolidButton(button: seafoodButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            seafoodSelected = true
+        }
+        else {
+            makeGhostButton(button: seafoodButton, color: Constants.appColors.mustard)
+            seafoodSelected = false
+        }
+    }
+    
+    @IBAction func selectNutsButton(_ sender: UIButton) {
+        if (nutsSelected == false) {
+            makeSolidButton(button: nutsButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            nutsSelected = true
+        }
+        else {
+            makeGhostButton(button: nutsButton, color: Constants.appColors.mustard)
+            nutsSelected = false
+        }
+    }
+    
+    
+    @IBAction func nextTapped(_ sender: Any) {
+        transitionToWelcome()
+    }
+    
+    
+    @IBAction func skipTapped(_ sender: Any) {
+        transitionToWelcome()
+    }
+    
+    
+    @IBAction func backTapped(_ sender: Any) {
+        // when clicking back button - delete all previous progress
+        // on making a user account
         
+        // get current user data
+        let db = Firestore.firestore()
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        
+        // delete user document from users collection on Firebase
+        db.collection("users").document(userID).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        
+        // delete user account from authentification side
+        Auth.auth().currentUser?.delete(completion: { err in
+            if let err = err {
+                print("Error removing user: \(err)")
+            } else {
+                print("User successfully removed!")
+            }
+        })
+        
+        self.transitionToBase()
         
     }
     
-
+    
+    // MARK: Transitions
+    
+    func transitionToWelcome() {
+        // transition to welcome screen
+        let welcomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.welcomeViewController) as? WelcomeViewController
+        
+        view.window?.rootViewController = welcomeViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToBase() {
+        // transition to home screen
+        let baseViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.baseViewController) as? ViewController
+        
+        view.window?.rootViewController = baseViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
 }

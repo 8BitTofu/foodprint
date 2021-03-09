@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F0876E125DE09F400CCC9D7 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0876E025DE09F400CCC9D7 /* States.swift */; };
 		1F09443725DD363C006ACEC7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F09443625DD363C006ACEC7 /* WelcomeViewController.swift */; };
+		1F0AA1A325F773D90062D54E /* firebaseRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0AA1A225F773D90062D54E /* firebaseRef.swift */; };
 		1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */; };
 		1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6625CA78360055CE65 /* LoginViewController.swift */; };
 		1F2096C025CAB2F000C343CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2096BF25CAB2F000C343CB /* Constants.swift */; };
@@ -47,6 +48,7 @@
 		1092F5901D05FFAEA8C0C8C9 /* Pods-testing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing.debug.xcconfig"; path = "Target Support Files/Pods-testing/Pods-testing.debug.xcconfig"; sourceTree = "<group>"; };
 		1F0876E025DE09F400CCC9D7 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		1F09443625DD363C006ACEC7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1F0AA1A225F773D90062D54E /* firebaseRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseRef.swift; sourceTree = "<group>"; };
 		1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1F0E0D6625CA78360055CE65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F2096BF25CAB2F000C343CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0AA1A125F773C80062D54E /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				1F0AA1A225F773D90062D54E /* firebaseRef.swift */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
 		1F0E0D6C25CA786F0055CE65 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		1FB2FB5525C8D57100DCD524 /* testing */ = {
 			isa = PBXGroup;
 			children = (
+				1F0AA1A125F773C80062D54E /* Reference */,
 				1F6CA10125DA397800C7296A /* testing.entitlements */,
 				1FB2FB5625C8D57100DCD524 /* AppDelegate.swift */,
 				1FB2FB5825C8D57100DCD524 /* SceneDelegate.swift */,
@@ -317,6 +328,7 @@
 			files = (
 				1FB2FB5B25C8D57100DCD524 /* ViewController.swift in Sources */,
 				1FF1ABE125F2674400E8D25C /* UpdateBMViewController.swift in Sources */,
+				1F0AA1A325F773D90062D54E /* firebaseRef.swift in Sources */,
 				1FB2FB5725C8D57100DCD524 /* AppDelegate.swift in Sources */,
 				1F09443725DD363C006ACEC7 /* WelcomeViewController.swift in Sources */,
 				1FC8639425DE9CE0004B4B31 /* currentUser.swift in Sources */,

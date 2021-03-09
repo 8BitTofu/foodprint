@@ -197,6 +197,9 @@
                                 <state key="normal">
                                     <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="backTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="rQ4-vN-jqo"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL2-0o-U36">
                                 <rect key="frame" x="483.00000000000006" y="74" width="81.666666666666686" height="29"/>
@@ -213,20 +216,29 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xlZ-nb-a0B">
                                 <rect key="frame" x="40" y="298" width="310" height="180"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVX-Xz-nuO">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oVX-Xz-nuO">
                                         <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4d-30-ZGy">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Sweets"/>
+                                                <connections>
+                                                    <action selector="selectSweetsButton:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="xwn-pn-lrV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzf-8I-m4n">
-                                                <rect key="frame" x="103.33333333333334" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Seafood"/>
+                                                <connections>
+                                                    <action selector="selectSeafoodButton:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="t7d-cd-Cuh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbq-Sc-jaN">
-                                                <rect key="frame" x="206.66666666666666" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Nuts"/>
+                                                <connections>
+                                                    <action selector="selectNutsButton:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="IDo-ym-Ojc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -234,19 +246,19 @@
                                             <constraint firstItem="Lzf-8I-m4n" firstAttribute="width" secondItem="t4d-30-ZGy" secondAttribute="width" id="mCZ-8A-nyE"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIV-Kk-tc4">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZIV-Kk-tc4">
                                         <rect key="frame" x="0.0" y="50" width="310" height="30"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycF-FG-H9A">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Fruits"/>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94C-Wd-bb4">
-                                                <rect key="frame" x="103.33333333333334" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Soups"/>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHP-hC-K5j">
-                                                <rect key="frame" x="206.66666666666666" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Baked"/>
                                             </button>
                                         </subviews>
@@ -255,19 +267,19 @@
                                             <constraint firstItem="PHP-hC-K5j" firstAttribute="width" secondItem="ycF-FG-H9A" secondAttribute="width" id="mni-fB-c0g"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXD-3M-l1S">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wXD-3M-l1S">
                                         <rect key="frame" x="0.0" y="100" width="310" height="30"/>
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-2F-QHK">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Healthy"/>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5n-z8-SEe">
-                                                <rect key="frame" x="103.33333333333334" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Bread"/>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-QE-8MO">
-                                                <rect key="frame" x="206.66666666666666" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Vegetables"/>
                                             </button>
                                         </subviews>
@@ -276,19 +288,19 @@
                                             <constraint firstItem="d5n-z8-SEe" firstAttribute="width" secondItem="1tz-2F-QHK" secondAttribute="width" id="cUr-HW-c3c"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3p-32-7M7">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="w3p-32-7M7">
                                         <rect key="frame" x="0.0" y="150" width="310" height="30"/>
                                         <subviews>
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jll-Bg-3w0">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Salads"/>
                                             </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2U-5k-oG3">
-                                                <rect key="frame" x="103.33333333333334" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Meats"/>
                                             </button>
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU4-tI-PtX">
-                                                <rect key="frame" x="206.66666666666666" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Pastas"/>
                                             </button>
                                         </subviews>
@@ -309,6 +321,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="u2S-dy-RMH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vm-9c-N52">
                                         <rect key="frame" x="0.0" y="60" width="310" height="50"/>
@@ -317,25 +332,28 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Skip"/>
+                                        <connections>
+                                            <action selector="skipTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="iAp-7W-pgD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0cv-JU-Fpm">
                                 <rect key="frame" x="40" y="529" width="310" height="80"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGJ-cf-YdV">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BGJ-cf-YdV">
                                         <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
                                         <subviews>
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFQ-Ge-8bw">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Mexican"/>
                                             </button>
                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUp-cO-CQM">
-                                                <rect key="frame" x="103.33333333333334" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Asian"/>
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqx-0T-vOn">
-                                                <rect key="frame" x="206.66666666666666" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="European"/>
                                             </button>
                                         </subviews>
@@ -344,19 +362,19 @@
                                             <constraint firstItem="Rqx-0T-vOn" firstAttribute="width" secondItem="JFQ-Ge-8bw" secondAttribute="width" id="mi5-AH-fWY"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QM-FM-q2x">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0QM-FM-q2x">
                                         <rect key="frame" x="0.0" y="50" width="310" height="30"/>
                                         <subviews>
                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeX-cR-L6A">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Caribbean"/>
                                             </button>
                                             <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29P-jJ-Ftc">
-                                                <rect key="frame" x="103.33333333333334" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Persian"/>
                                             </button>
                                             <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-1N-U3E">
-                                                <rect key="frame" x="206.66666666666666" y="0.0" width="103.33333333333334" height="30"/>
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Latin"/>
                                             </button>
                                         </subviews>

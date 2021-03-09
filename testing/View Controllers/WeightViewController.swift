@@ -193,7 +193,7 @@ class WeightViewController: UIViewController{
             
             // go to welcome splash screen
             else {
-                transitionToWelcome()
+                transitionToPreferences()
             }
         }
     }
@@ -211,11 +211,11 @@ class WeightViewController: UIViewController{
     }
     
     
-    func transitionToWelcome() {
+    func transitionToPreferences() {
         // transition to welcome screen
-        let welcomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.welcomeViewController) as? WelcomeViewController
+        let preferencesViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.preferencesViewController) as? PreferencesViewController
         
-        view.window?.rootViewController = welcomeViewController
+        view.window?.rootViewController = preferencesViewController
         view.window?.makeKeyAndVisible()
     }
     

@@ -13,6 +13,7 @@ func makeGhostButton(button: UIButton, color: UIColor) {
     button.layer.borderWidth = 1
     button.layer.borderColor = color.cgColor
     button.setTitleColor(color, for: .normal)
+    button.backgroundColor = .white
 }
 
 func makeSolidButton(button: UIButton, backgroundColor: UIColor, textColor: UIColor) {
