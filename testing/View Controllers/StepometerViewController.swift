@@ -24,9 +24,9 @@ class StepometerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
+        print("INSIDE PEDOMETER")
         
-        makeSolidButton(button: homeButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        //makeSolidButton(button: homeButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         
         
         if CMPedometer.isStepCountingAvailable() {
