@@ -33,9 +33,9 @@ class DeleteAccountViewController: UIViewController {
         
         logoLabel.textColor = Constants.appColors.orangeRed
         promptLabel.textColor = Constants.appColors.orangeRed
+        deleteButton.setTitleColor(Constants.appColors.orangeRed, for: .normal)
         
         makeSolidButton(button: keepButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
-        makeGhostButton(button: deleteButton, color: Constants.appColors.orangeRed)
 
     }
     

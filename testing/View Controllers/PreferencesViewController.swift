@@ -63,14 +63,7 @@ class PreferencesViewController: UIViewController {
     @IBOutlet weak var persianButton: UIButton!
     
     @IBOutlet weak var latinButton: UIButton!
-    
-    
-    
-    let prefList = ["sweetsButton", "seafoodButton", "nutsButton", "fruitsButton", "soupsButton", "bakedButton", "healthyButton", "breadButton", "vegetablesButton", "saladsButton", "meatsButton", "pastasButton", "mexicanButton", "asianButton", "europeanButton", "caribbeanButton", "persianButton", "latinButton"]
-    
-    var sweetsSelected = false
-    var seafoodSelected = false
-    var nutsSelected = false
+
     
     
     
@@ -103,43 +96,244 @@ class PreferencesViewController: UIViewController {
     }
     
     
-    // MARK: Selected Button
+    // MARK: Selected Pref Button
 
-    @IBAction func selectSweetsButton(_ sender: UIButton) {
-        if (sweetsSelected == false) {
+    @IBAction func sweetsTapped(_ sender: Any) {
+        if (prefStateList["sweets"] == false) {
             makeSolidButton(button: sweetsButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
-            sweetsSelected = true
+            prefStateList["sweets"] = true
         }
         else {
             makeGhostButton(button: sweetsButton, color: Constants.appColors.mustard)
-            sweetsSelected = false
+            prefStateList["sweets"] = false
         }
     }
     
-    @IBAction func selectSeafoodButton(_ sender: UIButton) {
-        if (seafoodSelected == false) {
+    
+    @IBAction func seafoodTapped(_ sender: Any) {
+        if (prefStateList["seafood"] == false) {
             makeSolidButton(button: seafoodButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
-            seafoodSelected = true
+            prefStateList["seafood"] = true
         }
         else {
             makeGhostButton(button: seafoodButton, color: Constants.appColors.mustard)
-            seafoodSelected = false
+            prefStateList["seafood"] = false
         }
     }
     
-    @IBAction func selectNutsButton(_ sender: UIButton) {
-        if (nutsSelected == false) {
+    
+    @IBAction func nutsTapped(_ sender: Any) {
+        if (prefStateList["nuts"] == false) {
             makeSolidButton(button: nutsButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
-            nutsSelected = true
+            prefStateList["nuts"] = true
         }
         else {
             makeGhostButton(button: nutsButton, color: Constants.appColors.mustard)
-            nutsSelected = false
+            prefStateList["nuts"] = false
+        }
+    }
+    
+
+    @IBAction func fruitsTapped(_ sender: Any) {
+        if (prefStateList["fruits"] == false) {
+            makeSolidButton(button: fruitsButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["fruits"] = true
+        }
+        else {
+            makeGhostButton(button: fruitsButton, color: Constants.appColors.mustard)
+            prefStateList["fruits"] = false
+        }
+    }
+    
+    @IBAction func soupsTapped(_ sender: Any) {
+        if (prefStateList["soups"] == false) {
+            makeSolidButton(button: soupsButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["soups"] = true
+        }
+        else {
+            makeGhostButton(button: soupsButton, color: Constants.appColors.mustard)
+            prefStateList["soups"] = false
+        }
+    }
+    
+    @IBAction func bakedTapped(_ sender: Any) {
+        if (prefStateList["baked"] == false) {
+            makeSolidButton(button: bakedButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["baked"] = true
+        }
+        else {
+            makeGhostButton(button: bakedButton, color: Constants.appColors.mustard)
+            prefStateList["baked"] = false
+        }
+    }
+    
+    @IBAction func healthyTapped(_ sender: Any) {
+        if (prefStateList["healthy"] == false) {
+            makeSolidButton(button: healthyButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["healthy"] = true
+        }
+        else {
+            makeGhostButton(button: healthyButton, color: Constants.appColors.mustard)
+            prefStateList["healthy"] = false
+        }
+    }
+    
+    @IBAction func breadTapped(_ sender: Any) {
+        if (prefStateList["bread"] == false) {
+            makeSolidButton(button: breadButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["bread"] = true
+        }
+        else {
+            makeGhostButton(button: breadButton, color: Constants.appColors.mustard)
+            prefStateList["bread"] = false
+        }
+    }
+    
+    @IBAction func vegetablesTapped(_ sender: Any) {
+        if (prefStateList["vegetables"] == false) {
+            makeSolidButton(button: vegetablesButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["vegetables"] = true
+        }
+        else {
+            makeGhostButton(button: vegetablesButton, color: Constants.appColors.mustard)
+            prefStateList["vegetables"] = false
+        }
+    }
+    
+    @IBAction func saladsTapped(_ sender: Any) {
+        if (prefStateList["salads"] == false) {
+            makeSolidButton(button: saladsButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["salads"] = true
+        }
+        else {
+            makeGhostButton(button: saladsButton, color: Constants.appColors.mustard)
+            prefStateList["salads"] = false
+        }
+    }
+    
+    @IBAction func meatsTapped(_ sender: Any) {
+        if (prefStateList["meats"] == false) {
+            makeSolidButton(button: meatsButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["meats"] = true
+        }
+        else {
+            makeGhostButton(button: meatsButton, color: Constants.appColors.mustard)
+            prefStateList["meats"] = false
+        }
+    }
+    
+    @IBAction func pastasTapped(_ sender: Any) {
+        if (prefStateList["pastas"] == false) {
+            makeSolidButton(button: pastasButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["pastas"] = true
+        }
+        else {
+            makeGhostButton(button: pastasButton, color: Constants.appColors.mustard)
+            prefStateList["pastas"] = false
         }
     }
     
     
+    
+    @IBAction func mexicanTapped(_ sender: Any) {
+        if (prefStateList["mexican"] == false) {
+            makeSolidButton(button: mexicanButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["mexican"] = true
+        }
+        else {
+            makeGhostButton(button: mexicanButton, color: Constants.appColors.mustard)
+            prefStateList["mexican"] = false
+        }
+    }
+    
+    @IBAction func asianTapped(_ sender: Any) {
+        if (prefStateList["asian"] == false) {
+            makeSolidButton(button: asianButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["asian"] = true
+        }
+        else {
+            makeGhostButton(button: asianButton, color: Constants.appColors.mustard)
+            prefStateList["asian"] = false
+        }
+    }
+    
+    @IBAction func europeanTapped(_ sender: Any) {
+        if (prefStateList["european"] == false) {
+            makeSolidButton(button: europeanButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["european"] = true
+        }
+        else {
+            makeGhostButton(button: europeanButton, color: Constants.appColors.mustard)
+            prefStateList["european"] = false
+        }
+    }
+    
+    @IBAction func caribbeanTapped(_ sender: Any) {
+        if (prefStateList["caribbean"] == false) {
+            makeSolidButton(button: caribbeanButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["caribbean"] = true
+        }
+        else {
+            makeGhostButton(button: caribbeanButton, color: Constants.appColors.mustard)
+            prefStateList["caribbean"] = false
+        }
+    }
+    
+    @IBAction func persianTapped(_ sender: Any) {
+        if (prefStateList["persian"] == false) {
+            makeSolidButton(button: persianButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["persian"] = true
+        }
+        else {
+            makeGhostButton(button: persianButton, color: Constants.appColors.mustard)
+            prefStateList["persian"] = false
+        }
+    }
+    
+    @IBAction func latinTapped(_ sender: Any) {
+        if (prefStateList["latin"] == false) {
+            makeSolidButton(button: latinButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+            prefStateList["latin"] = true
+        }
+        else {
+            makeGhostButton(button: latinButton, color: Constants.appColors.mustard)
+            prefStateList["latin"] = false
+        }
+    }
+    
+    
+    
+    
+    // MARK: Other Button Actions
+    
+    
     @IBAction func nextTapped(_ sender: Any) {
+        // check and input the states that are TRUE
+        // this means that the user has selected those TRUE state preferences
+        var prefList = [String]()
+        
+        for prefState in prefStateList.keys {
+            if prefStateList[prefState] == true {
+                prefList.append(prefState)
+            }
+        }
+        
+        // access current user information
+        let db = Firestore.firestore()
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        let userRef = db.collection("users").document(userID)
+        
+        // update the height/weight/age of current user (get input)
+        userRef.updateData([
+                            "preferences": prefList
+        ]) { err in
+            if let err = err {
+                print("Error updating preferences: \(err)")
+            } else {
+                print("Preferences successfully updated")
+            }
+        }
+        
         transitionToWelcome()
     }
     

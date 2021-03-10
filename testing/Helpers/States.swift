@@ -50,3 +50,26 @@ var sameDay: Bool = true
  
 var updating: Bool = false
 var updateBM = ""
+
+
+// MARK: Preferences State Dictionary
+
+var prefStateList = ["sweets": false,
+                     "seafood": false,
+                     "nuts": false,
+                     "fruits": false,
+                     "soups": false,
+                     "baked": false,
+                     "healthy": false,
+                     "bread": false,
+                     "vegetables": false,
+                     "salads": false,
+                     "meats": false,
+                     "pastas": false,
+                     "mexican": false,
+                     "asian": false,
+                     "european": false,
+                     "caribbean": false,
+                     "persian": false,
+                     "latin": false
+] as [String : Bool]

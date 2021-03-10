@@ -229,21 +229,21 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Sweets"/>
                                                 <connections>
-                                                    <action selector="selectSweetsButton:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="xwn-pn-lrV"/>
+                                                    <action selector="sweetsTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="np7-Sp-Ifs"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzf-8I-m4n">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Seafood"/>
                                                 <connections>
-                                                    <action selector="selectSeafoodButton:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="t7d-cd-Cuh"/>
+                                                    <action selector="seafoodTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="jzI-Yv-OtR"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbq-Sc-jaN">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Nuts"/>
                                                 <connections>
-                                                    <action selector="selectNutsButton:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="IDo-ym-Ojc"/>
+                                                    <action selector="nutsTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="Ltd-oH-xlF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -258,14 +258,23 @@
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycF-FG-H9A">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Fruits"/>
+                                                <connections>
+                                                    <action selector="fruitsTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="yfc-gj-Iey"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94C-Wd-bb4">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Soups"/>
+                                                <connections>
+                                                    <action selector="soupsTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="DF2-dc-VUJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHP-hC-K5j">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Baked"/>
+                                                <connections>
+                                                    <action selector="bakedTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="omr-KP-Jlh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -279,14 +288,23 @@
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-2F-QHK">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Healthy"/>
+                                                <connections>
+                                                    <action selector="healthyTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="j21-fB-jpH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5n-z8-SEe">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Bread"/>
+                                                <connections>
+                                                    <action selector="breadTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="GBL-du-Lwe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-QE-8MO">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Vegetables"/>
+                                                <connections>
+                                                    <action selector="vegetablesTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="MkO-WY-jya"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -300,14 +318,23 @@
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jll-Bg-3w0">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Salads"/>
+                                                <connections>
+                                                    <action selector="saladsTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="y7F-BA-r2C"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2U-5k-oG3">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Meats"/>
+                                                <connections>
+                                                    <action selector="meatsTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="Y7Q-Gx-4ns"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU4-tI-PtX">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Pastas"/>
+                                                <connections>
+                                                    <action selector="pastasTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="EKX-bK-077"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -331,13 +358,21 @@
                                             <action selector="nextTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="u2S-dy-RMH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vm-9c-N52">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Vm-9c-N52">
                                         <rect key="frame" x="0.0" y="60" width="310" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="G5V-WL-dck"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Skip"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Skip">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="20"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <connections>
                                             <action selector="skipTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="iAp-7W-pgD"/>
                                         </connections>
@@ -353,14 +388,23 @@
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFQ-Ge-8bw">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Mexican"/>
+                                                <connections>
+                                                    <action selector="mexicanTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="M3Y-L0-IGV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUp-cO-CQM">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Asian"/>
+                                                <connections>
+                                                    <action selector="asianTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="XCs-cS-loe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqx-0T-vOn">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="European"/>
+                                                <connections>
+                                                    <action selector="europeanTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="yxl-fe-2lu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -374,14 +418,23 @@
                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeX-cR-L6A">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Caribbean"/>
+                                                <connections>
+                                                    <action selector="caribbeanTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="8gj-qK-8Ha"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29P-jJ-Ftc">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Persian"/>
+                                                <connections>
+                                                    <action selector="persianTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="I2r-sB-Tvg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-1N-U3E">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Latin"/>
+                                                <connections>
+                                                    <action selector="latinTapped:" destination="9VV-AY-8Cd" eventType="touchUpInside" id="5UA-ti-O2R"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -1316,13 +1369,21 @@ to delete your account?</string>
                                             <action selector="keepButtonTapped:" destination="LsH-fN-BZt" eventType="touchUpInside" id="BU6-M3-ci2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27C-VH-6H8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="27C-VH-6H8">
                                         <rect key="frame" x="0.0" y="138" width="300" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="SUG-Ze-6go"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Delete Account"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Delete Account">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="20"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <connections>
                                             <action selector="deleteButtonTapped:" destination="LsH-fN-BZt" eventType="touchUpInside" id="Dvt-bK-mvk"/>
                                         </connections>
