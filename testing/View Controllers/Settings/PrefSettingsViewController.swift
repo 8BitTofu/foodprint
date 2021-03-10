@@ -430,7 +430,7 @@ class PrefSettingsViewController: UIViewController {
     // MARK: Button Actions
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        transitionToSettings()
+        transitionToHome()
     }
     
     @IBAction func updateTapped(_ sender: Any) {
@@ -461,7 +461,7 @@ class PrefSettingsViewController: UIViewController {
             }
         }
         
-        transitionToSettings()
+        transitionToHome()
     }
     
     
@@ -472,6 +472,14 @@ class PrefSettingsViewController: UIViewController {
         let settingsViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.settingsViewController) as? SettingsViewController
         
         view.window?.rootViewController = settingsViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToHome() {
+        // transition to home screen
+        let tabbedViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabbedViewController) as? TabbedViewController
+        
+        view.window?.rootViewController = tabbedViewController
         view.window?.makeKeyAndVisible()
     }
     

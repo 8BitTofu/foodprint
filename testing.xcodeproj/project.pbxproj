@@ -14,6 +14,7 @@
 		1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6625CA78360055CE65 /* LoginViewController.swift */; };
 		1F124E9525F8705E000015E5 /* PrefSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F124E9425F8705E000015E5 /* PrefSettingsViewController.swift */; };
 		1F2096C025CAB2F000C343CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2096BF25CAB2F000C343CB /* Constants.swift */; };
+		1F3002A525F8A675001C02BE /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3002A425F8A675001C02BE /* ProgressViewController.swift */; };
 		1F31525D25F60F5C00A9641C /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */; };
 		1F325D2325DFCCC500AA8ACA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */; };
 		1F325D2625DFCCD300AA8ACA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */; };
@@ -54,6 +55,7 @@
 		1F0E0D6625CA78360055CE65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F124E9425F8705E000015E5 /* PrefSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefSettingsViewController.swift; sourceTree = "<group>"; };
 		1F2096BF25CAB2F000C343CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F3002A425F8A675001C02BE /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				1FCFB75B25DFC83800259149 /* TabbedViewController.swift */,
 				1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */,
 				1FF6913F25F2521900E06C5C /* AddMealViewController.swift */,
+				1F3002A425F8A675001C02BE /* ProgressViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				1F64ED6B25F2133B00676682 /* AccountViewController.swift in Sources */,
 				1F325D2625DFCCD300AA8ACA /* SettingsViewController.swift in Sources */,
 				1F5FAC1725EA19A8005BDC12 /* GenderViewController.swift in Sources */,
+				1F3002A525F8A675001C02BE /* ProgressViewController.swift in Sources */,
 				1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */,
 				1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */,
 				1F124E9525F8705E000015E5 /* PrefSettingsViewController.swift in Sources */,

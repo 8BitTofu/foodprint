@@ -29,6 +29,7 @@ class Constants {
         static let updateBMViewController = "updateBMVC"
         static let preferencesViewController = "preferencesVC"
         static let prefSettingsViewController = "prefSettingsVC"
+        static let progressViewController = "progressVC"
         
     }
     

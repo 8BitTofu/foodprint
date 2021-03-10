@@ -23,8 +23,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var addMealButton: UIButton!
     
-    @IBOutlet weak var addStepometerButton: UIButton!
-    
     
     
     // MARK: Recommendation Buttons / Labels
@@ -207,10 +205,6 @@ class HomeViewController: UIViewController {
         transitionToAddMeal()
     }
     
-    @IBAction func addStepometerTapped(_ sender: Any) {
-        transitionToStepometerView()
-    }
-    
     
     
     // MARK: Set Calories
@@ -239,4 +233,5 @@ class HomeViewController: UIViewController {
         
         view.window?.rootViewController = stepometerViewController
         view.window?.makeKeyAndVisible()
-    }}
+    }
+}

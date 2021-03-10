@@ -26,6 +26,8 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var logoLabel: UILabel!
     
+    @IBOutlet weak var tabNavigation: UITabBarItem!
+    
     
     
     override func viewDidLoad() {
@@ -34,6 +36,7 @@ class SettingsViewController: UIViewController {
         // MARK: UI / Aesthetics
         
         self.view.backgroundColor = .white
+        tabNavigation.isEnabled = true
         
         logoLabel.textColor = Constants.appColors.chineseOrange
         
@@ -98,6 +101,8 @@ class SettingsViewController: UIViewController {
         view.window?.rootViewController = prefSettingsViewController
         view.window?.makeKeyAndVisible()
     }
+    
+    
     
 
 }

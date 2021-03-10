@@ -787,7 +787,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8L-e3-F3E">
-                                <rect key="frame" x="40" y="734" width="310" height="36"/>
+                                <rect key="frame" x="40" y="720" width="310" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TdK-ZF-Njr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Update"/>
                                 <connections>
@@ -1215,14 +1218,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Refresh"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qu-Sa-f0w">
-                                <rect key="frame" x="160" y="654" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stepometer"/>
-                                <connections>
-                                    <action selector="addStepometerTapped:" destination="xp7-Gs-Kd6" eventType="touchUpInside" id="51c-wy-dJG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Esp-6B-BkH"/>
                         <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1281,13 +1276,32 @@
                     <view key="view" contentMode="scaleToFill" id="lKo-Qd-W6g">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hla-ab-NUi">
+                                <rect key="frame" x="40" y="74" width="26.333333333333329" height="22"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backTapped:" destination="cL2-bE-MYG" eventType="touchUpInside" id="S2V-q3-s0q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WKd-Us-TGb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hla-ab-NUi" firstAttribute="leading" secondItem="WKd-Us-TGb" secondAttribute="leading" constant="40" id="2uI-zd-lbO"/>
+                            <constraint firstItem="Hla-ab-NUi" firstAttribute="top" secondItem="WKd-Us-TGb" secondAttribute="top" constant="30" id="KhF-25-4mH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="Hla-ab-NUi" id="gRi-fo-uua"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLD-uy-hvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4148" y="-1393"/>
+            <point key="canvasLocation" x="4874" y="-1393"/>
         </scene>
         <!--Settings-->
         <scene sceneID="qtv-M3-gKd">
@@ -1375,6 +1389,7 @@
                         <outlet property="logoLabel" destination="Ojt-qU-Dbg" id="VrF-V5-OmS"/>
                         <outlet property="preferencesButton" destination="fSM-qw-lbq" id="SQL-Ry-D2X"/>
                         <outlet property="signOutButton" destination="Ubh-vS-IBX" id="KNn-8C-Lsr"/>
+                        <outlet property="tabNavigation" destination="9hG-7i-qIA" id="AnY-5c-ewM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSw-vK-Wog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1708,14 +1723,27 @@ to delete your account?</string>
                     <view key="view" contentMode="scaleToFill" id="SMJ-bc-cQd">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3C-Rg-72J">
+                                <rect key="frame" x="155" y="407" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stepometer"/>
+                                <connections>
+                                    <action selector="stepometerTapped:" destination="BB4-T9-Bwm" eventType="touchUpInside" id="syq-Jg-WzQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8dR-tG-Fak"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Progress" image="person" catalog="system" id="6Mg-SX-anY"/>
+                    <connections>
+                        <outlet property="stepometerButton" destination="y3C-Rg-72J" id="h24-gw-uNR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ejj-Bb-fBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4875" y="-734"/>
+            <point key="canvasLocation" x="4873.8461538461534" y="-734.36018957345971"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="oHh-mo-sSB">

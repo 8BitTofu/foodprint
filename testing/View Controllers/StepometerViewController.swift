@@ -16,6 +16,13 @@ class StepometerViewController: UIViewController {
     @IBOutlet weak var lbCounter: UILabel!
     
     @IBOutlet weak var homeButton: UIButton!
+    
+    @IBOutlet weak var backButton: UIButton!
+    
+    
+    
+    
+    
 
     let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
@@ -45,17 +52,21 @@ class StepometerViewController: UIViewController {
         
     func transitionToHome() {
         // transition to home screen
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        let tabbedViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabbedViewController) as? TabbedViewController
         
-        view.window?.rootViewController = homeViewController
+        view.window?.rootViewController = tabbedViewController
         view.window?.makeKeyAndVisible()
     }
     
+
     
     @IBAction func stepButtonTapped(_ sender: Any) {
         self.transitionToHome()
     }
         
+    @IBAction func backTapped(_ sender: Any) {
+        transitionToHome()
+    }
     
     
 }
