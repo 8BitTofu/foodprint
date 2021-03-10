@@ -16,6 +16,9 @@ class DBHelper
         db = startDatabase()
     }
     
-    
+    func startDatabase()
+    {
+        var filePath = Bundle.main.path(forResource: "allrecipes", ofType: "json")
+    }
 }
 
