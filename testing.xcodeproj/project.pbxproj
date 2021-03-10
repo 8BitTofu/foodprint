@@ -27,7 +27,6 @@
 		1F6F176325EF76F50046BC44 /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F176225EF76F50046BC44 /* CategoryInfo.swift */; };
 		1F73C10A25EF8F5F0022F84B /* categories.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F73C10925EF8F5F0022F84B /* categories.txt */; };
 		1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */; };
-		1FA8CD3725F8C03D007F299C /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA8CD3625F8C03D007F299C /* test.swift */; };
 		1FB2FB5725C8D57100DCD524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5625C8D57100DCD524 /* AppDelegate.swift */; };
 		1FB2FB5925C8D57100DCD524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5825C8D57100DCD524 /* SceneDelegate.swift */; };
 		1FB2FB5B25C8D57100DCD524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5A25C8D57100DCD524 /* ViewController.swift */; };
@@ -508,7 +507,6 @@
 				1F0AA1A325F773D90062D54E /* firebaseRef.swift in Sources */,
 				1FB2FB5725C8D57100DCD524 /* AppDelegate.swift in Sources */,
 				1F09443725DD363C006ACEC7 /* WelcomeViewController.swift in Sources */,
-				1FA8CD3725F8C03D007F299C /* test.swift in Sources */,
 				1FC8639425DE9CE0004B4B31 /* currentUser.swift in Sources */,
 				1F0876E125DE09F400CCC9D7 /* States.swift in Sources */,
 				1F6F176325EF76F50046BC44 /* CategoryInfo.swift in Sources */,
