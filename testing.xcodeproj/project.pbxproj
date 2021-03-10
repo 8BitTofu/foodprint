@@ -146,21 +146,13 @@
 		1F6F176125EF76B40046BC44 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				441514A625F8C005001C9EED /* category_files */,
+				4476D58925F8C195001A60A3 /* category_files */,
 				4488C76A25ED04E3005A32FC /* DBHelper.swift */,
 				4488C78225ED059F005A32FC /* Recipe.swift */,
 				1F6F176225EF76F50046BC44 /* CategoryInfo.swift */,
 				1F73C10925EF8F5F0022F84B /* categories.txt */,
 			);
 			path = Database;
-			sourceTree = "<group>";
-		};
-		1FA8CD3525F8C030007F299C /* Category Files */ = {
-			isa = PBXGroup;
-			children = (
-				1FA8CD3625F8C03D007F299C /* test.swift */,
-			);
-			name = "Category Files";
 			sourceTree = "<group>";
 		};
 		1FB2FB4A25C8D57100DCD524 = {
@@ -170,6 +162,7 @@
 				1FB2FB5425C8D57100DCD524 /* Products */,
 				BCF2AA36EDD9B36ECD7F6AAF /* Pods */,
 				C9190822902F519D373242B0 /* Frameworks */,
+				4476D58725F8C183001A60A3 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,7 +226,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		441514A625F8C005001C9EED /* category_files */ = {
+		4476D58725F8C183001A60A3 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				1FA8CD3625F8C03D007F299C /* test.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		4476D58925F8C195001A60A3 /* category_files */ = {
 			isa = PBXGroup;
 			children = (
 			);
