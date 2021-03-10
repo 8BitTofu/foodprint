@@ -144,6 +144,7 @@
 		1F6F176125EF76B40046BC44 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				4415149E25F8BDA6001C9EED /* category_files */,
 				4488C76A25ED04E3005A32FC /* DBHelper.swift */,
 				4488C78225ED059F005A32FC /* Recipe.swift */,
 				1F6F176225EF76F50046BC44 /* CategoryInfo.swift */,
@@ -220,6 +221,13 @@
 				1F0E0D6625CA78360055CE65 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		4415149E25F8BDA6001C9EED /* category_files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = category_files;
 			sourceTree = "<group>";
 		};
 		BCF2AA36EDD9B36ECD7F6AAF /* Pods */ = {
