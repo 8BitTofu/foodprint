@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -72,6 +72,7 @@
 		44C5420225F8C3DC00832B01 /* vegetables.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541E025F8C3DC00832B01 /* vegetables.txt */; };
 		44C5420525F8C94E00832B01 /* allrecipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C5420425F8C94D00832B01 /* allrecipes.json */; };
 		44C5420825F8C97100832B01 /* fp.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C5420725F8C97100832B01 /* fp.json */; };
+		44C5420C25F8D89700832B01 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 44C5420B25F8D89700832B01 /* SwiftyJSON */; };
 		627B10D825F65521004B1AF5 /* StepometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B10D725F65521004B1AF5 /* StepometerViewController.swift */; };
 		80DD2799A2FD38377CE3AD21 /* Pods_testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D049976888F907BB8A4DD87 /* Pods_testing.framework */; };
 /* End PBXBuildFile section */
@@ -156,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C5420C25F8D89700832B01 /* SwiftyJSON in Frameworks */,
 				80DD2799A2FD38377CE3AD21 /* Pods_testing.framework in Frameworks */,
 				1F6CA10325DA397800C7296A /* HealthKit.framework in Frameworks */,
 			);
@@ -364,6 +366,9 @@
 			dependencies = (
 			);
 			name = testing;
+			packageProductDependencies = (
+				44C5420B25F8D89700832B01 /* SwiftyJSON */,
+			);
 			productName = testing;
 			productReference = 1FB2FB5325C8D57100DCD524 /* testing.app */;
 			productType = "com.apple.product-type.application";
@@ -391,6 +396,9 @@
 				Base,
 			);
 			mainGroup = 1FB2FB4A25C8D57100DCD524;
+			packageReferences = (
+				44C5420A25F8D89700832B01 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 1FB2FB5425C8D57100DCD524 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -727,6 +735,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44C5420A25F8D89700832B01 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44C5420B25F8D89700832B01 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44C5420A25F8D89700832B01 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FB2FB4B25C8D57100DCD524 /* Project object */;
 }

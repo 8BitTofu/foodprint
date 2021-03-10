@@ -5,6 +5,7 @@
 //  Created by Leon Hsieh on 3/1/21.
 //
 
+import SwiftyJSON
 import Foundation
 // import SQLite3
 
@@ -13,12 +14,22 @@ class DBHelper
 {
     init()
     {
-        db = startDatabase()
+        startDatabase()
     }
     
     func startDatabase()
     {
-        var filePath = Bundle.main.path(forResource: "allrecipes", ofType: "json")
+        if let path = Bundle.main.path(forResource: "category_files/asian.txt", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let jsonObj = try JSON(data: data)
+                print("jsonData:\(jsonObj)")
+            } catch let error {
+                print("parse error: \(error.localizedDescription)")
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
     }
 }
 
