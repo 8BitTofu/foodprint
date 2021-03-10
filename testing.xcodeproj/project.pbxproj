@@ -12,6 +12,7 @@
 		1F0AA1A325F773D90062D54E /* firebaseRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0AA1A225F773D90062D54E /* firebaseRef.swift */; };
 		1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */; };
 		1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6625CA78360055CE65 /* LoginViewController.swift */; };
+		1F124E9525F8705E000015E5 /* PrefSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F124E9425F8705E000015E5 /* PrefSettingsViewController.swift */; };
 		1F2096C025CAB2F000C343CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2096BF25CAB2F000C343CB /* Constants.swift */; };
 		1F31525D25F60F5C00A9641C /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */; };
 		1F325D2325DFCCC500AA8ACA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */; };
@@ -51,6 +52,7 @@
 		1F0AA1A225F773D90062D54E /* firebaseRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseRef.swift; sourceTree = "<group>"; };
 		1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1F0E0D6625CA78360055CE65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F124E9425F8705E000015E5 /* PrefSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefSettingsViewController.swift; sourceTree = "<group>"; };
 		1F2096BF25CAB2F000C343CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -111,24 +113,29 @@
 		1F0E0D6C25CA786F0055CE65 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1FF85CEC25F874B00050FA3E /* Login */,
+				1FF85CEB25F874820050FA3E /* Sign Up */,
+				1F124E9725F8722B000015E5 /* Settings */,
 				627B10D725F65521004B1AF5 /* StepometerViewController.swift */,
 				1FB2FB5A25C8D57100DCD524 /* ViewController.swift */,
-				1F0E0D6625CA78360055CE65 /* LoginViewController.swift */,
-				1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */,
-				1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */,
 				1F09443625DD363C006ACEC7 /* WelcomeViewController.swift */,
 				1FCFB75B25DFC83800259149 /* TabbedViewController.swift */,
 				1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */,
-				1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */,
-				1F5FAC1625EA19A8005BDC12 /* GenderViewController.swift */,
-				1F4496C525EA5456000DFADD /* WeightViewController.swift */,
-				1F64ED6A25F2133B00676682 /* AccountViewController.swift */,
-				1F64ED8325F2215700676682 /* DeleteAccountViewController.swift */,
 				1FF6913F25F2521900E06C5C /* AddMealViewController.swift */,
-				1FF1ABE025F2674400E8D25C /* UpdateBMViewController.swift */,
-				1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1F124E9725F8722B000015E5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1F325D2525DFCCD300AA8ACA /* SettingsViewController.swift */,
+				1F64ED8325F2215700676682 /* DeleteAccountViewController.swift */,
+				1FF1ABE025F2674400E8D25C /* UpdateBMViewController.swift */,
+				1F64ED6A25F2133B00676682 /* AccountViewController.swift */,
+				1F124E9425F8705E000015E5 /* PrefSettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		1F6F176125EF76B40046BC44 /* Database */ = {
@@ -190,6 +197,26 @@
 				1FB5050D25E0B5C300531682 /* formatting.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1FF85CEB25F874820050FA3E /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				1F0E0D6325CA603E0055CE65 /* SignUpViewController.swift */,
+				1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */,
+				1F5FAC1625EA19A8005BDC12 /* GenderViewController.swift */,
+				1F4496C525EA5456000DFADD /* WeightViewController.swift */,
+				1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		1FF85CEC25F874B00050FA3E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1F0E0D6625CA78360055CE65 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		BCF2AA36EDD9B36ECD7F6AAF /* Pods */ = {
@@ -343,6 +370,7 @@
 				1F5FAC1725EA19A8005BDC12 /* GenderViewController.swift in Sources */,
 				1F0E0D6425CA603E0055CE65 /* SignUpViewController.swift in Sources */,
 				1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */,
+				1F124E9525F8705E000015E5 /* PrefSettingsViewController.swift in Sources */,
 				1FB2FB5925C8D57100DCD524 /* SceneDelegate.swift in Sources */,
 				1F6CA10525DA3C5100C7296A /* healthKit.swift in Sources */,
 				1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */,

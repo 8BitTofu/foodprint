@@ -77,7 +77,7 @@ class foodCategories {
 
     // MARK: Cuisine Types
 
-    let austrian = ["Austrian"]
+    // let austrian = ["Austrian"]
 
     let asian = ["Asian", "Chinese", "Thai", "Filipino", "Japanese", "Korean"]
 
@@ -85,17 +85,17 @@ class foodCategories {
 
     let caribbean = ["Caribbean"]
 
-    let european = ["UK and Ireland", "European"]
+    let european = ["UK and Ireland", "European", "greek", "austrian", "french", "italian", "polish", "german", "spanish", "irish"]
 
     let mexican = ["Mexican"]
 
-    let greek = ["Greek"]
+    // let greek = ["Greek"]
 
-    let french = ["French"]
+    // let french = ["French"]
 
-    let italian = ["Italian"]
+    // let italian = ["Italian"]
 
-    let polish = ["Polish"]
+    // let polish = ["Polish"]
 
     let persian = ["Persian"]
 
@@ -103,9 +103,9 @@ class foodCategories {
 
     let latin = ["Latin American"]
 
-    let german = ["German"]
+    // let german = ["German"]
     
-    let spanish = ["Spanish"]
+    // let spanish = ["Spanish"]
 
 
 

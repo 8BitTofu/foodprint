@@ -562,6 +562,229 @@
             </objects>
             <point key="canvasLocation" x="4491" y="-39"/>
         </scene>
+        <!--Pref Settings View Controller-->
+        <scene sceneID="eA9-mi-Xu6">
+            <objects>
+                <viewController storyboardIdentifier="prefSettingsVC" id="fih-c4-4vN" customClass="PrefSettingsViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HGv-9W-arh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZy-UO-LPB">
+                                <rect key="frame" x="40" y="74" width="26.333333333333329" height="22"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wj8-j6-5ny">
+                                <rect key="frame" x="154" y="74" width="82" height="29"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RyE-oj-Zqw">
+                                <rect key="frame" x="40" y="278" width="310" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LhN-O2-OUe">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT2-mA-dEf">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Sweets"/>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-xg-sLv">
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Seafood"/>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0E-pf-pVd">
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Nuts"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="HcX-xg-sLv" firstAttribute="width" secondItem="oT2-mA-dEf" secondAttribute="width" id="ojn-64-7vO"/>
+                                            <constraint firstItem="H0E-pf-pVd" firstAttribute="width" secondItem="oT2-mA-dEf" secondAttribute="width" id="s3L-Bk-Sqh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Awc-KV-7zD">
+                                        <rect key="frame" x="0.0" y="50" width="310" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl5-Cn-E6P">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Fruits"/>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77j-HW-2WY">
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Soups"/>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8w-75-Yp7">
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Baked"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="77j-HW-2WY" firstAttribute="width" secondItem="vl5-Cn-E6P" secondAttribute="width" id="Xzg-OU-Gjh"/>
+                                            <constraint firstItem="q8w-75-Yp7" firstAttribute="width" secondItem="vl5-Cn-E6P" secondAttribute="width" id="ma0-AN-NvM"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1rN-oq-SvY">
+                                        <rect key="frame" x="0.0" y="100" width="310" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGi-OI-qcO">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Healthy"/>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFE-GI-N97">
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Bread"/>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOh-0K-7PW">
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Vegetables"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="EOh-0K-7PW" firstAttribute="width" secondItem="GGi-OI-qcO" secondAttribute="width" id="nIz-kq-4b0"/>
+                                            <constraint firstItem="rFE-GI-N97" firstAttribute="width" secondItem="GGi-OI-qcO" secondAttribute="width" id="oc6-N4-uyd"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ten-ea-hZr">
+                                        <rect key="frame" x="0.0" y="150" width="310" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-s5-A6B">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Salads"/>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4M-XZ-x0N">
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Meats"/>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4h-WI-sIh">
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Pastas"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="c4M-XZ-x0N" firstAttribute="width" secondItem="CqQ-s5-A6B" secondAttribute="width" id="fK1-vf-Rgc"/>
+                                            <constraint firstItem="b4h-WI-sIh" firstAttribute="width" secondItem="CqQ-s5-A6B" secondAttribute="width" id="vua-MD-5sf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-Or-Cls">
+                                <rect key="frame" x="40" y="501" width="310" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xBo-mi-h2E">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGX-MC-M4x">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Mexican"/>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oss-5b-ExR">
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Asian"/>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbo-Ft-Q86">
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="European"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zbo-Ft-Q86" firstAttribute="width" secondItem="cGX-MC-M4x" secondAttribute="width" id="5wt-V4-Sdp"/>
+                                            <constraint firstItem="Oss-5b-ExR" firstAttribute="width" secondItem="cGX-MC-M4x" secondAttribute="width" id="ewM-nN-SFf"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-Ez-FuC">
+                                        <rect key="frame" x="0.0" y="50" width="310" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFj-BG-bLB">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Caribbean"/>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oh-UX-ZiH">
+                                                <rect key="frame" x="110" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Persian"/>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smi-qv-V6K">
+                                                <rect key="frame" x="220" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Latin"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Smi-qv-V6K" firstAttribute="width" secondItem="iFj-BG-bLB" secondAttribute="width" id="PBq-yF-BaW"/>
+                                            <constraint firstItem="3Oh-UX-ZiH" firstAttribute="width" secondItem="iFj-BG-bLB" secondAttribute="width" id="r1u-4w-KF6"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preference Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtp-4g-Woq">
+                                <rect key="frame" x="40" y="225" width="310" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="omg-rU-dWs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8L-e3-F3E">
+                                <rect key="frame" x="40" y="734" width="310" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Update"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5QP-MC-W1F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zti-Or-Cls" firstAttribute="centerX" secondItem="wj8-j6-5ny" secondAttribute="centerX" id="8VL-5w-QPx"/>
+                            <constraint firstItem="5QP-MC-W1F" firstAttribute="trailing" secondItem="wj8-j6-5ny" secondAttribute="trailing" constant="154" id="8hd-8W-CFA"/>
+                            <constraint firstItem="Zti-Or-Cls" firstAttribute="leading" secondItem="5QP-MC-W1F" secondAttribute="leading" constant="40" id="Bke-fg-Kkv"/>
+                            <constraint firstItem="5QP-MC-W1F" firstAttribute="trailing" secondItem="Zti-Or-Cls" secondAttribute="trailing" constant="40" id="DLe-df-hBf"/>
+                            <constraint firstItem="vtp-4g-Woq" firstAttribute="leading" secondItem="5QP-MC-W1F" secondAttribute="leading" constant="40" id="FeJ-Iu-o2i"/>
+                            <constraint firstItem="5QP-MC-W1F" firstAttribute="trailing" secondItem="g8L-e3-F3E" secondAttribute="trailing" constant="40" id="Jil-Kh-fqI"/>
+                            <constraint firstItem="YZy-UO-LPB" firstAttribute="leading" secondItem="5QP-MC-W1F" secondAttribute="leading" constant="40" id="Mgi-Xx-x7k"/>
+                            <constraint firstItem="g8L-e3-F3E" firstAttribute="leading" secondItem="5QP-MC-W1F" secondAttribute="leading" constant="40" id="V8y-mc-eyr"/>
+                            <constraint firstItem="5QP-MC-W1F" firstAttribute="trailing" secondItem="RyE-oj-Zqw" secondAttribute="trailing" constant="40" id="dIh-yw-7Nq"/>
+                            <constraint firstItem="YZy-UO-LPB" firstAttribute="top" secondItem="5QP-MC-W1F" secondAttribute="top" constant="30" id="eZa-BO-jGf"/>
+                            <constraint firstItem="RyE-oj-Zqw" firstAttribute="top" secondItem="vtp-4g-Woq" secondAttribute="bottom" constant="32" id="ef9-tt-JMb"/>
+                            <constraint firstItem="Zti-Or-Cls" firstAttribute="top" secondItem="HGv-9W-arh" secondAttribute="top" constant="501" id="gYD-MJ-pQD"/>
+                            <constraint firstItem="5QP-MC-W1F" firstAttribute="trailing" secondItem="vtp-4g-Woq" secondAttribute="trailing" constant="40" id="l6y-3d-A7V"/>
+                            <constraint firstItem="wj8-j6-5ny" firstAttribute="top" secondItem="5QP-MC-W1F" secondAttribute="top" constant="30" id="sUr-Ft-EI0"/>
+                            <constraint firstItem="5QP-MC-W1F" firstAttribute="bottom" secondItem="g8L-e3-F3E" secondAttribute="bottom" constant="40" id="vgW-fG-hQ7"/>
+                            <constraint firstItem="RyE-oj-Zqw" firstAttribute="leading" secondItem="5QP-MC-W1F" secondAttribute="leading" constant="40" id="wAa-R6-V2s"/>
+                            <constraint firstItem="Zti-Or-Cls" firstAttribute="top" secondItem="RyE-oj-Zqw" secondAttribute="bottom" constant="43" id="zmq-CA-OEm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="asianButton" destination="Oss-5b-ExR" id="Znr-gC-f96"/>
+                        <outlet property="backButton" destination="YZy-UO-LPB" id="MvX-OF-HBM"/>
+                        <outlet property="bakedButton" destination="q8w-75-Yp7" id="y8j-uk-XK0"/>
+                        <outlet property="breadButton" destination="rFE-GI-N97" id="RRi-rl-2Cc"/>
+                        <outlet property="caribbeanButton" destination="iFj-BG-bLB" id="vyX-L7-iGW"/>
+                        <outlet property="europeanButton" destination="zbo-Ft-Q86" id="klt-e4-HSN"/>
+                        <outlet property="fruitsButton" destination="vl5-Cn-E6P" id="WH7-eH-zkM"/>
+                        <outlet property="healthyButton" destination="GGi-OI-qcO" id="UJn-7i-4Ku"/>
+                        <outlet property="latinButton" destination="Smi-qv-V6K" id="ZSA-1E-5or"/>
+                        <outlet property="logoLabel" destination="wj8-j6-5ny" id="vd7-s7-6Ze"/>
+                        <outlet property="meatsButton" destination="c4M-XZ-x0N" id="U0G-iG-aNN"/>
+                        <outlet property="mexicanButton" destination="cGX-MC-M4x" id="2Sg-PZ-sz9"/>
+                        <outlet property="nutsButton" destination="H0E-pf-pVd" id="d5R-45-DXc"/>
+                        <outlet property="pastasButton" destination="b4h-WI-sIh" id="eoD-VU-Ch5"/>
+                        <outlet property="persianButton" destination="3Oh-UX-ZiH" id="8ma-WN-kkZ"/>
+                        <outlet property="preferenceLabel" destination="vtp-4g-Woq" id="i1L-fe-FKg"/>
+                        <outlet property="saladsButton" destination="CqQ-s5-A6B" id="Q5E-E5-Oqt"/>
+                        <outlet property="seafoodButton" destination="HcX-xg-sLv" id="Hcb-rS-tAI"/>
+                        <outlet property="soupsButton" destination="77j-HW-2WY" id="8kd-Cb-wze"/>
+                        <outlet property="sweetsButton" destination="oT2-mA-dEf" id="03J-Vk-UQ7"/>
+                        <outlet property="updateButton" destination="g8L-e3-F3E" id="XRq-YO-oOH"/>
+                        <outlet property="vegetablesButton" destination="EOh-0K-7PW" id="Sec-tW-lwb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uv-vG-Wrc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5625" y="-2055"/>
+        </scene>
         <!--Add Meal View Controller-->
         <scene sceneID="L0r-U8-5ug">
             <objects>
