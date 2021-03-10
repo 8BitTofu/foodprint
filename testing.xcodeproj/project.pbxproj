@@ -73,6 +73,7 @@
 		44C5420525F8C94E00832B01 /* allrecipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C5420425F8C94D00832B01 /* allrecipes.json */; };
 		44C5420825F8C97100832B01 /* fp.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C5420725F8C97100832B01 /* fp.json */; };
 		44C5420C25F8D89700832B01 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 44C5420B25F8D89700832B01 /* SwiftyJSON */; };
+		44C542B125F8E3A600832B01 /* categories in Resources */ = {isa = PBXBuildFile; fileRef = 44C542B025F8E3A600832B01 /* categories */; };
 		627B10D825F65521004B1AF5 /* StepometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B10D725F65521004B1AF5 /* StepometerViewController.swift */; };
 		80DD2799A2FD38377CE3AD21 /* Pods_testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D049976888F907BB8A4DD87 /* Pods_testing.framework */; };
 /* End PBXBuildFile section */
@@ -147,6 +148,7 @@
 		44C541E025F8C3DC00832B01 /* vegetables.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vegetables.txt; sourceTree = "<group>"; };
 		44C5420425F8C94D00832B01 /* allrecipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = allrecipes.json; path = ../../../proj/allrecipes.json; sourceTree = "<group>"; };
 		44C5420725F8C97100832B01 /* fp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fp.json; path = ../../../proj/fp.json; sourceTree = "<group>"; };
+		44C542B025F8E3A600832B01 /* categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = categories; sourceTree = "<group>"; };
 		5D049976888F907BB8A4DD87 /* Pods_testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		627B10D725F65521004B1AF5 /* StepometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepometerViewController.swift; sourceTree = "<group>"; };
 		E31C65D13771AB2FD875A54D /* Pods-testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing.release.xcconfig"; path = "Target Support Files/Pods-testing/Pods-testing.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		1F6F176125EF76B40046BC44 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				44C542B025F8E3A600832B01 /* categories */,
 				44C5420725F8C97100832B01 /* fp.json */,
 				44C5420425F8C94D00832B01 /* allrecipes.json */,
 				4476D58925F8C195001A60A3 /* category_files */,
@@ -416,6 +419,7 @@
 				44C541F525F8C3DC00832B01 /* test.txt in Resources */,
 				44C541FA25F8C3DC00832B01 /* seafood.txt in Resources */,
 				44C5420125F8C3DC00832B01 /* dessert.txt in Resources */,
+				44C542B125F8E3A600832B01 /* categories in Resources */,
 				44C541E525F8C3DC00832B01 /* caribbean.txt in Resources */,
 				44C5420525F8C94E00832B01 /* allrecipes.json in Resources */,
 				1FB2FB6325C8D57400DCD524 /* LaunchScreen.storyboard in Resources */,
