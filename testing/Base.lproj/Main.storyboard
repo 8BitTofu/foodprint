@@ -554,9 +554,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="esX-l8-yQB" kind="relationship" relationship="viewControllers" id="MgM-QO-hx1"/>
+                        <segue destination="xp7-Gs-Kd6" kind="relationship" relationship="viewControllers" id="WuH-wc-JJb"/>
                         <segue destination="BB4-T9-Bwm" kind="relationship" relationship="viewControllers" id="Eho-o7-v4u"/>
-                        <segue destination="xQA-O7-3Ll" kind="relationship" relationship="viewControllers" id="aMA-7H-0Ka"/>
+                        <segue destination="WtA-37-Th9" kind="relationship" relationship="viewControllers" id="BFK-Y6-iZO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOi-6S-d6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -596,14 +596,23 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT2-mA-dEf">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Sweets"/>
+                                                <connections>
+                                                    <action selector="sweetsTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="5t5-KV-bU2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-xg-sLv">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Seafood"/>
+                                                <connections>
+                                                    <action selector="seafoodTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="noE-gN-gIo"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0E-pf-pVd">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Nuts"/>
+                                                <connections>
+                                                    <action selector="nutsTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="DNY-7R-nG6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -617,14 +626,23 @@
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl5-Cn-E6P">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Fruits"/>
+                                                <connections>
+                                                    <action selector="fruitsTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="KZK-Aj-9oC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77j-HW-2WY">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Soups"/>
+                                                <connections>
+                                                    <action selector="soupsTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="5C3-ca-D1Y"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8w-75-Yp7">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Baked"/>
+                                                <connections>
+                                                    <action selector="bakedTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="wBf-p4-vG1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -638,14 +656,23 @@
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGi-OI-qcO">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Healthy"/>
+                                                <connections>
+                                                    <action selector="healthyTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="AmF-fd-aLf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFE-GI-N97">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Bread"/>
+                                                <connections>
+                                                    <action selector="breadTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="dCD-FO-QUT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOh-0K-7PW">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Vegetables"/>
+                                                <connections>
+                                                    <action selector="vegetablesTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="wO9-v5-Hx7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -659,14 +686,23 @@
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-s5-A6B">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Salads"/>
+                                                <connections>
+                                                    <action selector="saladsTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="YUK-zk-qct"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4M-XZ-x0N">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Meats"/>
+                                                <connections>
+                                                    <action selector="meatsTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="4ca-Tf-VSc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4h-WI-sIh">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Pastas"/>
+                                                <connections>
+                                                    <action selector="pastasTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="8kZ-W9-rnu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -685,14 +721,23 @@
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGX-MC-M4x">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Mexican"/>
+                                                <connections>
+                                                    <action selector="mexicanTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="doy-GX-Qsb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oss-5b-ExR">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Asian"/>
+                                                <connections>
+                                                    <action selector="asianTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="V5Y-2C-e86"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbo-Ft-Q86">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="European"/>
+                                                <connections>
+                                                    <action selector="europeanTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="aH4-PA-qy2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -706,14 +751,23 @@
                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFj-BG-bLB">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Caribbean"/>
+                                                <connections>
+                                                    <action selector="caribbeanTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="G2L-XV-7IW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oh-UX-ZiH">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Persian"/>
+                                                <connections>
+                                                    <action selector="persianTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="JXg-Js-Ywe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smi-qv-V6K">
                                                 <rect key="frame" x="220" y="0.0" width="90" height="30"/>
                                                 <state key="normal" title="Latin"/>
+                                                <connections>
+                                                    <action selector="latinTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="gB5-Ua-FEx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -790,7 +844,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0uv-vG-Wrc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5625" y="-2055"/>
+            <point key="canvasLocation" x="5625" y="-1393"/>
         </scene>
         <!--Add Meal View Controller-->
         <scene sceneID="L0r-U8-5ug">
@@ -995,7 +1049,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBM-je-iY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3380" y="-1393"/>
+            <point key="canvasLocation" x="3426" y="-734"/>
         </scene>
         <!--Home-->
         <scene sceneID="5CR-X0-OHl">
@@ -1191,6 +1245,7 @@
                             <constraint firstItem="gNp-pn-hnM" firstAttribute="leading" secondItem="E7M-hF-3VF" secondAttribute="trailing" constant="17" id="xWG-rj-eUd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="G7H-wE-Lie"/>
                     <navigationItem key="navigationItem" title="Home" id="ZHX-fK-Nt8"/>
                     <connections>
                         <outlet property="addMealButton" destination="E7M-hF-3VF" id="1l3-Ak-pRb"/>
@@ -1217,7 +1272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZJ-fY-hoD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4127.6923076923076" y="-1393.3649289099526"/>
+            <point key="canvasLocation" x="4148" y="-734"/>
         </scene>
         <!--Stepometer View Controller-->
         <scene sceneID="QSk-Xd-kyV">
@@ -1232,7 +1287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLD-uy-hvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4149" y="-2055"/>
+            <point key="canvasLocation" x="4148" y="-1393"/>
         </scene>
         <!--Settings-->
         <scene sceneID="qtv-M3-gKd">
@@ -1254,7 +1309,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jhJ-nG-A7x">
-                                <rect key="frame" x="40" y="258" width="310" height="260"/>
+                                <rect key="frame" x="40" y="214" width="310" height="260"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teE-9h-fIa">
                                         <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
@@ -1311,6 +1366,7 @@
                             <constraint firstItem="Ubh-vS-IBX" firstAttribute="leading" secondItem="MPj-6l-QOy" secondAttribute="leading" constant="40" id="yHv-92-KWk"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="9hG-7i-qIA"/>
                     <navigationItem key="navigationItem" title="Settings" id="fLf-25-yBr"/>
                     <connections>
                         <outlet property="accountButton" destination="teE-9h-fIa" id="V0o-I3-TaH"/>
@@ -1323,7 +1379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSw-vK-Wog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5625" y="-1393"/>
+            <point key="canvasLocation" x="5625" y="-734"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="Wc2-rJ-2Qo">
@@ -1561,7 +1617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rp7-Ed-RUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6354" y="-1393"/>
+            <point key="canvasLocation" x="6354" y="-734"/>
         </scene>
         <!--Delete Account View Controller-->
         <scene sceneID="jLh-PH-lQi">
@@ -1643,24 +1699,7 @@ to delete your account?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jkz-EF-V3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7118" y="-1393"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="wZF-ce-Yun">
-            <objects>
-                <navigationController id="esX-l8-yQB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="XCi-1u-EKp"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wFt-WJ-yKX">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="xp7-Gs-Kd6" kind="relationship" relationship="rootViewController" id="Fa5-LV-9BF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="53r-cu-Djq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4128" y="-734"/>
+            <point key="canvasLocation" x="7077" y="-734"/>
         </scene>
         <!--Progress-->
         <scene sceneID="Y0c-20-kHB">
@@ -2113,23 +2152,6 @@ to delete your account?</string>
             </objects>
             <point key="canvasLocation" x="-213.04347826086959" y="93.75"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="19f-hf-M1a">
-            <objects>
-                <navigationController id="xQA-O7-3Ll" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="0ns-PI-sp6"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="asB-53-0At">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="WtA-37-Th9" kind="relationship" relationship="rootViewController" id="LNI-7m-lOd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XWA-Pf-2u9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5625" y="-734"/>
-        </scene>
         <!--UpdateBM View Controller-->
         <scene sceneID="v5U-B3-IyO">
             <objects>
@@ -2224,7 +2246,7 @@ to delete your account?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSe-bs-LB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6354" y="-734"/>
+            <point key="canvasLocation" x="6354" y="-92"/>
         </scene>
         <!--Weight View Controller-->
         <scene sceneID="eer-gF-SFT">
