@@ -155,6 +155,15 @@ class HomeViewController: UIViewController {
                 let exerciseAmt = document.get("exerciseAmt") as! String
                 let gender = document.get("gender") as! String
                 let caloriesConsumed = document.get("caloriesConsumed") as! Int
+                let hadBreakfast = document.get("hadBreakfast") as! Bool
+                let hadLunch = document.get("hadLunch") as! Bool
+                let hadDinner = document.get("hadDinner") as! Bool
+                
+                var breakfastCals: Double = 0.0
+                var lunchCals: Double = 0.0
+                var dinnerCals: Double = 0.0
+                
+                
                 
                 if (gender == "Male") {
                     totalCalories = Int(calcMaleCalories(weightLB: weight, heightCM: height, ageYR: age, exerciseAmt: exerciseAmt))
@@ -163,6 +172,8 @@ class HomeViewController: UIViewController {
                 if (gender == "Female") {
                     totalCalories = Int(calcFemaleCalories(weightLB: weight, heightCM: height, ageYR: age, exerciseAmt: exerciseAmt))
                 }
+                
+                let caloriesLeftover = totalCalories - caloriesConsumed
                 
                 
                 // update totalCalories data field in user
@@ -175,6 +186,41 @@ class HomeViewController: UIViewController {
                         print("Total calories successfully updated")
                     }
                 }
+                
+                
+                // divide up the meals from total calories
+                if (hadBreakfast == false) {
+                    breakfastCals = Double(caloriesLeftover) * 0.3
+                    lunchCals = Double(caloriesLeftover) * 0.4
+                    dinnerCals = Double(caloriesLeftover) * 0.3
+                }
+                
+                else if (hadLunch == false) {
+                    breakfastCals = 0
+                    lunchCals = Double(caloriesLeftover) * (4/7)
+                    dinnerCals = Double(caloriesLeftover) * (3/7)
+                }
+                
+                else if (hadDinner == false) {
+                    breakfastCals = 0
+                    lunchCals = 0
+                    dinnerCals = Double(caloriesLeftover)
+                }
+                
+                userRef.updateData([
+                    "breakfastCals": Int(breakfastCals),
+                    "lunchCals": Int(lunchCals),
+                    "dinnerCals": Int(dinnerCals)
+                ]) { err in
+                    if err != nil {
+                        print("Error updating individual breakfast, lunch, dinner calories")
+                    } else {
+                        print("Success: individual breakfast, lunch, dinner calories updated")
+                    }
+                }
+                
+                
+                
                 
                 
                 // if new day, reset calories consumed

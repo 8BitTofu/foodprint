@@ -14,6 +14,8 @@
 		1F0E0D6725CA78360055CE65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E0D6625CA78360055CE65 /* LoginViewController.swift */; };
 		1F124E9525F8705E000015E5 /* PrefSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F124E9425F8705E000015E5 /* PrefSettingsViewController.swift */; };
 		1F2096C025CAB2F000C343CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2096BF25CAB2F000C343CB /* Constants.swift */; };
+		1F22EC3F25F8E7F5008789F2 /* allrecipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F22EC3D25F8E7F5008789F2 /* allrecipes.json */; };
+		1F22EC4025F8E7F5008789F2 /* fp.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F22EC3E25F8E7F5008789F2 /* fp.json */; };
 		1F3002A525F8A675001C02BE /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3002A425F8A675001C02BE /* ProgressViewController.swift */; };
 		1F31525D25F60F5C00A9641C /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */; };
 		1F325D2325DFCCC500AA8ACA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */; };
@@ -42,8 +44,6 @@
 		1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6913F25F2521900E06C5C /* AddMealViewController.swift */; };
 		4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C76A25ED04E3005A32FC /* DBHelper.swift */; };
 		4488C78325ED059F005A32FC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C78225ED059F005A32FC /* Recipe.swift */; };
-		44C5420525F8C94E00832B01 /* allrecipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C5420425F8C94D00832B01 /* allrecipes.json */; };
-		44C5420825F8C97100832B01 /* fp.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C5420725F8C97100832B01 /* fp.json */; };
 		44C5420C25F8D89700832B01 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 44C5420B25F8D89700832B01 /* SwiftyJSON */; };
 		44C542B125F8E3A600832B01 /* categories in Resources */ = {isa = PBXBuildFile; fileRef = 44C542B025F8E3A600832B01 /* categories */; };
 		627B10D825F65521004B1AF5 /* StepometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B10D725F65521004B1AF5 /* StepometerViewController.swift */; };
@@ -59,6 +59,8 @@
 		1F0E0D6625CA78360055CE65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F124E9425F8705E000015E5 /* PrefSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefSettingsViewController.swift; sourceTree = "<group>"; };
 		1F2096BF25CAB2F000C343CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F22EC3D25F8E7F5008789F2 /* allrecipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allrecipes.json; sourceTree = "<group>"; };
+		1F22EC3E25F8E7F5008789F2 /* fp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fp.json; sourceTree = "<group>"; };
 		1F3002A425F8A675001C02BE /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		1F31525C25F60F5C00A9641C /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -91,8 +93,6 @@
 		1FF6913F25F2521900E06C5C /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
 		4488C76A25ED04E3005A32FC /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		4488C78225ED059F005A32FC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		44C5420425F8C94D00832B01 /* allrecipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = allrecipes.json; path = ../../../proj/allrecipes.json; sourceTree = "<group>"; };
-		44C5420725F8C97100832B01 /* fp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fp.json; path = ../../../proj/fp.json; sourceTree = "<group>"; };
 		44C542B025F8E3A600832B01 /* categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = categories; sourceTree = "<group>"; };
 		5D049976888F907BB8A4DD87 /* Pods_testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		627B10D725F65521004B1AF5 /* StepometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepometerViewController.swift; sourceTree = "<group>"; };
@@ -154,8 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				44C542B025F8E3A600832B01 /* categories */,
-				44C5420725F8C97100832B01 /* fp.json */,
-				44C5420425F8C94D00832B01 /* allrecipes.json */,
+				1F22EC3D25F8E7F5008789F2 /* allrecipes.json */,
+				1F22EC3E25F8E7F5008789F2 /* fp.json */,
 				4488C76A25ED04E3005A32FC /* DBHelper.swift */,
 				4488C78225ED059F005A32FC /* Recipe.swift */,
 				1F6F176225EF76F50046BC44 /* CategoryInfo.swift */,
@@ -327,11 +327,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				44C542B125F8E3A600832B01 /* categories in Resources */,
-				44C5420525F8C94E00832B01 /* allrecipes.json in Resources */,
+				1F22EC3F25F8E7F5008789F2 /* allrecipes.json in Resources */,
 				1FB2FB6325C8D57400DCD524 /* LaunchScreen.storyboard in Resources */,
 				1F73C10A25EF8F5F0022F84B /* categories.txt in Resources */,
-				44C5420825F8C97100832B01 /* fp.json in Resources */,
 				1FD4460A25CA9704009CEF4A /* GoogleService-Info.plist in Resources */,
+				1F22EC4025F8E7F5008789F2 /* fp.json in Resources */,
 				1FB2FB6025C8D57400DCD524 /* Assets.xcassets in Resources */,
 				1FB2FB5E25C8D57100DCD524 /* Main.storyboard in Resources */,
 			);
