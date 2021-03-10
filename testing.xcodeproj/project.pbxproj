@@ -43,6 +43,40 @@
 		1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6913F25F2521900E06C5C /* AddMealViewController.swift */; };
 		4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C76A25ED04E3005A32FC /* DBHelper.swift */; };
 		4488C78325ED059F005A32FC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C78225ED059F005A32FC /* Recipe.swift */; };
+		44C541E125F8C3DC00832B01 /* greek.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541BF25F8C3DA00832B01 /* greek.txt */; };
+		44C541E225F8C3DC00832B01 /* mexican.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C025F8C3DA00832B01 /* mexican.txt */; };
+		44C541E325F8C3DC00832B01 /* sweets.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C125F8C3DA00832B01 /* sweets.txt */; };
+		44C541E425F8C3DC00832B01 /* lunch.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C225F8C3DA00832B01 /* lunch.txt */; };
+		44C541E525F8C3DC00832B01 /* caribbean.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C325F8C3DA00832B01 /* caribbean.txt */; };
+		44C541E625F8C3DC00832B01 /* breakfast.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C425F8C3DB00832B01 /* breakfast.txt */; };
+		44C541E725F8C3DC00832B01 /* nuts.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C525F8C3DB00832B01 /* nuts.txt */; };
+		44C541E825F8C3DC00832B01 /* austrian.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C625F8C3DB00832B01 /* austrian.txt */; };
+		44C541E925F8C3DC00832B01 /* polish.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C725F8C3DB00832B01 /* polish.txt */; };
+		44C541EA25F8C3DC00832B01 /* persian.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C825F8C3DB00832B01 /* persian.txt */; };
+		44C541EB25F8C3DC00832B01 /* european.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541C925F8C3DB00832B01 /* european.txt */; };
+		44C541EC25F8C3DC00832B01 /* salads.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541CA25F8C3DB00832B01 /* salads.txt */; };
+		44C541ED25F8C3DC00832B01 /* german.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541CB25F8C3DB00832B01 /* german.txt */; };
+		44C541EE25F8C3DC00832B01 /* baked.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541CC25F8C3DB00832B01 /* baked.txt */; };
+		44C541EF25F8C3DC00832B01 /* indian.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541CD25F8C3DB00832B01 /* indian.txt */; };
+		44C541F025F8C3DC00832B01 /* spanish.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541CE25F8C3DB00832B01 /* spanish.txt */; };
+		44C541F125F8C3DC00832B01 /* dinner.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541CF25F8C3DB00832B01 /* dinner.txt */; };
+		44C541F225F8C3DC00832B01 /* drinks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D025F8C3DB00832B01 /* drinks.txt */; };
+		44C541F325F8C3DC00832B01 /* bread.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D125F8C3DB00832B01 /* bread.txt */; };
+		44C541F425F8C3DC00832B01 /* pastas.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D225F8C3DB00832B01 /* pastas.txt */; };
+		44C541F525F8C3DC00832B01 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D325F8C3DB00832B01 /* test.txt */; };
+		44C541F625F8C3DC00832B01 /* healthy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D425F8C3DB00832B01 /* healthy.txt */; };
+		44C541F725F8C3DC00832B01 /* asian.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D525F8C3DB00832B01 /* asian.txt */; };
+		44C541F825F8C3DC00832B01 /* fruits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D625F8C3DB00832B01 /* fruits.txt */; };
+		44C541F925F8C3DC00832B01 /* french.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D725F8C3DB00832B01 /* french.txt */; };
+		44C541FA25F8C3DC00832B01 /* seafood.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D825F8C3DC00832B01 /* seafood.txt */; };
+		44C541FB25F8C3DC00832B01 /* snacks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541D925F8C3DC00832B01 /* snacks.txt */; };
+		44C541FC25F8C3DC00832B01 /* soups.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541DA25F8C3DC00832B01 /* soups.txt */; };
+		44C541FD25F8C3DC00832B01 /* latin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541DB25F8C3DC00832B01 /* latin.txt */; };
+		44C541FE25F8C3DC00832B01 /* vegetarian.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541DC25F8C3DC00832B01 /* vegetarian.txt */; };
+		44C541FF25F8C3DC00832B01 /* italian.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541DD25F8C3DC00832B01 /* italian.txt */; };
+		44C5420025F8C3DC00832B01 /* meats.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541DE25F8C3DC00832B01 /* meats.txt */; };
+		44C5420125F8C3DC00832B01 /* dessert.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541DF25F8C3DC00832B01 /* dessert.txt */; };
+		44C5420225F8C3DC00832B01 /* vegetables.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44C541E025F8C3DC00832B01 /* vegetables.txt */; };
 		627B10D825F65521004B1AF5 /* StepometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B10D725F65521004B1AF5 /* StepometerViewController.swift */; };
 		80DD2799A2FD38377CE3AD21 /* Pods_testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D049976888F907BB8A4DD87 /* Pods_testing.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +122,40 @@
 		1FF6913F25F2521900E06C5C /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
 		4488C76A25ED04E3005A32FC /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		4488C78225ED059F005A32FC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		44C541BF25F8C3DA00832B01 /* greek.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = greek.txt; sourceTree = "<group>"; };
+		44C541C025F8C3DA00832B01 /* mexican.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mexican.txt; sourceTree = "<group>"; };
+		44C541C125F8C3DA00832B01 /* sweets.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sweets.txt; sourceTree = "<group>"; };
+		44C541C225F8C3DA00832B01 /* lunch.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lunch.txt; sourceTree = "<group>"; };
+		44C541C325F8C3DA00832B01 /* caribbean.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = caribbean.txt; sourceTree = "<group>"; };
+		44C541C425F8C3DB00832B01 /* breakfast.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = breakfast.txt; sourceTree = "<group>"; };
+		44C541C525F8C3DB00832B01 /* nuts.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nuts.txt; sourceTree = "<group>"; };
+		44C541C625F8C3DB00832B01 /* austrian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = austrian.txt; sourceTree = "<group>"; };
+		44C541C725F8C3DB00832B01 /* polish.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polish.txt; sourceTree = "<group>"; };
+		44C541C825F8C3DB00832B01 /* persian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = persian.txt; sourceTree = "<group>"; };
+		44C541C925F8C3DB00832B01 /* european.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = european.txt; sourceTree = "<group>"; };
+		44C541CA25F8C3DB00832B01 /* salads.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = salads.txt; sourceTree = "<group>"; };
+		44C541CB25F8C3DB00832B01 /* german.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = german.txt; sourceTree = "<group>"; };
+		44C541CC25F8C3DB00832B01 /* baked.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = baked.txt; sourceTree = "<group>"; };
+		44C541CD25F8C3DB00832B01 /* indian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = indian.txt; sourceTree = "<group>"; };
+		44C541CE25F8C3DB00832B01 /* spanish.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spanish.txt; sourceTree = "<group>"; };
+		44C541CF25F8C3DB00832B01 /* dinner.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dinner.txt; sourceTree = "<group>"; };
+		44C541D025F8C3DB00832B01 /* drinks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = drinks.txt; sourceTree = "<group>"; };
+		44C541D125F8C3DB00832B01 /* bread.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bread.txt; sourceTree = "<group>"; };
+		44C541D225F8C3DB00832B01 /* pastas.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pastas.txt; sourceTree = "<group>"; };
+		44C541D325F8C3DB00832B01 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		44C541D425F8C3DB00832B01 /* healthy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = healthy.txt; sourceTree = "<group>"; };
+		44C541D525F8C3DB00832B01 /* asian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = asian.txt; sourceTree = "<group>"; };
+		44C541D625F8C3DB00832B01 /* fruits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fruits.txt; sourceTree = "<group>"; };
+		44C541D725F8C3DB00832B01 /* french.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = french.txt; sourceTree = "<group>"; };
+		44C541D825F8C3DC00832B01 /* seafood.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seafood.txt; sourceTree = "<group>"; };
+		44C541D925F8C3DC00832B01 /* snacks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = snacks.txt; sourceTree = "<group>"; };
+		44C541DA25F8C3DC00832B01 /* soups.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = soups.txt; sourceTree = "<group>"; };
+		44C541DB25F8C3DC00832B01 /* latin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = latin.txt; sourceTree = "<group>"; };
+		44C541DC25F8C3DC00832B01 /* vegetarian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vegetarian.txt; sourceTree = "<group>"; };
+		44C541DD25F8C3DC00832B01 /* italian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = italian.txt; sourceTree = "<group>"; };
+		44C541DE25F8C3DC00832B01 /* meats.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = meats.txt; sourceTree = "<group>"; };
+		44C541DF25F8C3DC00832B01 /* dessert.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dessert.txt; sourceTree = "<group>"; };
+		44C541E025F8C3DC00832B01 /* vegetables.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vegetables.txt; sourceTree = "<group>"; };
 		5D049976888F907BB8A4DD87 /* Pods_testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		627B10D725F65521004B1AF5 /* StepometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepometerViewController.swift; sourceTree = "<group>"; };
 		E31C65D13771AB2FD875A54D /* Pods-testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing.release.xcconfig"; path = "Target Support Files/Pods-testing/Pods-testing.release.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +305,40 @@
 		4476D58925F8C195001A60A3 /* category_files */ = {
 			isa = PBXGroup;
 			children = (
+				44C541D525F8C3DB00832B01 /* asian.txt */,
+				44C541C625F8C3DB00832B01 /* austrian.txt */,
+				44C541CC25F8C3DB00832B01 /* baked.txt */,
+				44C541D125F8C3DB00832B01 /* bread.txt */,
+				44C541C425F8C3DB00832B01 /* breakfast.txt */,
+				44C541C325F8C3DA00832B01 /* caribbean.txt */,
+				44C541DF25F8C3DC00832B01 /* dessert.txt */,
+				44C541CF25F8C3DB00832B01 /* dinner.txt */,
+				44C541D025F8C3DB00832B01 /* drinks.txt */,
+				44C541C925F8C3DB00832B01 /* european.txt */,
+				44C541D725F8C3DB00832B01 /* french.txt */,
+				44C541D625F8C3DB00832B01 /* fruits.txt */,
+				44C541CB25F8C3DB00832B01 /* german.txt */,
+				44C541BF25F8C3DA00832B01 /* greek.txt */,
+				44C541D425F8C3DB00832B01 /* healthy.txt */,
+				44C541CD25F8C3DB00832B01 /* indian.txt */,
+				44C541DD25F8C3DC00832B01 /* italian.txt */,
+				44C541DB25F8C3DC00832B01 /* latin.txt */,
+				44C541C225F8C3DA00832B01 /* lunch.txt */,
+				44C541DE25F8C3DC00832B01 /* meats.txt */,
+				44C541C025F8C3DA00832B01 /* mexican.txt */,
+				44C541C525F8C3DB00832B01 /* nuts.txt */,
+				44C541D225F8C3DB00832B01 /* pastas.txt */,
+				44C541C825F8C3DB00832B01 /* persian.txt */,
+				44C541C725F8C3DB00832B01 /* polish.txt */,
+				44C541CA25F8C3DB00832B01 /* salads.txt */,
+				44C541D825F8C3DC00832B01 /* seafood.txt */,
+				44C541D925F8C3DC00832B01 /* snacks.txt */,
+				44C541DA25F8C3DC00832B01 /* soups.txt */,
+				44C541CE25F8C3DB00832B01 /* spanish.txt */,
+				44C541C125F8C3DA00832B01 /* sweets.txt */,
+				44C541D325F8C3DB00832B01 /* test.txt */,
+				44C541E025F8C3DC00832B01 /* vegetables.txt */,
+				44C541DC25F8C3DC00832B01 /* vegetarian.txt */,
 			);
 			path = category_files;
 			sourceTree = "<group>";
@@ -318,9 +420,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C541F525F8C3DC00832B01 /* test.txt in Resources */,
+				44C541ED25F8C3DC00832B01 /* german.txt in Resources */,
+				44C541FA25F8C3DC00832B01 /* seafood.txt in Resources */,
+				44C5420125F8C3DC00832B01 /* dessert.txt in Resources */,
+				44C541E525F8C3DC00832B01 /* caribbean.txt in Resources */,
+				44C541E925F8C3DC00832B01 /* polish.txt in Resources */,
 				1FB2FB6325C8D57400DCD524 /* LaunchScreen.storyboard in Resources */,
+				44C541E625F8C3DC00832B01 /* breakfast.txt in Resources */,
+				44C541F325F8C3DC00832B01 /* bread.txt in Resources */,
+				44C541E225F8C3DC00832B01 /* mexican.txt in Resources */,
+				44C541FE25F8C3DC00832B01 /* vegetarian.txt in Resources */,
+				44C541E825F8C3DC00832B01 /* austrian.txt in Resources */,
+				44C541FC25F8C3DC00832B01 /* soups.txt in Resources */,
+				44C541F025F8C3DC00832B01 /* spanish.txt in Resources */,
+				44C541EA25F8C3DC00832B01 /* persian.txt in Resources */,
+				44C541F425F8C3DC00832B01 /* pastas.txt in Resources */,
+				44C541EC25F8C3DC00832B01 /* salads.txt in Resources */,
+				44C541FD25F8C3DC00832B01 /* latin.txt in Resources */,
+				44C541E725F8C3DC00832B01 /* nuts.txt in Resources */,
 				1F73C10A25EF8F5F0022F84B /* categories.txt in Resources */,
+				44C541FF25F8C3DC00832B01 /* italian.txt in Resources */,
+				44C541EE25F8C3DC00832B01 /* baked.txt in Resources */,
+				44C541EB25F8C3DC00832B01 /* european.txt in Resources */,
+				44C541E325F8C3DC00832B01 /* sweets.txt in Resources */,
+				44C541E425F8C3DC00832B01 /* lunch.txt in Resources */,
+				44C541F625F8C3DC00832B01 /* healthy.txt in Resources */,
+				44C541F925F8C3DC00832B01 /* french.txt in Resources */,
+				44C541F825F8C3DC00832B01 /* fruits.txt in Resources */,
+				44C541F125F8C3DC00832B01 /* dinner.txt in Resources */,
+				44C5420225F8C3DC00832B01 /* vegetables.txt in Resources */,
+				44C5420025F8C3DC00832B01 /* meats.txt in Resources */,
+				44C541EF25F8C3DC00832B01 /* indian.txt in Resources */,
 				1FD4460A25CA9704009CEF4A /* GoogleService-Info.plist in Resources */,
+				44C541F725F8C3DC00832B01 /* asian.txt in Resources */,
+				44C541FB25F8C3DC00832B01 /* snacks.txt in Resources */,
+				44C541E125F8C3DC00832B01 /* greek.txt in Resources */,
+				44C541F225F8C3DC00832B01 /* drinks.txt in Resources */,
 				1FB2FB6025C8D57400DCD524 /* Assets.xcassets in Resources */,
 				1FB2FB5E25C8D57100DCD524 /* Main.storyboard in Resources */,
 			);
