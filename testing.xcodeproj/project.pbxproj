@@ -40,7 +40,6 @@
 		1FEFC6AA25CAA73A00CE8523 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEFC6A925CAA73A00CE8523 /* Utilities.swift */; };
 		1FF1ABE125F2674400E8D25C /* UpdateBMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1ABE025F2674400E8D25C /* UpdateBMViewController.swift */; };
 		1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6913F25F2521900E06C5C /* AddMealViewController.swift */; };
-		441514A025F8BF1D001C9EED /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415149F25F8BF1D001C9EED /* File.swift */; };
 		4488C76B25ED04E3005A32FC /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C76A25ED04E3005A32FC /* DBHelper.swift */; };
 		4488C78325ED059F005A32FC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C78225ED059F005A32FC /* Recipe.swift */; };
 		627B10D825F65521004B1AF5 /* StepometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B10D725F65521004B1AF5 /* StepometerViewController.swift */; };
@@ -85,7 +84,6 @@
 		1FEFC6A925CAA73A00CE8523 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		1FF1ABE025F2674400E8D25C /* UpdateBMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBMViewController.swift; sourceTree = "<group>"; };
 		1FF6913F25F2521900E06C5C /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
-		4415149F25F8BF1D001C9EED /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		4488C76A25ED04E3005A32FC /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		4488C78225ED059F005A32FC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5D049976888F907BB8A4DD87 /* Pods_testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,9 +226,8 @@
 		4415149E25F8BDA6001C9EED /* category_files */ = {
 			isa = PBXGroup;
 			children = (
-				4415149F25F8BF1D001C9EED /* File.swift */,
 			);
-			name = category_files;
+			path = category_files;
 			sourceTree = "<group>";
 		};
 		BCF2AA36EDD9B36ECD7F6AAF /* Pods */ = {
@@ -375,7 +372,6 @@
 				1FC8639425DE9CE0004B4B31 /* currentUser.swift in Sources */,
 				1F0876E125DE09F400CCC9D7 /* States.swift in Sources */,
 				1F6F176325EF76F50046BC44 /* CategoryInfo.swift in Sources */,
-				441514A025F8BF1D001C9EED /* File.swift in Sources */,
 				1F325D2325DFCCC500AA8ACA /* HomeViewController.swift in Sources */,
 				1FB5050E25E0B5C300531682 /* formatting.swift in Sources */,
 				1FEFC6AA25CAA73A00CE8523 /* Utilities.swift in Sources */,
