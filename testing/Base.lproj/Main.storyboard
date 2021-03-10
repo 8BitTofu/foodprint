@@ -555,6 +555,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="esX-l8-yQB" kind="relationship" relationship="viewControllers" id="MgM-QO-hx1"/>
+                        <segue destination="BB4-T9-Bwm" kind="relationship" relationship="viewControllers" id="Eho-o7-v4u"/>
                         <segue destination="xQA-O7-3Ll" kind="relationship" relationship="viewControllers" id="aMA-7H-0Ka"/>
                     </connections>
                 </tabBarController>
@@ -576,6 +577,9 @@
                                 <state key="normal">
                                     <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="WST-Bq-QTQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wj8-j6-5ny">
                                 <rect key="frame" x="154" y="74" width="82" height="29"/>
@@ -732,6 +736,9 @@
                                 <rect key="frame" x="40" y="734" width="310" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateTapped:" destination="fih-c4-4vN" eventType="touchUpInside" id="8Tw-eh-aIo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5QP-MC-W1F"/>
@@ -1264,6 +1271,9 @@
                                         <rect key="frame" x="0.0" y="70" width="310" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Preferences"/>
+                                        <connections>
+                                            <action selector="preferencesTapped:" destination="WtA-37-Th9" eventType="touchUpInside" id="2MO-qW-bdp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5X-8o-bAd">
                                         <rect key="frame" x="0.0" y="140" width="310" height="50"/>
@@ -1313,7 +1323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSw-vK-Wog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4876.9230769230771" y="-1393.3649289099526"/>
+            <point key="canvasLocation" x="5625" y="-1393"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="Wc2-rJ-2Qo">
@@ -1551,7 +1561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rp7-Ed-RUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5625" y="-1393"/>
+            <point key="canvasLocation" x="6354" y="-1393"/>
         </scene>
         <!--Delete Account View Controller-->
         <scene sceneID="jLh-PH-lQi">
@@ -1633,7 +1643,7 @@ to delete your account?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jkz-EF-V3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6353.8461538461534" y="-1393.3649289099526"/>
+            <point key="canvasLocation" x="7118" y="-1393"/>
         </scene>
         <!--Home-->
         <scene sceneID="wZF-ce-Yun">
@@ -1651,6 +1661,22 @@ to delete your account?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53r-cu-Djq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4128" y="-734"/>
+        </scene>
+        <!--Progress-->
+        <scene sceneID="Y0c-20-kHB">
+            <objects>
+                <viewController storyboardIdentifier="progressVC" id="BB4-T9-Bwm" customClass="ProgressViewController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SMJ-bc-cQd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8dR-tG-Fak"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Progress" image="person" catalog="system" id="6Mg-SX-anY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ejj-Bb-fBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4875" y="-734"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="oHh-mo-sSB">
@@ -2102,7 +2128,7 @@ to delete your account?</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWA-Pf-2u9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4877" y="-734"/>
+            <point key="canvasLocation" x="5625" y="-734"/>
         </scene>
         <!--UpdateBM View Controller-->
         <scene sceneID="v5U-B3-IyO">
@@ -2198,7 +2224,7 @@ to delete your account?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSe-bs-LB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5625" y="-734"/>
+            <point key="canvasLocation" x="6354" y="-734"/>
         </scene>
         <!--Weight View Controller-->
         <scene sceneID="eer-gF-SFT">
@@ -2375,6 +2401,7 @@ to delete your account?</string>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

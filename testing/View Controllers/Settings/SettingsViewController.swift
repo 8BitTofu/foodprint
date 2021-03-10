@@ -64,6 +64,12 @@ class SettingsViewController: UIViewController {
         transitionToAccount()
     }
     
+    @IBAction func preferencesTapped(_ sender: Any) {
+        transitionToPrefSettings()
+    }
+    
+    
+    
     
     // MARK: Transitions
     
@@ -81,6 +87,15 @@ class SettingsViewController: UIViewController {
         let accountViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.accountViewController) as? AccountViewController
         
         view.window?.rootViewController = accountViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    
+    func transitionToPrefSettings() {
+        // transition to preference settings
+        let prefSettingsViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.prefSettingsViewController) as? PrefSettingsViewController
+        
+        view.window?.rootViewController = prefSettingsViewController
         view.window?.makeKeyAndVisible()
     }
     

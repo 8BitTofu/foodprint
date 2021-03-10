@@ -28,6 +28,7 @@ class Constants {
         static let addMealViewController = "addMealVC"
         static let updateBMViewController = "updateBMVC"
         static let preferencesViewController = "preferencesVC"
+        static let prefSettingsViewController = "prefSettingsVC"
         
     }
     

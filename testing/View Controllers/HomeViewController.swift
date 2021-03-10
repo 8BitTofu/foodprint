@@ -223,6 +223,8 @@ class HomeViewController: UIViewController {
     }
     
     
+    // MARK: Transitions
+    
     func transitionToAddMeal() {
         // transition to account screen
         let addMealViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.addMealViewController) as? AddMealViewController

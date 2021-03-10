@@ -48,6 +48,7 @@ class PrefSettingsViewController: UIViewController {
     @IBOutlet weak var pastasButton: UIButton!
     
     
+    
     @IBOutlet weak var mexicanButton: UIButton!
     
     @IBOutlet weak var asianButton: UIButton!
@@ -68,18 +69,33 @@ class PrefSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // MARK: UI / Aesthetics
+        
+        makeSolidButton(button: updateButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        backButton.tintColor = Constants.appColors.mustard
+        logoLabel.textColor = Constants.appColors.orangeRed
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: Button Actions
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func updateTapped(_ sender: Any) {
+    }
+    
+    
+    // MARK: Transitions
+    
+    func transitionToSettings() {
+        // transition to account screen
+        let accountViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.accountViewController) as? AccountViewController
+        
+        view.window?.rootViewController = accountViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
 }
