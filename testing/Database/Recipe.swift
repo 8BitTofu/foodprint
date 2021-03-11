@@ -15,10 +15,10 @@ class Recipe
     var ingredients = [String]()
     var instructions = [String]()
     var nutrients: [String: String] = [:]
-    var categories = [String]()
+    var categories = Set<String>()
     var image: String = ""
     
-    init(name:String = "", yields:String = "", time:String = "", ingredients:[String] = [String](), instructions:[String] = [String](), nutrients:[String:String] = [String:String](), categories:[String] = [String](), image:String = "")
+    init(name:String = "", yields:String = "", time:String = "", ingredients:[String] = [String](), instructions:[String] = [String](), nutrients:[String:String] = [String:String](), categories:Set<String> = Set<String>(), image:String = "")
     {
         self.name = name
         self.yields = yields

@@ -1,5 +1,6 @@
 import SwiftyJSON
 import Foundation
+import Firebase
 // import SQLite3
 
 
@@ -7,7 +8,8 @@ class DBHelper
 {
     var file_pointers = [String: Int]()
     var db: dbReader
-        
+    var random_pref: [Int:String]
+    
     init()
     {
         func retrieve_fps() -> Dictionary<String, Int>
@@ -35,6 +37,7 @@ class DBHelper
         
         let pathname = Bundle.main.path(forResource: "allrecipes", ofType: "json")
         self.db = dbReader(path: pathname!)! //initialize db
+        self.random_pref = [1:"asian", 2:"baked", 3:"caribbean", 4:"european", 5:"healthy", 6:"indian", 7: "latin", 8: "meats", 9: "mexican", 10: "nuts", 11: "pastas", 12: "persian", 13: "salads", 14: "seafood", 15: "soups", 16: "vegetables"]
     }
     
     func print_recipe(recipe: Recipe)
@@ -47,6 +50,26 @@ class DBHelper
         print("nutrients: \(recipe.nutrients)")
         print("image: \(recipe.image)")
         print("categories: \(recipe.categories)")
+    }
+    
+    func retrieve_preferences(pref: String) -> Dictionary<Double, String>
+    {
+        var post = [Double: String]()
+        if let path = Bundle.main.path(forResource: pref, ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let jsonObj = try JSON(data: data)
+                for (key, value) in  jsonObj
+                {
+                    post[Double(key)!] = value.string
+                }
+            } catch let error {
+                print("parse error: \(error.localizedDescription)")
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
+        return post
     }
     
     // Enter a recipe name and this will return a Recipe object.. crazy huh
@@ -84,7 +107,7 @@ class DBHelper
                     }
                     else if key == "category"{
                         for category in value{
-                            recipe.categories.append(category.1.string!)
+                            recipe.categories.insert(category.1.string!)
                         }
                     }
                     else if key == "nutrients"{
@@ -98,5 +121,93 @@ class DBHelper
             print("error")
         }
         return recipe
+    }
+    
+    func ranking(n: Int = 100, calories: Double = 0.0, meal_type: String)
+    {
+        let preference_value = 20.0
+        let max_calorie_value = 75.0
+        let max_error = 0.3
+        
+        let rank_constant = 1.0 // for ever 1 % error in calories, the ranking score is deducted byt this value
+        
+        var preferences = [String]()
+        var added_preferences = [String]()
+        
+        let db = Firestore.firestore()
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        let userRef = db.collection("users").document(userID)
+        var ranked_meals = [String:Double]()
+        
+        userRef.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                preferences = document.get("preferences") as! [String]
+            } else {
+                print("Cannot access current user's preferences")
+            }
+        }
+        
+        // case when there are too little pref
+        if preferences.count < 5{
+            var used = Set<Int>()
+            var i = preferences.count
+            while i <= 5
+            {
+                let randomInt = Int.random(in: 1..<self.random_pref.count)
+                if used.contains(randomInt){
+                    continue
+                }
+                used.insert(randomInt)
+                added_preferences.append(self.random_pref[randomInt]!)
+                i+=1
+            }
+        }
+        
+        var temp = [Double:String]()
+        
+        for preference in added_preferences{
+            retrieve_preferences(pref: preference).forEach({(key, value) in temp[key] = value})
+        }
+        for (k, v) in temp{
+            if k < calories*(1.0 - max_error) || k > calories*(1.0 + max_error){
+                continue
+            }
+            let deductions = rank_constant*(abs(k-calories)/calories/0.01)
+            ranked_meals[v] = max_calorie_value - deductions
+        }
+        
+        temp.removeAll()
+        for preference in preferences{
+            retrieve_preferences(pref: preference).forEach({(key, value) in temp[key] = value})
+        }
+        for (k, v) in temp{
+            if k < calories*(1.0 - max_error) || k > calories*(1.0 + max_error){
+                continue
+            }
+            let deductions = rank_constant*(abs(k-calories)/calories/0.01)
+            ranked_meals[v] = preference_value + max_calorie_value - deductions
+        }
+        
+        let sortedByValueDictionary = ranked_meals.sorted { $0.1 < $1.1 }
+        var list = [String]()
+        var i = 0
+        for (k, v) in sortedByValueDictionary{
+            if(i == 100){
+                break
+            }
+            list.append(k)
+            i+=1
+        }
+        
+        userRef.updateData([
+                            meal_type: list
+        ]) { err in
+            if let err = err {
+                print("Error updating \(meal_type): \(err)")
+            } else {
+                print("\(meal_type) successfully updated")
+                print(list)
+            }
+        }
     }
 }
