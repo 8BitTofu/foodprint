@@ -1365,8 +1365,14 @@
                                     <action selector="signOutTapped:" destination="WtA-37-Th9" eventType="touchUpInside" id="8cz-49-0mx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojt-qU-Dbg">
+                                <rect key="frame" x="154" y="74" width="82" height="29"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jhJ-nG-A7x">
-                                <rect key="frame" x="40" y="214" width="310" height="260"/>
+                                <rect key="frame" x="40" y="362" width="310" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teE-9h-fIa">
                                         <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
@@ -1387,39 +1393,23 @@
                                             <action selector="preferencesTapped:" destination="WtA-37-Th9" eventType="touchUpInside" id="2MO-qW-bdp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5X-8o-bAd">
-                                        <rect key="frame" x="0.0" y="140" width="310" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buz-xl-02a">
-                                        <rect key="frame" x="0.0" y="210" width="310" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="buz-xl-02a" firstAttribute="height" secondItem="teE-9h-fIa" secondAttribute="height" id="HtC-UC-7it"/>
                                     <constraint firstItem="fSM-qw-lbq" firstAttribute="height" secondItem="teE-9h-fIa" secondAttribute="height" id="YJs-Du-Y1U"/>
-                                    <constraint firstItem="i5X-8o-bAd" firstAttribute="height" secondItem="teE-9h-fIa" secondAttribute="height" id="bI1-e2-ac1"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="foodPrint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojt-qU-Dbg">
-                                <rect key="frame" x="154" y="176" width="82" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MPj-6l-QOy"/>
                         <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="MPj-6l-QOy" firstAttribute="trailing" secondItem="Ubh-vS-IBX" secondAttribute="trailing" constant="40" id="2GK-s0-btp"/>
                             <constraint firstItem="MPj-6l-QOy" firstAttribute="trailing" secondItem="jhJ-nG-A7x" secondAttribute="trailing" constant="40" id="93r-RK-3V8"/>
+                            <constraint firstItem="Ojt-qU-Dbg" firstAttribute="top" secondItem="MPj-6l-QOy" secondAttribute="top" constant="30" id="9hi-BZ-lBR"/>
+                            <constraint firstItem="MPj-6l-QOy" firstAttribute="trailing" secondItem="Ojt-qU-Dbg" secondAttribute="trailing" constant="154" id="EyW-fw-a8T"/>
                             <constraint firstItem="MPj-6l-QOy" firstAttribute="bottom" secondItem="Ubh-vS-IBX" secondAttribute="bottom" constant="40" id="Od3-ky-TM9"/>
                             <constraint firstItem="jhJ-nG-A7x" firstAttribute="leading" secondItem="MPj-6l-QOy" secondAttribute="leading" constant="40" id="eru-A5-MUL"/>
-                            <constraint firstItem="jhJ-nG-A7x" firstAttribute="top" secondItem="MPj-6l-QOy" secondAttribute="top" constant="170" id="mO6-WM-Snd"/>
+                            <constraint firstItem="jhJ-nG-A7x" firstAttribute="centerY" secondItem="CRE-wG-HjY" secondAttribute="centerY" id="rE3-hN-ws6"/>
+                            <constraint firstItem="jhJ-nG-A7x" firstAttribute="centerX" secondItem="Ojt-qU-Dbg" secondAttribute="centerX" id="xBW-eB-Lz3"/>
                             <constraint firstItem="Ubh-vS-IBX" firstAttribute="leading" secondItem="MPj-6l-QOy" secondAttribute="leading" constant="40" id="yHv-92-KWk"/>
                         </constraints>
                     </view>
@@ -1427,8 +1417,6 @@
                     <navigationItem key="navigationItem" title="Settings" id="fLf-25-yBr"/>
                     <connections>
                         <outlet property="accountButton" destination="teE-9h-fIa" id="V0o-I3-TaH"/>
-                        <outlet property="button3" destination="i5X-8o-bAd" id="gG2-fv-B58"/>
-                        <outlet property="button4" destination="buz-xl-02a" id="cQ7-B5-l7i"/>
                         <outlet property="logoLabel" destination="Ojt-qU-Dbg" id="VrF-V5-OmS"/>
                         <outlet property="preferencesButton" destination="fSM-qw-lbq" id="SQL-Ry-D2X"/>
                         <outlet property="signOutButton" destination="Ubh-vS-IBX" id="KNn-8C-Lsr"/>

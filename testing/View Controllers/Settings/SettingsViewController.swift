@@ -20,10 +20,6 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var preferencesButton: UIButton!
     
-    @IBOutlet weak var button3: UIButton!
-    
-    @IBOutlet weak var button4: UIButton!
-    
     @IBOutlet weak var logoLabel: UILabel!
     
     @IBOutlet weak var tabNavigation: UITabBarItem!
@@ -38,15 +34,11 @@ class SettingsViewController: UIViewController {
         self.view.backgroundColor = .white
         tabNavigation.isEnabled = true
         
-        logoLabel.textColor = Constants.appColors.chineseOrange
+        logoLabel.textColor = Constants.appColors.orangeRed
         
-        
-        makeGhostButton(button: signOutButton, color: Constants.appColors.pearlAqua)
-        
-        makeGhostButton(button: accountButton, color: Constants.appColors.chineseOrange)
-        makeGhostButton(button: preferencesButton, color: Constants.appColors.chineseOrange)
-        makeGhostButton(button: button3, color: Constants.appColors.chineseOrange)
-        makeGhostButton(button: button4, color: Constants.appColors.chineseOrange)
+        makeGhostButton(button: signOutButton, color: Constants.appColors.orangeRed)
+        makeSolidButton(button: accountButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        makeSolidButton(button: preferencesButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         
     }
     
