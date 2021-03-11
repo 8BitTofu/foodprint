@@ -8,9 +8,10 @@
 import Foundation
 import CoreMotion
 import UIKit
+import HealthKit
 
 
-class StepometerViewController: UIViewController {
+class StepometerViewController: UIViewController{
     
     
     @IBOutlet weak var lbCounter: UILabel!
@@ -26,6 +27,8 @@ class StepometerViewController: UIViewController {
 
     let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
+    
+    let healthKitStore:HKHealthStore = HKHealthStore()
     
 
 
@@ -66,6 +69,37 @@ class StepometerViewController: UIViewController {
         
     @IBAction func backTapped(_ sender: Any) {
         transitionToHome()
+    }
+    
+    @IBAction func authorizeKitClicked(_ sender: Any) {
+        self.authorizeHealthKitApp()
+    }
+    
+    func getHealthInfo()
+    {
+        
+    }
+    
+    func authorizeHealthKitApp()
+    {
+        let healthKitTypesToRead: Set<HKObjectType> = [
+            HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.dateOfBirth)!,
+            HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.bloodType)!,
+            //HKObjectType.quantityType(forIdentifier: .bodyMass)!,
+        ]
+        
+        let healthKitTypesToWrite : Set<HKSampleType> = []
+        
+        if !HKHealthStore.isHealthDataAvailable()
+        {
+            print("Error occured")
+            return
+        }
+        
+        healthKitStore.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead)
+        { (success, error) -> Void in
+            print("Read Write Authorization succeeded")
+        }
     }
     
     
