@@ -23,7 +23,12 @@ class ProgressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.authorizeHealthKitApp()
+        self.getLatestWeight()
+        self.getLatestSteps()
+        self.getLatestDistance()
+        
     }
     
     
