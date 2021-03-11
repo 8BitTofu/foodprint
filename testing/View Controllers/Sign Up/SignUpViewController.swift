@@ -146,6 +146,7 @@ class SignUpViewController: UIViewController {
                         "lunch": [String](),
                         "dinner": [String](),
                         "eaten_set": Set<String>()
+                        "mealNum": 0
                     ] as [String : Any]
 
                     // set the data fields
