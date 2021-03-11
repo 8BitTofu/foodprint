@@ -30,6 +30,7 @@ class Constants {
         static let preferencesViewController = "preferencesVC"
         static let prefSettingsViewController = "prefSettingsVC"
         static let progressViewController = "progressVC"
+        static let recipeViewController = "recipeVC"
         
     }
     
