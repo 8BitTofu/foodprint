@@ -13,7 +13,7 @@ class ProgressViewController: UIViewController {
     // MARK: Buttons / Labels
     
     @IBOutlet weak var stepometerButton: UIButton!
-    @IBOutlet weak var lblAge: UILabel!
+    //@IBOutlet weak var lblAge: UILabel!
     @IBOutlet weak var lblSteps: UILabel!
     @IBOutlet weak var txtWeight: UILabel!
     @IBOutlet weak var lblDistance: UILabel!
@@ -36,8 +36,6 @@ class ProgressViewController: UIViewController {
     
     @IBAction func getDetails(_ sender: Any)
     {
-        let age = self.readProfile()
-        self.lblAge.text = "\(String(describing: age))"
         self.getLatestWeight()
         self.getLatestSteps()
         self.getLatestDistance()
@@ -122,7 +120,7 @@ class ProgressViewController: UIViewController {
 
     // MARK: Transitions
     
-    
+    /*
     func readProfile() -> Int?
     {
         var age:Int?
@@ -138,18 +136,16 @@ class ProgressViewController: UIViewController {
 
         return age
     }
+     */
     
     func authorizeHealthKitApp()
     {
         let healthKitTypesToRead: Set<HKObjectType> = [
-            HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.dateOfBirth)!,
             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!,
             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.distanceWalkingRunning)!        ]
         
-        let healthKitTypesToWrite : Set<HKSampleType> =  [
-            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
-        ]
+        let healthKitTypesToWrite : Set<HKSampleType> =  []
         
         if !HKHealthStore.isHealthDataAvailable()
         {

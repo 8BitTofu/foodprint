@@ -48,7 +48,6 @@
 		44C5420C25F8D89700832B01 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 44C5420B25F8D89700832B01 /* SwiftyJSON */; };
 		44C542B125F8E3A600832B01 /* categories in Resources */ = {isa = PBXBuildFile; fileRef = 44C542B025F8E3A600832B01 /* categories */; };
 		44F6C4CA25F9BE3C00153DC2 /* dbReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F6C4C925F9BE3C00153DC2 /* dbReader.swift */; };
-		627B10D825F65521004B1AF5 /* StepometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B10D725F65521004B1AF5 /* StepometerViewController.swift */; };
 		80DD2799A2FD38377CE3AD21 /* Pods_testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D049976888F907BB8A4DD87 /* Pods_testing.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +98,6 @@
 		44C542B025F8E3A600832B01 /* categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = categories; sourceTree = "<group>"; };
 		44F6C4C925F9BE3C00153DC2 /* dbReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbReader.swift; sourceTree = "<group>"; };
 		5D049976888F907BB8A4DD87 /* Pods_testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		627B10D725F65521004B1AF5 /* StepometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepometerViewController.swift; sourceTree = "<group>"; };
 		E31C65D13771AB2FD875A54D /* Pods-testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing.release.xcconfig"; path = "Target Support Files/Pods-testing/Pods-testing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +129,6 @@
 				1FF85CEC25F874B00050FA3E /* Login */,
 				1FF85CEB25F874820050FA3E /* Sign Up */,
 				1F124E9725F8722B000015E5 /* Settings */,
-				627B10D725F65521004B1AF5 /* StepometerViewController.swift */,
 				1FB2FB5A25C8D57100DCD524 /* ViewController.swift */,
 				1F09443625DD363C006ACEC7 /* WelcomeViewController.swift */,
 				1FCFB75B25DFC83800259149 /* TabbedViewController.swift */,
@@ -422,7 +419,6 @@
 				1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */,
 				44F6C4CA25F9BE3C00153DC2 /* dbReader.swift in Sources */,
 				1F2096C025CAB2F000C343CB /* Constants.swift in Sources */,
-				627B10D825F65521004B1AF5 /* StepometerViewController.swift in Sources */,
 				4488C78325ED059F005A32FC /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
