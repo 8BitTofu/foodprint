@@ -28,6 +28,11 @@ class dbReader {
         isAtEOF = false
     }
     
+    func seek(fp: UInt64)
+    {
+        fileHandle.seek(toFileOffset: fp)
+    }
+    
     func nextLine() -> String? {
         if isAtEOF { return nil }
         
