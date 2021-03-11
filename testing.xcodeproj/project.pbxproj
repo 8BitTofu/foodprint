@@ -29,6 +29,7 @@
 		1F6F176325EF76F50046BC44 /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F176225EF76F50046BC44 /* CategoryInfo.swift */; };
 		1F73C10A25EF8F5F0022F84B /* categories.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F73C10925EF8F5F0022F84B /* categories.txt */; };
 		1F9E3EC125CACC4D008A28B3 /* BodyMeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */; };
+		1FA31DA225F9D5A7004AF6DE /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA31DA125F9D5A7004AF6DE /* RecipeViewController.swift */; };
 		1FB2FB5725C8D57100DCD524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5625C8D57100DCD524 /* AppDelegate.swift */; };
 		1FB2FB5925C8D57100DCD524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5825C8D57100DCD524 /* SceneDelegate.swift */; };
 		1FB2FB5B25C8D57100DCD524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB2FB5A25C8D57100DCD524 /* ViewController.swift */; };
@@ -76,6 +77,7 @@
 		1F6F176225EF76F50046BC44 /* CategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfo.swift; sourceTree = "<group>"; };
 		1F73C10925EF8F5F0022F84B /* categories.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = categories.txt; sourceTree = "<group>"; };
 		1F9E3EC025CACC4D008A28B3 /* BodyMeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasurementsViewController.swift; sourceTree = "<group>"; };
+		1FA31DA125F9D5A7004AF6DE /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		1FA8CD3625F8C03D007F299C /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		1FB2FB5325C8D57100DCD524 /* testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB2FB5625C8D57100DCD524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				1F325D2225DFCCC500AA8ACA /* HomeViewController.swift */,
 				1FF6913F25F2521900E06C5C /* AddMealViewController.swift */,
 				1F3002A425F8A675001C02BE /* ProgressViewController.swift */,
+				1FA31DA125F9D5A7004AF6DE /* RecipeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				1FB5050E25E0B5C300531682 /* formatting.swift in Sources */,
 				1FEFC6AA25CAA73A00CE8523 /* Utilities.swift in Sources */,
 				1FCFB75C25DFC83800259149 /* TabbedViewController.swift in Sources */,
+				1FA31DA225F9D5A7004AF6DE /* RecipeViewController.swift in Sources */,
 				1F64ED6B25F2133B00676682 /* AccountViewController.swift in Sources */,
 				1F325D2625DFCCD300AA8ACA /* SettingsViewController.swift in Sources */,
 				1F5FAC1725EA19A8005BDC12 /* GenderViewController.swift in Sources */,
@@ -569,13 +573,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = testing/testing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X2Q7V338PT;
+				DEVELOPMENT_TEAM = QCFP9BTKCQ;
 				INFOPLIST_FILE = testing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Austin-Leung.testing";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leon-Hsieh.testing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -590,13 +594,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = testing/testing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X2Q7V338PT;
+				DEVELOPMENT_TEAM = QCFP9BTKCQ;
 				INFOPLIST_FILE = testing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Austin-Leung.testing";
+				PRODUCT_BUNDLE_IDENTIFIER = "Leon-Hsieh.testing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

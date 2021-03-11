@@ -14,11 +14,11 @@ class Recipe
     var time: String = ""
     var ingredients = [String]()
     var instructions = [String]()
-    var nutrients: [String: Int] = [:]
+    var nutrients: [String: String] = [:]
     var categories = [String]()
     var image: String = ""
     
-    init(name:String, yields:String, time:String, ingredients:[String], instructions:[String], nutrients:[String:Int], categories:[String], image:String)
+    init(name:String = "", yields:String = "", time:String = "", ingredients:[String] = [String](), instructions:[String] = [String](), nutrients:[String:String] = [String:String](), categories:[String] = [String](), image:String = "")
     {
         self.name = name
         self.yields = yields

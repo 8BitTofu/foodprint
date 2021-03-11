@@ -26,6 +26,8 @@
 	<string>Use steps in order to help calculate your recommended meal plan.</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Use steps in order to update your recommended meal plan.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Using steps to factor calories</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -66,7 +68,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSMotionUsageDescription</key>
-	<string>Using steps to factor calories</string>
 </dict>
 </plist>
