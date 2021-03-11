@@ -141,7 +141,8 @@ class SignUpViewController: UIViewController {
                         "hadBreakfast": false,
                         "hadLunch": false,
                         "hadDinner": false,
-                        "preferences": [String]()
+                        "preferences": [String](),
+                        "mealNum": 0
                     ] as [String : Any]
 
                     // set the data fields

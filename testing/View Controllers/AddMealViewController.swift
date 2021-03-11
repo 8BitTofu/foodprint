@@ -181,10 +181,12 @@ class AddMealViewController: UIViewController {
             userRef.getDocument(source: .cache) { (document, error) in
                 if let document = document {
                     currentCaloriesConsumed = document.get("caloriesConsumed") as! Int
+                    let currentMealNum = document.get("mealNum") as! Int
                     
                     // update the height/weight/age of current user (get input)
                     userRef.updateData([
-                        "caloriesConsumed": currentCaloriesConsumed + Int(cleanedCalories)!
+                        "caloriesConsumed": currentCaloriesConsumed + Int(cleanedCalories)!,
+                        "mealNum": currentMealNum + 1
                     ]) { err in
                         if let err = err {
                             print("Error adding new meal: \(err)")
