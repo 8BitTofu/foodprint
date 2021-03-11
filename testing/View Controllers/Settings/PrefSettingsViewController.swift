@@ -461,6 +461,7 @@ class PrefSettingsViewController: UIViewController {
             }
         }
         
+        refreshMeals = true
         transitionToHome()
     }
     

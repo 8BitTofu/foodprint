@@ -188,6 +188,7 @@ class WeightViewController: UIViewController{
                 makeSolidButton(button: nextButton, backgroundColor: .green, textColor: .white)
                 
                 updating = false
+                refreshMeals = true
                 transitionToAccount()
             }
             

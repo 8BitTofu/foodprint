@@ -1238,6 +1238,9 @@
                                 <rect key="frame" x="214" y="679" width="146" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshTapped:" destination="xp7-Gs-Kd6" eventType="touchUpInside" id="Jdm-cd-waa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Esp-6B-BkH"/>
@@ -1283,7 +1286,7 @@
                         <outlet property="rec3InfoButton" destination="PZh-O2-frb" id="O3X-cA-jqe"/>
                         <outlet property="rec3NameLabel" destination="Yc9-BN-5h9" id="Xz3-lv-scc"/>
                         <outlet property="rec3Stack" destination="qyC-zL-wR6" id="qts-uJ-ede"/>
-                        <outlet property="refreshButton" destination="gNp-pn-hnM" id="yER-Qm-2Hv"/>
+                        <outlet property="refreshButton" destination="gNp-pn-hnM" id="rrE-1e-kPG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZJ-fY-hoD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

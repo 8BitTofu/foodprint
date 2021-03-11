@@ -23,6 +23,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var addMealButton: UIButton!
     
+    @IBOutlet weak var refreshButton: UIButton!
+    
     
     
     // MARK: Recommendation Buttons / Labels
@@ -56,8 +58,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var rec2Stack: UIStackView!
     
     @IBOutlet weak var rec3Stack: UIStackView!
-    
-    @IBOutlet weak var refreshButton: UIButton!
     
     
     
@@ -244,152 +244,185 @@ class HomeViewController: UIViewController {
         
         // MARK: Database / Get Recipes
         
-        userRef.getDocument(source: .cache) { (document, error) in
-            if let document = document {
-                let breakfastCals = document.get("breakfastCals") as! Int
-                let lunchCals = document.get("lunchCals") as! Int
-                let dinnerCals = document.get("dinnerCals") as! Int
-                let hadBreakfast = document.get("hadBreakfast") as! Bool
-                let hadLunch = document.get("hadLunch") as! Bool
-                let hadDinner = document.get("hadDinner") as! Bool
-                let caloriesConsumed = document.get("caloriesConsumed") as! Int
-                let totalCalories = document.get("totalCalories") as! Int
-                
-                var rdb = DBHelper()
-                var threeRecMeals = [String]()
-                let leftoverCals = totalCalories - caloriesConsumed
-                
-                
-                if hadBreakfast == false {
-                    // MARK: Breakfast
+        if refreshMeals == true {
+            userRef.getDocument(source: .cache) { (document, error) in
+                if let document = document {
+                    let breakfastCals = document.get("breakfastCals") as! Int
+                    let lunchCals = document.get("lunchCals") as! Int
+                    let dinnerCals = document.get("dinnerCals") as! Int
+                    let hadBreakfast = document.get("hadBreakfast") as! Bool
+                    let hadLunch = document.get("hadLunch") as! Bool
+                    let hadDinner = document.get("hadDinner") as! Bool
+                    let caloriesConsumed = document.get("caloriesConsumed") as! Int
+                    let totalCalories = document.get("totalCalories") as! Int
                     
-                    rdb.ranking(n: 100, calories: Double(breakfastCals))
-                    let breakfastRecipes = document.get("currentRecipes") as! [String]
-                    var resultSet = Set<String>()
-
-                    while resultSet.count < 4 {
-                        let randomIndex = Int.random(in: 0...(breakfastRecipes.count))
-                        resultSet.insert(breakfastRecipes[randomIndex])
-                    }
-
-                    threeRecMeals = Array(resultSet)
-                }
-                
-                
-                else if hadLunch == false {
-                    // MARK: Lunch
+                    var rdb = DBHelper()
+                    var threeRecMeals = [String]()
+                    let leftoverCals = totalCalories - caloriesConsumed
                     
-                    rdb.ranking(n: 100, calories: Double(lunchCals))
-                    let lunchRecipes = document.get("currentRecipes") as! [String]
-                    var resultSet = Set<String>()
-
-                    while resultSet.count < 4 {
-                        let randomIndex = Int.random(in: 0...(lunchRecipes.count))
-                        resultSet.insert(lunchRecipes[randomIndex])
-                    }
-
-                    threeRecMeals = Array(resultSet)
-                }
-                
-                
-                else if hadDinner == false {
-                    // MARK: Dinner
                     
-                    rdb.ranking(n: 100, calories: Double(dinnerCals))
-                    let dinnerRecipes = document.get("currentRecipes") as! [String]
-                    var resultSet = Set<String>()
-
-                    while resultSet.count < 4 {
-                        let randomIndex = Int.random(in: 0...(dinnerRecipes.count))
-                        resultSet.insert(dinnerRecipes[randomIndex])
-                    }
-
-                    threeRecMeals = Array(resultSet)
-                }
-                
-                
-                else {
-                    // MARK: Other
-                    
-                    rdb.ranking(n: 100, calories: Double(leftoverCals))
-                    let leftoverRecipes = document.get("currentRecipes") as! [String]
-                    var resultSet = Set<String>()
-
-                    while resultSet.count < 4 {
-                        let randomIndex = Int.random(in: 0...(leftoverRecipes.count))
-                        resultSet.insert(leftoverRecipes[randomIndex])
-                    }
-
-                    threeRecMeals = Array(resultSet)
-                }
-                
-                
-                // MARK: Recommendations
-                
-                var index = 1
-                
-                print("three meals:")
-                print(threeRecMeals)
-                
-                for recommendation in threeRecMeals {
-                    let recipe: Recipe = rdb.retrieve_recipe(name: recommendation)!
-                    
-                    if index == 1 {
-                        userRef.updateData([
-                            "mealRec1": recommendation
-                        ])
+                    if hadBreakfast == false {
+                        // MARK: Breakfast
                         
-                        /*
-                        let url = URL(string: recipe.image)
-                        print(url)
-                        self.rec1Image.downloadImage(from: url!)
-                         */
- 
-                        self.rec1NameLabel.text = recommendation
-                        self.rec1CalorieLabel.text = recipe.nutrients["calories"]
-                        print("rec1Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
+                        rdb.ranking(n: 100, calories: Double(breakfastCals))
+                        let breakfastRecipes = document.get("currentRecipes") as! [String]
+                        var resultSet = Set<String>()
+
+                        while resultSet.count < 3 {
+                            let randomIndex = Int.random(in: 0...(breakfastRecipes.count))
+                            resultSet.insert(breakfastRecipes[randomIndex])
+                        }
+
+                        threeRecMeals = Array(resultSet)
                     }
                     
-                    else if index == 2 {
-                        userRef.updateData([
-                            "mealRec2": recommendation
-                        ])
+                    
+                    else if hadLunch == false {
+                        // MARK: Lunch
                         
-                        /*
-                        let url = URL(string: recipe.image)
-                        print(url)
-                        self.rec2Image.downloadImage(from: url!)
-                        */
-                        
-                        self.rec2NameLabel.text = recommendation
-                        self.rec2CalorieLabel.text = recipe.nutrients["calories"]
-                        print("rec2Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
+                        rdb.ranking(n: 100, calories: Double(lunchCals))
+                        let lunchRecipes = document.get("currentRecipes") as! [String]
+                        var resultSet = Set<String>()
+
+                        while resultSet.count < 3 {
+                            let randomIndex = Int.random(in: 0...(lunchRecipes.count))
+                            resultSet.insert(lunchRecipes[randomIndex])
+                        }
+
+                        threeRecMeals = Array(resultSet)
                     }
                     
-                    else if index == 3 {
-                        userRef.updateData([
-                            "mealRec3": recommendation
-                        ])
+                    
+                    else if hadDinner == false {
+                        // MARK: Dinner
                         
-                        /*
-                        let url = URL(string: recipe.image)
-                        print(url)
-                        self.rec3Image.downloadImage(from: url!)
-                        */
-                        
-                        self.rec3NameLabel.text = recommendation
-                        self.rec3CalorieLabel.text = recipe.nutrients["calories"]
-                        print("rec3Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
+                        rdb.ranking(n: 100, calories: Double(dinnerCals))
+                        let dinnerRecipes = document.get("currentRecipes") as! [String]
+                        var resultSet = Set<String>()
+
+                        while resultSet.count < 3 {
+                            let randomIndex = Int.random(in: 0...(dinnerRecipes.count))
+                            resultSet.insert(dinnerRecipes[randomIndex])
+                        }
+
+                        threeRecMeals = Array(resultSet)
                     }
                     
-                    // increment
-                    index = index + 1
+                    
+                    else {
+                        // MARK: Other
+                        
+                        rdb.ranking(n: 100, calories: Double(leftoverCals))
+                        let leftoverRecipes = document.get("currentRecipes") as! [String]
+                        var resultSet = Set<String>()
+
+                        while resultSet.count < 3 {
+                            let randomIndex = Int.random(in: 0...(leftoverRecipes.count))
+                            resultSet.insert(leftoverRecipes[randomIndex])
+                        }
+
+                        threeRecMeals = Array(resultSet)
+                    }
+                    
+                    
+                    // MARK: Recommendations
+                    
+                    var index = 1
+                    
+                    print("three meals:")
+                    print(threeRecMeals)
+                    
+                    for recommendation in threeRecMeals {
+                        let recipe: Recipe = rdb.retrieve_recipe(name: recommendation)!
+                        
+                        if index == 1 {
+                            userRef.updateData([
+                                "mealRec1": recommendation
+                            ])
+                            
+                            /*
+                            let url = URL(string: recipe.image)
+                            print(url)
+                            self.rec1Image.downloadImage(from: url!)
+                             */
+     
+                            self.rec1NameLabel.text = recommendation
+                            self.rec1CalorieLabel.text = recipe.nutrients["calories"]
+                            print("rec1Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
+                        }
+                        
+                        else if index == 2 {
+                            userRef.updateData([
+                                "mealRec2": recommendation
+                            ])
+                            
+                            /*
+                            let url = URL(string: recipe.image)
+                            print(url)
+                            self.rec2Image.downloadImage(from: url!)
+                            */
+                            
+                            self.rec2NameLabel.text = recommendation
+                            self.rec2CalorieLabel.text = recipe.nutrients["calories"]
+                            print("rec2Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
+                        }
+                        
+                        else if index == 3 {
+                            userRef.updateData([
+                                "mealRec3": recommendation
+                            ])
+                            
+                            /*
+                            let url = URL(string: recipe.image)
+                            print(url)
+                            self.rec3Image.downloadImage(from: url!)
+                            */
+                            
+                            self.rec3NameLabel.text = recommendation
+                            self.rec3CalorieLabel.text = recipe.nutrients["calories"]
+                            print("rec3Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
+                        }
+                        
+                        // increment
+                        index = index + 1
+                    }
+                    
+                    // reset
+                    refreshMeals = false
+                    
+                } else {
+                    print("Cannot access current user's firstname and lastname")
                 }
-                
-                
-            } else {
-                print("Cannot access current user's firstname and lastname")
             }
+        }
+        
+        else {
+            // if regular not updating
+            
+            userRef.getDocument(source: .cache) { (document, error) in
+                if let document = document {
+                    let mealRec1 = document.get("mealRec1") as! String
+                    let mealRec2 = document.get("mealRec2") as! String
+                    let mealRec3 = document.get("mealRec3") as! String
+                    
+                    let rdb = DBHelper()
+                    
+                    self.rec1NameLabel.text = mealRec1
+                    self.rec2NameLabel.text = mealRec2
+                    self.rec3NameLabel.text = mealRec3
+                    
+                    let rec1: Recipe = rdb.retrieve_recipe(name: mealRec1)!
+                    let rec2: Recipe = rdb.retrieve_recipe(name: mealRec2)!
+                    let rec3: Recipe = rdb.retrieve_recipe(name: mealRec3)!
+                    
+                    self.rec1CalorieLabel.text = rec1.nutrients["calories"]
+                    self.rec2CalorieLabel.text = rec2.nutrients["calories"]
+                    self.rec3CalorieLabel.text = rec3.nutrients["calories"]
+                } else {
+                    print("Cannot access redo recommendation labels")
+                }
+            }
+            
         }
         
     }
@@ -417,6 +450,13 @@ class HomeViewController: UIViewController {
         recMealNum = 2
         transitionToRecipeView()
     }
+    
+    @IBAction func refreshTapped(_ sender: Any) {
+        refreshMeals = true
+        transitionToHome()
+    }
+    
+    
     
     
     
@@ -448,5 +488,12 @@ class HomeViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
+    func transitionToHome() {
+        // transition to home screen
+        let tabbedViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabbedViewController) as? TabbedViewController
+        
+        view.window?.rootViewController = tabbedViewController
+        view.window?.makeKeyAndVisible()
+    }
     
 }

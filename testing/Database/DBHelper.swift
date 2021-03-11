@@ -205,7 +205,7 @@ class DBHelper
                 userRef.updateData([
                                     "currentRecipes": list
                 ]) { err in
-                    if let err = err {
+                    if err != nil {
                         print("Error updating currentRecipes")
                     } else {
                         print("currentRecipes successfully updated")

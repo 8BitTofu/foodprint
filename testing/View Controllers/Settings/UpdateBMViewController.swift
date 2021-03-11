@@ -157,6 +157,7 @@ class UpdateBMViewController: UIViewController {
             
             // reset updateBM
             updateBM = ""
+            refreshMeals = true
             
             // transition back
             successAdd()

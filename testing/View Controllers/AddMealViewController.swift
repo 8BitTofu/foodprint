@@ -241,7 +241,7 @@ class AddMealViewController: UIViewController {
             }
             
 
-            
+            refreshMeals = true
             successAdd()
         }
     }

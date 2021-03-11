@@ -69,7 +69,8 @@ class WelcomeViewController: UIViewController {
             self.view.window?.makeKeyAndVisible()
         }
 
-        // Do any additional setup after loading the view.
+        // MARK: Meal Recommendations
+        refreshMeals = true
     }
     
 

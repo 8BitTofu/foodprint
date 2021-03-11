@@ -81,3 +81,4 @@ var prefStateList = ["sweets": false,
 
 var recMealNum = -1
 var mealRecList:[String] = ["mealRec1", "mealRec2", "mealRec3"]
+var refreshMeals:Bool = false
