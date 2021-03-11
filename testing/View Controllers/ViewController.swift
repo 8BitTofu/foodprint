@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = .white
         
+        
+        
         /*
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "foodShot")?.draw(in: self.view.bounds)

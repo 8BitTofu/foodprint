@@ -95,7 +95,7 @@ class DBHelper
                         recipe.image = value.string!
                     }
                     else if key == "time"{
-                        recipe.time = value.string!
+                        recipe.time = value.string ?? ""
                     }
                     else if key == "ingredients"{
                         for ingredient in value{
@@ -125,7 +125,7 @@ class DBHelper
         return recipe
     }
     
-    func ranking(n: Int = 100, calories: Double = 0.0) -> [String]
+    func ranking(n: Int = 100, calories: Double = 0.0) -> Void
     {
         let preference_value = 20.0
         let max_calorie_value = 75.0
@@ -197,21 +197,22 @@ class DBHelper
                     list.append(k)
                     i+=1
                 }
-                /*
+                
+                
                 userRef.updateData([
-                                    meal_type: list
+                                    "currentRecipes": list
                 ]) { err in
                     if let err = err {
-                        print("Error updating \(meal_type): \(err)")
+                        print("Error updating currentRecipes")
                     } else {
-                        print("\(meal_type) successfully updated")
+                        print("currentRecipes successfully updated")
                     }
                 }
-                */
+                
+                
             } else {
                 print("Cannot access current user's preferences")
             }
         }
-        return list
     }
 }

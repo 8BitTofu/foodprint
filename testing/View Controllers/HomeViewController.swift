@@ -98,7 +98,7 @@ class HomeViewController: UIViewController {
         
         // MARK: Checking Same Day
         
-        let db = Firestore.firestore()
+        var db = Firestore.firestore()
         let userID : String = getCurrentUserID()
         let userRef = db.collection("users").document(userID)
         
@@ -222,9 +222,6 @@ class HomeViewController: UIViewController {
                 }
                 
                 
-                
-                
-                
                 // if new day, reset calories consumed
                 if sameDay == false {
                     userRef.updateData([
@@ -244,6 +241,145 @@ class HomeViewController: UIViewController {
                 self.setCalories(totalCalories: totalCalories, caloriesConsumed: caloriesConsumed)
             }
         }
+        
+        // MARK: Database / Get Recipes
+        
+        userRef.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                let breakfastCals = document.get("breakfastCals") as! Int
+                let lunchCals = document.get("lunchCals") as! Int
+                let dinnerCals = document.get("dinnerCals") as! Int
+                let hadBreakfast = document.get("hadBreakfast") as! Bool
+                let hadLunch = document.get("hadLunch") as! Bool
+                let hadDinner = document.get("hadDinner") as! Bool
+                let caloriesConsumed = document.get("caloriesConsumed") as! Int
+                let totalCalories = document.get("totalCalories") as! Int
+                
+                var rdb = DBHelper()
+                var threeRecMeals = [String]()
+                let leftoverCals = totalCalories - caloriesConsumed
+                
+                
+                if hadBreakfast == false {
+                    // MARK: Breakfast
+                    
+                    rdb.ranking(n: 100, calories: Double(breakfastCals))
+                    let breakfastRecipes = document.get("currentRecipes") as! [String]
+                    var resultSet = Set<String>()
+
+                    while resultSet.count < 3 {
+                        let randomIndex = Int.random(in: 0...(breakfastRecipes.count))
+                        resultSet.insert(breakfastRecipes[randomIndex])
+                    }
+
+                    threeRecMeals = Array(resultSet)
+                }
+                
+                
+                else if hadLunch == false {
+                    // MARK: Lunch
+                    
+                    rdb.ranking(n: 100, calories: Double(lunchCals))
+                    let lunchRecipes = document.get("currentRecipes") as! [String]
+                    var resultSet = Set<String>()
+
+                    while resultSet.count < 3 {
+                        let randomIndex = Int.random(in: 0...(lunchRecipes.count))
+                        resultSet.insert(lunchRecipes[randomIndex])
+                    }
+
+                    threeRecMeals = Array(resultSet)
+                }
+                
+                
+                else if hadDinner == false {
+                    // MARK: Dinner
+                    
+                    rdb.ranking(n: 100, calories: Double(dinnerCals))
+                    let dinnerRecipes = document.get("currentRecipes") as! [String]
+                    var resultSet = Set<String>()
+
+                    while resultSet.count < 3 {
+                        let randomIndex = Int.random(in: 0...(dinnerRecipes.count))
+                        resultSet.insert(dinnerRecipes[randomIndex])
+                    }
+
+                    threeRecMeals = Array(resultSet)
+                }
+                
+                
+                else {
+                    // MARK: Other
+                    
+                    rdb.ranking(n: 100, calories: Double(leftoverCals))
+                    let leftoverRecipes = document.get("currentRecipes") as! [String]
+                    var resultSet = Set<String>()
+
+                    while resultSet.count < 4 {
+                        let randomIndex = Int.random(in: 0...(leftoverRecipes.count))
+                        resultSet.insert(leftoverRecipes[randomIndex])
+                    }
+
+                    threeRecMeals = Array(resultSet)
+                }
+                
+                
+                // MARK: Recommendations
+                
+                var index = 1
+                
+                print("three meals:")
+                print(threeRecMeals)
+                
+                for recommendation in threeRecMeals {
+                    var recipe: Recipe = rdb.retrieve_recipe(name: recommendation)!
+                    
+                    if index == 1 {
+                        self.rec1NameLabel.text = recommendation
+                        self.rec1CalorieLabel.text = recipe.nutrients["calories"]
+                    }
+                    
+                    else if index == 2 {
+                        self.rec2NameLabel.text = recommendation
+                        self.rec2CalorieLabel.text = recipe.nutrients["calories"]
+                    }
+                    
+                    else if index == 3 {
+                        self.rec3NameLabel.text = recommendation
+                        self.rec3CalorieLabel.text = recipe.nutrients["calories"]
+                    }
+                    
+                    
+                    // increment
+                    index = index + 1
+                }
+                
+                
+                
+                
+                // update in firestore
+                
+                /*
+                userRef.updateData([
+                    "breakfast": breakfastRecipes,
+                    "lunch": lunchRecipes,
+                    "dinner": dinnerRecipes
+                ]) { err in
+                    if err != nil {
+                        print("Error updating meal recipes")
+                    } else {
+                        print("Success: meal recipes updated")
+                    }
+                }
+                */
+                
+                
+                
+            } else {
+                print("Cannot access current user's firstname and lastname")
+            }
+        }
+        
     }
     
     

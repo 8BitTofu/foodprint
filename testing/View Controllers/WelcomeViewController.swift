@@ -27,6 +27,11 @@ class WelcomeViewController: UIViewController {
         
         logoLabel.textColor = Constants.appColors.orangeRed
         
+        var rdb = DBHelper()
+        
+        print("RANKING:")
+        print(rdb.ranking(n: 50, calories: 1000))
+        print("RANKING END")
         
         
         // MARK: Access User Data
