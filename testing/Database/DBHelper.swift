@@ -125,7 +125,7 @@ class DBHelper
         return recipe
     }
     
-    func ranking(n: Int = 100, calories: Double = 0.0, meal_type: String)
+    func ranking(n: Int = 100, calories: Double = 0.0) -> [String]
     {
         let preference_value = 20.0
         let max_calorie_value = 75.0
@@ -140,6 +140,7 @@ class DBHelper
         let userID : String = (Auth.auth().currentUser?.uid)!
         let userRef = db.collection("users").document(userID)
         var ranked_meals = [String:Double]()
+        var list = [String]()
         
         userRef.getDocument(source: .cache) { [self] (document, error) in
             if let document = document {
@@ -188,7 +189,6 @@ class DBHelper
                 }
                 
                 let sortedByValueDictionary = ranked_meals.sorted { $0.1 > $1.1 }
-                var list = [String]()
                 var i = 0
                 for (k, v) in sortedByValueDictionary{
                     if(i == n){
@@ -197,7 +197,7 @@ class DBHelper
                     list.append(k)
                     i+=1
                 }
-                
+                /*
                 userRef.updateData([
                                     meal_type: list
                 ]) { err in
@@ -207,9 +207,11 @@ class DBHelper
                         print("\(meal_type) successfully updated")
                     }
                 }
+                */
             } else {
                 print("Cannot access current user's preferences")
             }
         }
+        return list
     }
 }
