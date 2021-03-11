@@ -85,10 +85,12 @@ class StepometerViewController: UIViewController{
         let healthKitTypesToRead: Set<HKObjectType> = [
             HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.dateOfBirth)!,
             HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.bloodType)!,
-            //HKObjectType.quantityType(forIdentifier: .bodyMass)!,
+            HKObjectType.quantityType(forIdentifier: .bodyMass)!,
         ]
         
-        let healthKitTypesToWrite : Set<HKSampleType> = []
+        let healthKitTypesToWrite : Set<HKSampleType> = [
+            HKObjectType.quantityType(forIdentifier: .bodyMass)!
+        ]
         
         if !HKHealthStore.isHealthDataAvailable()
         {
