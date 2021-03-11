@@ -73,3 +73,11 @@ var prefStateList = ["sweets": false,
                      "persian": false,
                      "latin": false
 ] as [String : Bool]
+
+
+
+// MARK: Recommendation Meals
+// this variable denotes which recommendation was pressed
+
+var recMealNum = -1
+var mealRecList:[String] = ["mealRec1", "mealRec2", "mealRec3"]

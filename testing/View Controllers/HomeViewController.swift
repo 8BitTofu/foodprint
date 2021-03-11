@@ -267,7 +267,7 @@ class HomeViewController: UIViewController {
                     let breakfastRecipes = document.get("currentRecipes") as! [String]
                     var resultSet = Set<String>()
 
-                    while resultSet.count < 3 {
+                    while resultSet.count < 4 {
                         let randomIndex = Int.random(in: 0...(breakfastRecipes.count))
                         resultSet.insert(breakfastRecipes[randomIndex])
                     }
@@ -283,7 +283,7 @@ class HomeViewController: UIViewController {
                     let lunchRecipes = document.get("currentRecipes") as! [String]
                     var resultSet = Set<String>()
 
-                    while resultSet.count < 3 {
+                    while resultSet.count < 4 {
                         let randomIndex = Int.random(in: 0...(lunchRecipes.count))
                         resultSet.insert(lunchRecipes[randomIndex])
                     }
@@ -299,7 +299,7 @@ class HomeViewController: UIViewController {
                     let dinnerRecipes = document.get("currentRecipes") as! [String]
                     var resultSet = Set<String>()
 
-                    while resultSet.count < 3 {
+                    while resultSet.count < 4 {
                         let randomIndex = Int.random(in: 0...(dinnerRecipes.count))
                         resultSet.insert(dinnerRecipes[randomIndex])
                     }
@@ -332,47 +332,59 @@ class HomeViewController: UIViewController {
                 print(threeRecMeals)
                 
                 for recommendation in threeRecMeals {
-                    var recipe: Recipe = rdb.retrieve_recipe(name: recommendation)!
+                    let recipe: Recipe = rdb.retrieve_recipe(name: recommendation)!
                     
                     if index == 1 {
+                        userRef.updateData([
+                            "mealRec1": recommendation
+                        ])
+                        
+                        /*
+                        let url = URL(string: recipe.image)
+                        print(url)
+                        self.rec1Image.downloadImage(from: url!)
+                         */
+ 
                         self.rec1NameLabel.text = recommendation
                         self.rec1CalorieLabel.text = recipe.nutrients["calories"]
+                        print("rec1Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
                     }
                     
                     else if index == 2 {
+                        userRef.updateData([
+                            "mealRec2": recommendation
+                        ])
+                        
+                        /*
+                        let url = URL(string: recipe.image)
+                        print(url)
+                        self.rec2Image.downloadImage(from: url!)
+                        */
+                        
                         self.rec2NameLabel.text = recommendation
                         self.rec2CalorieLabel.text = recipe.nutrients["calories"]
+                        print("rec2Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
                     }
                     
                     else if index == 3 {
+                        userRef.updateData([
+                            "mealRec3": recommendation
+                        ])
+                        
+                        /*
+                        let url = URL(string: recipe.image)
+                        print(url)
+                        self.rec3Image.downloadImage(from: url!)
+                        */
+                        
                         self.rec3NameLabel.text = recommendation
                         self.rec3CalorieLabel.text = recipe.nutrients["calories"]
+                        print("rec3Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
                     }
-                    
                     
                     // increment
                     index = index + 1
                 }
-                
-                
-                
-                
-                // update in firestore
-                
-                /*
-                userRef.updateData([
-                    "breakfast": breakfastRecipes,
-                    "lunch": lunchRecipes,
-                    "dinner": dinnerRecipes
-                ]) { err in
-                    if err != nil {
-                        print("Error updating meal recipes")
-                    } else {
-                        print("Success: meal recipes updated")
-                    }
-                }
-                */
-                
                 
                 
             } else {
@@ -391,15 +403,20 @@ class HomeViewController: UIViewController {
         transitionToAddMeal()
     }
     
-    @IBAction func infoTapped(_ sender: Any) {
+    @IBAction func info1Tapped(_ sender: Any) {
+        recMealNum = 0
         transitionToRecipeView()
     }
     
+    @IBAction func info2Tapped(_ sender: Any) {
+        recMealNum = 1
+        transitionToRecipeView()
+    }
     
-    
-    
-    
-    
+    @IBAction func info3Tapped(_ sender: Any) {
+        recMealNum = 2
+        transitionToRecipeView()
+    }
     
     
     

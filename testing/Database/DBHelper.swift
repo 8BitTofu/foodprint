@@ -86,6 +86,7 @@ class DBHelper
             for (key1, value1) in json
             {
                 recipe.name = key1
+                // print("recipe.name: " + key1)
                 for (key, value) in value1
                 {
                     if key == "yield"{
@@ -95,7 +96,7 @@ class DBHelper
                         recipe.image = value.string!
                     }
                     else if key == "time"{
-                        recipe.time = value.string ?? ""
+                        recipe.time = value.string ?? "" // temporary fix
                     }
                     else if key == "ingredients"{
                         for ingredient in value{
@@ -115,6 +116,8 @@ class DBHelper
                     else if key == "nutrients"{
                         for (nutrient_name, nutrient_value) in value{
                             recipe.nutrients[nutrient_name] = nutrient_value.string
+                            // print("nutName: " + nutrient_name)
+                            // print(nutrient_value)
                         }
                     }
                 }
