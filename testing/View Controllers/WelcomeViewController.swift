@@ -30,7 +30,7 @@ class WelcomeViewController: UIViewController {
         var rdb = DBHelper()
         
         print("RANKING:")
-        print(rdb.ranking(n: 50, calories: 1000))
+        rdb.ranking(n: 50, calories: 1000.0)
         print("RANKING END")
         
         

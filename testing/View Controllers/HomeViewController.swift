@@ -269,7 +269,7 @@ class HomeViewController: UIViewController {
                         var resultSet = Set<String>()
 
                         while resultSet.count < 3 {
-                            let randomIndex = Int.random(in: 0...(breakfastRecipes.count))
+                            let randomIndex = Int.random(in: 0..<(breakfastRecipes.count))
                             resultSet.insert(breakfastRecipes[randomIndex])
                         }
 
@@ -285,7 +285,7 @@ class HomeViewController: UIViewController {
                         var resultSet = Set<String>()
 
                         while resultSet.count < 3 {
-                            let randomIndex = Int.random(in: 0...(lunchRecipes.count))
+                            let randomIndex = Int.random(in: 0..<(lunchRecipes.count))
                             resultSet.insert(lunchRecipes[randomIndex])
                         }
 
@@ -301,7 +301,7 @@ class HomeViewController: UIViewController {
                         var resultSet = Set<String>()
 
                         while resultSet.count < 3 {
-                            let randomIndex = Int.random(in: 0...(dinnerRecipes.count))
+                            let randomIndex = Int.random(in: 0..<(dinnerRecipes.count))
                             resultSet.insert(dinnerRecipes[randomIndex])
                         }
 
@@ -317,7 +317,7 @@ class HomeViewController: UIViewController {
                         var resultSet = Set<String>()
 
                         while resultSet.count < 3 {
-                            let randomIndex = Int.random(in: 0...(leftoverRecipes.count))
+                            let randomIndex = Int.random(in: 0..<(leftoverRecipes.count))
                             resultSet.insert(leftoverRecipes[randomIndex])
                         }
 

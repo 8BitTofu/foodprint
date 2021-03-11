@@ -144,13 +144,13 @@ class DBHelper
         let userRef = db.collection("users").document(userID)
         var ranked_meals = [String:Double]()
         var list = [String]()
+        var used = Set<Int>()
         
         userRef.getDocument(source: .cache) { [self] (document, error) in
             if let document = document {
                 preferences = document.get("preferences") as! [String]
                 // case when there are too little pref
                 if preferences.count < 5{
-                    var used = Set<Int>()
                     var i = preferences.count
                     while i < 5
                     {
@@ -191,6 +191,26 @@ class DBHelper
                     ranked_meals[v] = preference_value + max_calorie_value - deductions
                 }
                 
+                temp.removeAll()
+                while (ranked_meals.count) < n{
+                    let randomInt = Int.random(in: 1..<self.random_pref.count)
+                    if used.contains(randomInt){
+                        continue
+                    }
+                    used.insert(randomInt)
+                    temp = retrieve_preferences(pref: self.random_pref[randomInt]!)
+                    for (k,v) in temp{
+                        if ranked_meals[v] == nil{
+                            continue
+                        }
+                        if k < calories*(1.0 - max_error) || k > calories*(1.0 + max_error){
+                            continue
+                        }
+                        let deductions = rank_constant*(abs(k-calories)/calories/0.01)
+                        ranked_meals[v] = max_calorie_value - deductions
+                    }
+                }
+                
                 let sortedByValueDictionary = ranked_meals.sorted { $0.1 > $1.1 }
                 var i = 0
                 for (k, v) in sortedByValueDictionary{
@@ -200,6 +220,8 @@ class DBHelper
                     list.append(k)
                     i+=1
                 }
+                
+                print(list)
                 
                 
                 userRef.updateData([
