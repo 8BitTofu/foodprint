@@ -12,24 +12,39 @@ import Foundation
 
 class DBHelper
 {
+    var file_pointers = [String: Int]()
+        
     init()
     {
-        startDatabase()
+        file_pointers = retrieve_fps()
     }
     
-    func startDatabase()
+    func retrieve_fps() -> Dictionary<String, Int>
     {
-        if let path = Bundle.main.path(forResource: "category_files/asian.txt", ofType: "json") {
+        var post = [String: Int]()
+        if let path = Bundle.main.path(forResource: "fp", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let jsonObj = try JSON(data: data)
-                print("jsonData:\(jsonObj)")
+                for (key, value) in  jsonObj
+                {
+                    post[key] = value.intValue
+                }
             } catch let error {
                 print("parse error: \(error.localizedDescription)")
             }
         } else {
             print("Invalid filename/path.")
         }
+        return post
+    }
+    
+    func startDatabase()
+    {
+        let pathURL = URL(fileURLWithPath: "allrecipes.json")
+        if FileManager.default.fileExists(atPath: pathURL.path) { print(1) }
+
+        let s = dbReader(url: pathURL)
     }
 }
 

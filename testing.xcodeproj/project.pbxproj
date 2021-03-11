@@ -46,6 +46,7 @@
 		4488C78325ED059F005A32FC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488C78225ED059F005A32FC /* Recipe.swift */; };
 		44C5420C25F8D89700832B01 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 44C5420B25F8D89700832B01 /* SwiftyJSON */; };
 		44C542B125F8E3A600832B01 /* categories in Resources */ = {isa = PBXBuildFile; fileRef = 44C542B025F8E3A600832B01 /* categories */; };
+		44F6C4CA25F9BE3C00153DC2 /* dbReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F6C4C925F9BE3C00153DC2 /* dbReader.swift */; };
 		627B10D825F65521004B1AF5 /* StepometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627B10D725F65521004B1AF5 /* StepometerViewController.swift */; };
 		80DD2799A2FD38377CE3AD21 /* Pods_testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D049976888F907BB8A4DD87 /* Pods_testing.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		4488C76A25ED04E3005A32FC /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		4488C78225ED059F005A32FC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		44C542B025F8E3A600832B01 /* categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = categories; sourceTree = "<group>"; };
+		44F6C4C925F9BE3C00153DC2 /* dbReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbReader.swift; sourceTree = "<group>"; };
 		5D049976888F907BB8A4DD87 /* Pods_testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		627B10D725F65521004B1AF5 /* StepometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepometerViewController.swift; sourceTree = "<group>"; };
 		E31C65D13771AB2FD875A54D /* Pods-testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing.release.xcconfig"; path = "Target Support Files/Pods-testing/Pods-testing.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				4488C78225ED059F005A32FC /* Recipe.swift */,
 				1F6F176225EF76F50046BC44 /* CategoryInfo.swift */,
 				1F73C10925EF8F5F0022F84B /* categories.txt */,
+				44F6C4C925F9BE3C00153DC2 /* dbReader.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				1F31525D25F60F5C00A9641C /* PreferencesViewController.swift in Sources */,
 				1F4496C625EA5456000DFADD /* WeightViewController.swift in Sources */,
 				1FF6914025F2521900E06C5C /* AddMealViewController.swift in Sources */,
+				44F6C4CA25F9BE3C00153DC2 /* dbReader.swift in Sources */,
 				1F2096C025CAB2F000C343CB /* Constants.swift in Sources */,
 				627B10D825F65521004B1AF5 /* StepometerViewController.swift in Sources */,
 				4488C78325ED059F005A32FC /* Recipe.swift in Sources */,
