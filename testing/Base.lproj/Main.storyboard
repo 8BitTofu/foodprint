@@ -1121,13 +1121,16 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOr-mA-OQa">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOr-mA-OQa">
                                                                 <rect key="frame" x="96" y="0.0" width="60" height="33"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="CCv-Op-URy"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <state key="normal" title="Info"/>
+                                                                <connections>
+                                                                    <action selector="infoTapped:" destination="xp7-Gs-Kd6" eventType="touchUpInside" id="RHC-z3-eMo"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1159,13 +1162,16 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCj-2h-Nbc">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCj-2h-Nbc">
                                                                 <rect key="frame" x="96" y="0.0" width="60" height="33"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="tm7-Zt-ueo"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <state key="normal" title="Info"/>
+                                                                <connections>
+                                                                    <action selector="infoTapped:" destination="xp7-Gs-Kd6" eventType="touchUpInside" id="9Sl-Nq-Q1h"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1197,13 +1203,16 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZh-O2-frb">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZh-O2-frb">
                                                                 <rect key="frame" x="96" y="0.0" width="60" height="33"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="Tpg-Bf-IbY"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <state key="normal" title="Info"/>
+                                                                <connections>
+                                                                    <action selector="infoTapped:" destination="xp7-Gs-Kd6" eventType="touchUpInside" id="3Ai-aX-FSB"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1276,9 +1285,28 @@
                     <view key="view" contentMode="scaleToFill" id="73b-5M-Zo2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC5-r9-XWq">
+                                <rect key="frame" x="40" y="74" width="26.333333333333329" height="22"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backTapped:" destination="c5l-AJ-SEr" eventType="touchUpInside" id="piv-1D-2LB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dK9-PU-IOK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uC5-r9-XWq" firstAttribute="top" secondItem="dK9-PU-IOK" secondAttribute="top" constant="30" id="hpL-ss-bN4"/>
+                            <constraint firstItem="uC5-r9-XWq" firstAttribute="leading" secondItem="dK9-PU-IOK" secondAttribute="leading" constant="40" id="vtG-Zo-tFf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="uC5-r9-XWq" id="hMQ-T0-lU8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82y-ld-v7i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

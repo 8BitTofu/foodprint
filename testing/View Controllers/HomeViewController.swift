@@ -102,6 +102,8 @@ class HomeViewController: UIViewController {
         let userID : String = getCurrentUserID()
         let userRef = db.collection("users").document(userID)
         
+        print(userID)
+        
         userRef.getDocument(source: .cache) { (document, error) in
             if let document = document {
                 let lastLogin = document.get("lastLogin") as! String
@@ -245,11 +247,23 @@ class HomeViewController: UIViewController {
     }
     
     
+    
+    
     // MARK: Button Actions
     
     @IBAction func addMealTapped(_ sender: Any) {
         transitionToAddMeal()
     }
+    
+    @IBAction func infoTapped(_ sender: Any) {
+        transitionToRecipeView()
+    }
+    
+    
+    
+    
+    
+    
     
     
     
@@ -273,11 +287,13 @@ class HomeViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
-    func transitionToStepometerView() {
+    func transitionToRecipeView() {
         // transition to account screen
-        let stepometerViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.stepometerViewController) as? StepometerViewController
+        let recipeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.recipeViewController) as? RecipeViewController
         
-        view.window?.rootViewController = stepometerViewController
+        view.window?.rootViewController = recipeViewController
         view.window?.makeKeyAndVisible()
     }
+    
+    
 }
