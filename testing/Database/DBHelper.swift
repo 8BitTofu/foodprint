@@ -55,13 +55,15 @@ class DBHelper
     func retrieve_preferences(pref: String) -> Dictionary<Double, String>
     {
         var post = [Double: String]()
-        if let path = Bundle.main.path(forResource: pref, ofType: "json") {
+        if let path = Bundle.main.path(forResource: "categories/" + pref, ofType: "txt") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let jsonObj = try JSON(data: data)
                 for (key, value) in  jsonObj
                 {
-                    post[Double(key)!] = value.string
+                    for (_, v) in value{
+                        post[Double(key)!] = v.string
+                    }
                 }
             } catch let error {
                 print("parse error: \(error.localizedDescription)")
@@ -139,74 +141,74 @@ class DBHelper
         let userRef = db.collection("users").document(userID)
         var ranked_meals = [String:Double]()
         
-        userRef.getDocument(source: .cache) { (document, error) in
+        userRef.getDocument(source: .cache) { [self] (document, error) in
             if let document = document {
                 preferences = document.get("preferences") as! [String]
+                // case when there are too little pref
+                if preferences.count < 5{
+                    var used = Set<Int>()
+                    var i = preferences.count
+                    while i < 5
+                    {
+                        let randomInt = Int.random(in: 1..<self.random_pref.count)
+                        if used.contains(randomInt){
+                            continue
+                        }
+                        used.insert(randomInt)
+                        added_preferences.append(self.random_pref[randomInt]!)
+                        i+=1
+                    }
+                }
+                print("preferences: \(preferences)")
+                print("added preferences: \(added_preferences)")
+                
+                var temp = [Double:String]()
+                
+                for preference in added_preferences{
+                    self.retrieve_preferences(pref: preference).forEach({(key, value) in temp[key] = value})
+                }
+                for (k, v) in temp{
+                    if k < calories*(1.0 - max_error) || k > calories*(1.0 + max_error){
+                        continue
+                    }
+                    let deductions = rank_constant*(abs(k-calories)/calories/0.01)
+                    ranked_meals[v] = max_calorie_value - deductions
+                }
+                
+                temp.removeAll()
+                for preference in preferences{
+                    retrieve_preferences(pref: preference).forEach({(key, value) in temp[key] = value})
+                }
+                for (k, v) in temp{
+                    if k < calories*(1.0 - max_error) || k > calories*(1.0 + max_error){
+                        continue
+                    }
+                    let deductions = rank_constant*(abs(k-calories)/calories/0.01)
+                    ranked_meals[v] = preference_value + max_calorie_value - deductions
+                }
+                
+                let sortedByValueDictionary = ranked_meals.sorted { $0.1 > $1.1 }
+                var list = [String]()
+                var i = 0
+                for (k, v) in sortedByValueDictionary{
+                    if(i == n){
+                        break
+                    }
+                    list.append(k)
+                    i+=1
+                }
+                
+                userRef.updateData([
+                                    meal_type: list
+                ]) { err in
+                    if let err = err {
+                        print("Error updating \(meal_type): \(err)")
+                    } else {
+                        print("\(meal_type) successfully updated")
+                    }
+                }
             } else {
                 print("Cannot access current user's preferences")
-            }
-        }
-        
-        // case when there are too little pref
-        if preferences.count < 5{
-            var used = Set<Int>()
-            var i = preferences.count
-            while i <= 5
-            {
-                let randomInt = Int.random(in: 1..<self.random_pref.count)
-                if used.contains(randomInt){
-                    continue
-                }
-                used.insert(randomInt)
-                added_preferences.append(self.random_pref[randomInt]!)
-                i+=1
-            }
-        }
-        
-        var temp = [Double:String]()
-        
-        for preference in added_preferences{
-            retrieve_preferences(pref: preference).forEach({(key, value) in temp[key] = value})
-        }
-        for (k, v) in temp{
-            if k < calories*(1.0 - max_error) || k > calories*(1.0 + max_error){
-                continue
-            }
-            let deductions = rank_constant*(abs(k-calories)/calories/0.01)
-            ranked_meals[v] = max_calorie_value - deductions
-        }
-        
-        temp.removeAll()
-        for preference in preferences{
-            retrieve_preferences(pref: preference).forEach({(key, value) in temp[key] = value})
-        }
-        for (k, v) in temp{
-            if k < calories*(1.0 - max_error) || k > calories*(1.0 + max_error){
-                continue
-            }
-            let deductions = rank_constant*(abs(k-calories)/calories/0.01)
-            ranked_meals[v] = preference_value + max_calorie_value - deductions
-        }
-        
-        let sortedByValueDictionary = ranked_meals.sorted { $0.1 < $1.1 }
-        var list = [String]()
-        var i = 0
-        for (k, v) in sortedByValueDictionary{
-            if(i == 100){
-                break
-            }
-            list.append(k)
-            i+=1
-        }
-        
-        userRef.updateData([
-                            meal_type: list
-        ]) { err in
-            if let err = err {
-                print("Error updating \(meal_type): \(err)")
-            } else {
-                print("\(meal_type) successfully updated")
-                print(list)
             }
         }
     }
