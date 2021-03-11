@@ -38,7 +38,7 @@ class DBHelper
         self.db = dbReader(path: pathname!)!
         for _ in 1...10{
             if let line = db.nextLine() {
-                print(line)
+                print("line: \(line)")
             }
         }
         
