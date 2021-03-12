@@ -122,8 +122,9 @@ class DBHelper
                     }
                 }
             }
-        }catch _{
-            print("error")
+        }catch{
+            print("recipe retrieval error: \(error)")
+            print(jsonString as Any)
         }
         return recipe
     }
@@ -134,7 +135,7 @@ class DBHelper
         let max_calorie_value = 75.0
         let max_error = 0.3
         
-        let rank_constant = 1.0 // for ever 1 % error in calories, the ranking score is deducted byt this value
+        let rank_constant = 1.0 // for ever 1 % error in calories, the ranking score is deducted by this value
         
         var preferences = [String]()
         var added_preferences = [String]()

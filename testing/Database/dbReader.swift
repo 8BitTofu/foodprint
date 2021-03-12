@@ -41,6 +41,7 @@ class dbReader {
                 let subData = buffer.subdata(in: buffer.startIndex..<range.lowerBound)
                 let line = String(data: subData, encoding: encoding)
                 buffer.replaceSubrange(buffer.startIndex..<range.upperBound, with: [])
+                buffer.removeAll()
                 return line
             } else {
                 let tempData = fileHandle.readData(ofLength: chunkSize)
