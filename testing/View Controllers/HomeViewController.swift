@@ -329,23 +329,34 @@ class HomeViewController: UIViewController {
                     
                     var index = 1
                     
-                    print("three meals:")
-                    print(threeRecMeals)
+                    print("three meals: \(threeRecMeals)")
                     
                     for recommendation in threeRecMeals {
                         let recipe: Recipe = rdb.retrieve_recipe(name: recommendation)!
+                        rdb.print_recipe(recipe: recipe)
                         
                         if index == 1 {
                             userRef.updateData([
                                 "mealRec1": recommendation
                             ])
                             
-                            /*
-                            let url = URL(string: recipe.image)
-                            print(url)
-                            self.rec1Image.downloadImage(from: url!)
-                             */
-     
+                            
+                            let url = URL(string: recipe.image)!
+
+                            // Create Data Task
+                            let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, _, _) in
+                                if let data = data {
+                                    DispatchQueue.main.async {
+                                        // Create Image and Update Image View
+                                        self?.rec1Image.image = UIImage(data: data)
+                                    }
+                                }
+                            }
+
+                            // Start Data Task
+                            dataTask.resume()
+                            
+                            
                             self.rec1NameLabel.text = recommendation
                             self.rec1CalorieLabel.text = recipe.nutrients["calories"]
                             print("rec1Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
@@ -356,11 +367,22 @@ class HomeViewController: UIViewController {
                                 "mealRec2": recommendation
                             ])
                             
-                            /*
-                            let url = URL(string: recipe.image)
-                            print(url)
-                            self.rec2Image.downloadImage(from: url!)
-                            */
+                            
+                            let url = URL(string: recipe.image)!
+
+                            // Create Data Task
+                            let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, _, _) in
+                                if let data = data {
+                                    DispatchQueue.main.async {
+                                        // Create Image and Update Image View
+                                        self?.rec2Image.image = UIImage(data: data)
+                                    }
+                                }
+                            }
+
+                            // Start Data Task
+                            dataTask.resume()
+                            
                             
                             self.rec2NameLabel.text = recommendation
                             self.rec2CalorieLabel.text = recipe.nutrients["calories"]
@@ -372,11 +394,23 @@ class HomeViewController: UIViewController {
                                 "mealRec3": recommendation
                             ])
                             
-                            /*
-                            let url = URL(string: recipe.image)
-                            print(url)
-                            self.rec3Image.downloadImage(from: url!)
-                            */
+                            
+                            let url = URL(string: recipe.image)!
+
+                            // Create Data Task
+                            let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, _, _) in
+                                if let data = data {
+                                    DispatchQueue.main.async {
+                                        // Create Image and Update Image View
+                                        self?.rec3Image.image = UIImage(data: data)
+                                    }
+                                }
+                            }
+                            
+
+                            // Start Data Task
+                            dataTask.resume()
+                            
                             
                             self.rec3NameLabel.text = recommendation
                             self.rec3CalorieLabel.text = recipe.nutrients["calories"]

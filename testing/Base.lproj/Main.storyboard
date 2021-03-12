@@ -1283,6 +1283,7 @@
                         <outlet property="rec2NameLabel" destination="O4T-Hw-g49" id="4zH-U0-qV5"/>
                         <outlet property="rec2Stack" destination="ebb-XZ-OVa" id="za1-a2-UDN"/>
                         <outlet property="rec3CalorieLabel" destination="ojR-pg-oTN" id="AH6-ed-gSK"/>
+                        <outlet property="rec3Image" destination="tE5-48-ICt" id="iuW-n8-t90"/>
                         <outlet property="rec3InfoButton" destination="PZh-O2-frb" id="O3X-cA-jqe"/>
                         <outlet property="rec3NameLabel" destination="Yc9-BN-5h9" id="Xz3-lv-scc"/>
                         <outlet property="rec3Stack" destination="qyC-zL-wR6" id="qts-uJ-ede"/>
