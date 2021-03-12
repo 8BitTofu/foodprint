@@ -52,6 +52,23 @@ class RecipeViewController: UIViewController {
                 let stringRepresentation = instructions.joined(separator:" ")
                 self.instructionsLabel.text = stringRepresentation
                 
+                
+                // MARK: Image
+                
+                let url = URL(string: recipe.image)!
+
+                // Create Data Task
+                let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, _, _) in
+                    if let data = data {
+                        DispatchQueue.main.async {
+                            // Create Image and Update Image View
+                            self?.recipeImage.image = UIImage(data: data)
+                        }
+                    }
+                }
+                
+                dataTask.resume()
+                
             } else {
                 print("Cannot access meal info")
             }
