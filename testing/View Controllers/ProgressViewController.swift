@@ -7,22 +7,66 @@
 
 import UIKit
 import HealthKit
+import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 class ProgressViewController: UIViewController {
 
     // MARK: Buttons / Labels
     
-    @IBOutlet weak var stepometerButton: UIButton!
+    @IBOutlet weak var logoLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var stepsLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var mealsEatenLabel: UILabel!
+    
+    @IBOutlet weak var mealsEatenDataLabel: UILabel!
+    
+    
     //@IBOutlet weak var lblAge: UILabel!
     @IBOutlet weak var lblSteps: UILabel!
     @IBOutlet weak var txtWeight: UILabel!
     @IBOutlet weak var lblDistance: UILabel!
     
     let healthKitStore:HKHealthStore = HKHealthStore()
-    
+    var dailySteps = 0
+    var healthKitWeight = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // MARK: UI / Aesthetics
+        
+        logoLabel.textColor = Constants.appColors.orangeRed
+        
+        makeSolidLabel(label: weightLabel, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        makeSolidLabel(label: stepsLabel, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        makeSolidLabel(label: distanceLabel, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        makeSolidLabel(label: mealsEatenLabel, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        
+        // MARK: Update Meals Eaten Label
+        
+        let db = Firestore.firestore()
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        let userRef = db.collection("users").document(userID)
+        
+        userRef.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                let numMeals = document.get("mealNum") as! Int
+                
+                if numMeals == 1 {
+                    self.mealsEatenDataLabel.text = String(numMeals) + " Meal"
+                }
+                else {
+                    self.mealsEatenDataLabel.text = String(numMeals) + " Meals"
+                }
+                
+            } else {
+                print("Cannot access current user's firstname and lastname")
+            }
+        }
+        
         
         self.authorizeHealthKitApp()
         self.getLatestWeight()

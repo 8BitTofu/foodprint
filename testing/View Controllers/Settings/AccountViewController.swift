@@ -34,7 +34,6 @@ class AccountViewController: UIViewController {
     
     @IBOutlet var weightOptionDescLabel: UILabel!
     
-    @IBOutlet var exerciseDescLabel: UILabel!
     
     
     // MARK: Dynamic Labels
@@ -47,8 +46,6 @@ class AccountViewController: UIViewController {
     
     @IBOutlet var dWeightOptionLabel: UILabel!
     
-    @IBOutlet var dExerciseLabel: UILabel!
-    
     
     // MARK: Update Buttons
     
@@ -60,7 +57,6 @@ class AccountViewController: UIViewController {
     
     @IBOutlet var updateWeightOptionButton: UIButton!
     
-    @IBOutlet var updateExerciseButton: UIButton!
     
     
     
@@ -76,13 +72,11 @@ class AccountViewController: UIViewController {
         heightDescLabel.textColor = Constants.appColors.orangeRed
         ageDescLabel.textColor = Constants.appColors.orangeRed
         weightOptionDescLabel.textColor = Constants.appColors.orangeRed
-        exerciseDescLabel.textColor = Constants.appColors.orangeRed
         
         makeSolidButton(button: updateWeightButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         makeSolidButton(button: updateHeightButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         makeSolidButton(button: updateAgeButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         makeSolidButton(button: updateWeightOptionButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
-        makeSolidButton(button: updateExerciseButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
         
         makeGhostButton(button: deleteAccountButton, color: Constants.appColors.orangeRed)
         
@@ -95,7 +89,6 @@ class AccountViewController: UIViewController {
         var height = -1
         var age = -1
         var weightOption = ""
-        var exercise = ""
         
         let db = Firestore.firestore()
         let userID : String = getCurrentUserID()
@@ -107,13 +100,11 @@ class AccountViewController: UIViewController {
                 height = document.get("height") as! Int
                 age = document.get("age") as! Int
                 weightOption = document.get("weightChange") as! String
-                exercise = document.get("exerciseAmt") as! String
                 
                 dWeightLabel.text = String(weight)
                 dHeightLabel.text = String(height)
                 dAgeLabel.text = String(age)
                 dWeightOptionLabel.text = weightOption
-                dExerciseLabel.text = exercise
                 
             } else {
                 print("Cannot access current user's calorie count / consumed")
