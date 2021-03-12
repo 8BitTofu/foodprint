@@ -88,5 +88,14 @@ func calcFemaleCalories(weightLB: Int, heightCM: Int, ageYR: Int, exerciseAmt: S
 
 
 
+// MARK: Calculate Leftover Calories
 
+func calcLeftoverCals(totalCalories:Int, caloriesConsumed:Int) -> Int {
+    if totalCalories > caloriesConsumed {
+        return totalCalories - caloriesConsumed
+    }
+    else {
+        return totalCalories
+    }
+}
 
