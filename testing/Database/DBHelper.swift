@@ -164,8 +164,8 @@ class DBHelper
                         i+=1
                     }
                 }
-                print("preferences: \(preferences)")
-                print("added preferences: \(added_preferences)")
+                // print("preferences: \(preferences)")
+                // print("added preferences: \(added_preferences)")
                 
                 var temp = [Double:String]()
                 
@@ -222,7 +222,7 @@ class DBHelper
                     i+=1
                 }
                 
-                print(list)
+                // print(list)
                 
                 
                 userRef.updateData([

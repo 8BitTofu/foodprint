@@ -112,7 +112,113 @@ class RecipeViewController: UIViewController {
         transitionToHome()
     }
     
+    @IBAction func addMealTapped(_ sender: Any) {
+        let db = Firestore.firestore()
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        let userRef = db.collection("users").document(userID)
+        
+        userRef.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                let recipeName:String = document.get(mealRecList[recMealNum]) as! String
+                
+                let rdb = DBHelper()
+                let recipe: Recipe = rdb.retrieve_recipe(name: recipeName )!
+                
+                let recipeCalString:String = recipe.nutrients["calories"]!
+                
+                let delimiter = " "
+                let caloriesString = recipeCalString.components(separatedBy: delimiter)
+                let mealCalories = String(caloriesString[0])
+                let mealCaloriesDouble = Double(mealCalories) ?? 0.0
+                let mealCaloriesInt = Int(mealCaloriesDouble)
+
+                
+                userRef.getDocument(source: .cache) { (document, error) in
+                    if let document = document {
+                        let currentCaloriesConsumed = document.get("caloriesConsumed") as! Int
+                        let currentMealNum = document.get("mealNum") as! Int
+                        let hadBreakfast = document.get("hadBreakfast") as! Bool
+                        let hadLunch = document.get("hadLunch") as! Bool
+                        let hadDinner = document.get("hadDinner") as! Bool
+                        
+                        // update the height/weight/age of current user (get input)
+                        userRef.updateData([
+                            "caloriesConsumed": currentCaloriesConsumed + mealCaloriesInt,
+                            "mealNum": currentMealNum + 1
+                        ]) { err in
+                            if let err = err {
+                                print("Error adding new meal via info: \(err)")
+                            } else {
+                                print("New meal successfully added via info")
+                            }
+                        }
+                        
+                        
+                        // update which meal has been eaten
+                        
+                        if (hadBreakfast == false) {
+                            userRef.updateData([
+                                "hadBreakfast": true
+                            ]) { err in
+                                if let err = err {
+                                    print("Error updating hadBreakfast: \(err)")
+                                } else {
+                                    print("hadBreakfast successfully updated")
+                                }
+                            }
+                        }
+                        
+                        else if (hadLunch == false) {
+                            userRef.updateData([
+                                "hadLunch": true
+                            ]) { err in
+                                if let err = err {
+                                    print("Error updating hadLunch: \(err)")
+                                } else {
+                                    print("hadLunch successfully updated")
+                                }
+                            }
+                        }
+                        
+                        else if (hadDinner == false) {
+                            userRef.updateData([
+                                "hadDinner": true
+                            ]) { err in
+                                if let err = err {
+                                    print("Error updating hadDinner: \(err)")
+                                } else {
+                                    print("hadDinner successfully updated")
+                                }
+                            }
+                        }
+                        
+                        
+                    } else {
+                        print("Cannot access current user's data (Adding Recipe Meal via Info)")
+                    }
+                }
+
+            }
+        }
+
+        refreshMeals = false // dont refresh?
+        
+        
+        successAdd()
+    }
     
+    
+    func successAdd() {
+        addMealButton.setTitle("Success!", for: .normal)
+        makeSolidButton(button: addMealButton, backgroundColor: .green, textColor: .white)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let tabbedViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabbedViewController) as? TabbedViewController
+            
+            self.view.window?.rootViewController = tabbedViewController
+            self.view.window?.makeKeyAndVisible()
+        }
+    }
     
     
     

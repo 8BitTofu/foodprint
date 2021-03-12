@@ -102,7 +102,7 @@ class HomeViewController: UIViewController {
         let userID : String = getCurrentUserID()
         let userRef = db.collection("users").document(userID)
         
-        print(userID)
+        // print(userID)
         
         userRef.getDocument(source: .cache) { (document, error) in
             if let document = document {
@@ -132,12 +132,14 @@ class HomeViewController: UIViewController {
             }
         }
         
+        /*
         switch (sameDay) {
         case true:
             print("SAME DAY")
         case false:
             print("NEW/DIFFERENT DAY")
         }
+         */
         
         
 
@@ -330,7 +332,7 @@ class HomeViewController: UIViewController {
                     
                     var index = 1
                     
-                    print("three meals: \(threeRecMeals)")
+                    // print("three meals: \(threeRecMeals)")
                     
                     for recommendation in threeRecMeals {
                         let recipe: Recipe = rdb.retrieve_recipe(name: recommendation)!
@@ -360,7 +362,7 @@ class HomeViewController: UIViewController {
                             
                             self.rec1NameLabel.text = recommendation
                             self.rec1CalorieLabel.text = recipe.nutrients["calories"]
-                            print("rec1Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
+                            // print("rec1Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
                         }
                         
                         else if index == 2 {
@@ -387,7 +389,7 @@ class HomeViewController: UIViewController {
                             
                             self.rec2NameLabel.text = recommendation
                             self.rec2CalorieLabel.text = recipe.nutrients["calories"]
-                            print("rec2Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
+                            // print("rec2Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
                         }
                         
                         else if index == 3 {
@@ -415,7 +417,7 @@ class HomeViewController: UIViewController {
                             
                             self.rec3NameLabel.text = recommendation
                             self.rec3CalorieLabel.text = recipe.nutrients["calories"]
-                            print("rec3Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
+                            // print("rec3Cal: " + String(recipe.nutrients["calories"] ?? "0000"))
                         }
                         
                         // increment
