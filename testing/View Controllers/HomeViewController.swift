@@ -168,6 +168,7 @@ class HomeViewController: UIViewController {
                 var dinnerCals: Double = 0.0
                 
                 
+                // MARK: Calculate Calories
                 
                 if (gender == "Male") {
                     totalCalories = Int(calcMaleCalories(weightLB: weight, heightCM: height, ageYR: age, exerciseAmt: exerciseAmt))
@@ -176,8 +177,9 @@ class HomeViewController: UIViewController {
                 if (gender == "Female") {
                     totalCalories = Int(calcFemaleCalories(weightLB: weight, heightCM: height, ageYR: age, exerciseAmt: exerciseAmt))
                 }
+            
+                var caloriesLeftover = totalCalories - caloriesConsumed
                 
-                let caloriesLeftover = totalCalories - caloriesConsumed
                 
                 
                 // update totalCalories data field in user
@@ -209,6 +211,12 @@ class HomeViewController: UIViewController {
                     breakfastCals = 0
                     lunchCals = 0
                     dinnerCals = Double(caloriesLeftover)
+                }
+                
+                else {
+                    breakfastCals = 0
+                    lunchCals = 0
+                    dinnerCals = 0
                 }
                 
                 userRef.updateData([
@@ -244,6 +252,7 @@ class HomeViewController: UIViewController {
             }
         }
         
+        print("HELLO")
         
         // MARK: Database / Get Recipes
         
@@ -261,7 +270,16 @@ class HomeViewController: UIViewController {
                     
                     var rdb = DBHelper()
                     var threeRecMeals = [String]()
-                    let leftoverCals = totalCalories - caloriesConsumed
+                    var leftoverCals = (totalCalories - caloriesConsumed)
+                    
+                    /*
+                    if totalCalories > caloriesConsumed {
+                        leftoverCals = totalCalories - caloriesConsumed
+                    }
+                    else {
+                        leftoverCals = totalCalories
+                    }
+                    */
                     
                     
                     if hadBreakfast == false {
