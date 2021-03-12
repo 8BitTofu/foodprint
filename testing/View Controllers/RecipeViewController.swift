@@ -28,6 +28,11 @@ class RecipeViewController: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    
+    @IBOutlet weak var instructLabel: UILabel!
+    
+    @IBOutlet weak var ingredientsView: UITextView!
     
     
     @IBOutlet weak var logoLabel: UILabel!
@@ -50,6 +55,12 @@ class RecipeViewController: UIViewController {
                        , textColor: Constants.appColors.softBlack)
         makeSolidLabel(label: timeLabel, backgroundColor: Constants.appColors.mustard
                        , textColor: Constants.appColors.softBlack)
+        
+        makeSolidLabel(label: ingredientsLabel, backgroundColor: Constants.appColors.mustard
+                       , textColor: Constants.appColors.softBlack)
+        makeSolidLabel(label: instructLabel, backgroundColor: Constants.appColors.mustard
+                       , textColor: Constants.appColors.softBlack)
+        
         
         caloriesLabel.numberOfLines = 0
         yieldLabel.numberOfLines = 0
@@ -75,8 +86,12 @@ class RecipeViewController: UIViewController {
                 self.timeLabel.text = recipe.time
                 
                 let instructions:[String] = recipe.instructions
-                let stringRepresentation = instructions.joined(separator:" ")
-                self.instructionsLabel.text = stringRepresentation
+                let instructionsRepresentation = instructions.joined(separator:"\n")
+                self.instructionsLabel.text = instructionsRepresentation
+                
+                let ingredients:[String] = recipe.ingredients
+                let ingredientsRepresentation = ingredients.joined(separator:"\n")
+                self.ingredientsView.text = ingredientsRepresentation
                 
                 
                 

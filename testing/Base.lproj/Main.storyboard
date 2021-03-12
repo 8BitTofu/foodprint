@@ -1303,7 +1303,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC5-r9-XWq">
-                                <rect key="frame" x="40" y="74" width="26.333333333333329" height="81.666666666666686"/>
+                                <rect key="frame" x="40" y="74" width="26.333333333333329" height="57"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal">
                                     <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
@@ -1324,22 +1324,22 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-pw-1p4">
-                                <rect key="frame" x="40" y="189.66666666666663" width="310" height="475"/>
+                                <rect key="frame" x="40" y="165" width="310" height="525"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mIs-A7-zsh">
                                         <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECIPE TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUp-Dj-He7">
-                                        <rect key="frame" x="0.0" y="70.000000000000028" width="310" height="40"/>
+                                        <rect key="frame" x="0.0" y="70" width="310" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="66W-zI-ea8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hEk-p8-xQT">
-                                        <rect key="frame" x="0.0" y="130.00000000000003" width="310" height="25"/>
+                                        <rect key="frame" x="0.0" y="130" width="310" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALORIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xql-Lb-Vi3">
                                                 <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="25"/>
@@ -1370,11 +1370,40 @@
                                             <constraint firstItem="Qt7-7A-YBY" firstAttribute="height" secondItem="Xql-Lb-Vi3" secondAttribute="height" id="aS8-LH-fFo"/>
                                         </constraints>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Ml-Pz-W9y">
-                                        <rect key="frame" x="0.0" y="175" width="310" height="300"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZG-5a-ITm">
+                                        <rect key="frame" x="0.0" y="175" width="310" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="zFo-GS-col"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y22-bk-Jkd">
+                                        <rect key="frame" x="0.0" y="220" width="310" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="3gT-g6-9pB"/>
+                                            <constraint firstAttribute="height" constant="40" id="Mei-dK-iNf"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAi-R2-Arq">
+                                        <rect key="frame" x="0.0" y="280" width="310" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="uZh-nt-X31"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Ml-Pz-W9y">
+                                        <rect key="frame" x="0.0" y="325" width="310" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="3gT-g6-9pB"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -1399,7 +1428,7 @@
                             <constraint firstItem="dK9-PU-IOK" firstAttribute="trailing" secondItem="qXY-Zb-uZa" secondAttribute="trailing" constant="40" id="P55-tl-sz1"/>
                             <constraint firstItem="dK9-PU-IOK" firstAttribute="bottom" secondItem="qXY-Zb-uZa" secondAttribute="bottom" constant="30" id="Vmf-fj-lw2"/>
                             <constraint firstItem="Sjy-pw-1p4" firstAttribute="leading" secondItem="dK9-PU-IOK" secondAttribute="leading" constant="40" id="WoI-hA-OEa"/>
-                            <constraint firstItem="qXY-Zb-uZa" firstAttribute="top" secondItem="Sjy-pw-1p4" secondAttribute="bottom" constant="65.333333333333371" id="hf2-b9-iY6"/>
+                            <constraint firstItem="qXY-Zb-uZa" firstAttribute="top" secondItem="Sjy-pw-1p4" secondAttribute="bottom" constant="40" id="hf2-b9-iY6"/>
                             <constraint firstItem="uC5-r9-XWq" firstAttribute="top" secondItem="dK9-PU-IOK" secondAttribute="top" constant="30" id="hpL-ss-bN4"/>
                             <constraint firstItem="Sjy-pw-1p4" firstAttribute="top" secondItem="uC5-r9-XWq" secondAttribute="bottom" constant="34" id="kmC-XW-1bp"/>
                             <constraint firstItem="uC5-r9-XWq" firstAttribute="leading" secondItem="dK9-PU-IOK" secondAttribute="leading" constant="40" id="vtG-Zo-tFf"/>
@@ -1410,6 +1439,9 @@
                         <outlet property="addMealButton" destination="qXY-Zb-uZa" id="bZ8-DC-1w7"/>
                         <outlet property="backButton" destination="uC5-r9-XWq" id="hMQ-T0-lU8"/>
                         <outlet property="caloriesLabel" destination="Xql-Lb-Vi3" id="0pP-pI-Y85"/>
+                        <outlet property="ingredientsLabel" destination="uZG-5a-ITm" id="c01-Cg-cXu"/>
+                        <outlet property="ingredientsView" destination="y22-bk-Jkd" id="M8C-2u-It9"/>
+                        <outlet property="instructLabel" destination="iAi-R2-Arq" id="tPI-6b-baa"/>
                         <outlet property="instructionsLabel" destination="6Ml-Pz-W9y" id="nEy-Hu-DqE"/>
                         <outlet property="logoLabel" destination="OC6-c3-cJY" id="2cd-Cs-MaG"/>
                         <outlet property="recipeImage" destination="mIs-A7-zsh" id="gR4-SZ-pen"/>

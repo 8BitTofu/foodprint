@@ -28,7 +28,6 @@ class ProgressViewController: UIViewController {
         self.getLatestWeight()
         self.getLatestSteps()
         self.getLatestDistance()
-        
     }
     
     
@@ -82,7 +81,7 @@ class ProgressViewController: UIViewController {
                     self.txtWeight.text = "\(result.quantity)"
                 });
             } else {
-                print("OOPS didn't get height \nResults => \(String(describing: results)), error => \(String(describing: error))")
+                print("OOPS didn't get weight \nResults => \(String(describing: results)), error => \(String(describing: error))")
             }
         }
         healthKitStore.execute(query)
@@ -94,12 +93,12 @@ class ProgressViewController: UIViewController {
         
         let query = HKSampleQuery(sampleType: stepsType, predicate: nil, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, results, error) in
             if let result = results?.last as? HKQuantitySample{
-                print("weight => \(result.quantity)")
+                print("steps => \(result.quantity)")
                 DispatchQueue.main.async(execute: { () -> Void in
                     self.lblSteps.text = "\(result.quantity)"
                 });
             } else {
-                print("OOPS didn't get height \nResults => \(String(describing: results)), error => \(String(describing: error))")
+                print("OOPS didn't get steps \nResults => \(String(describing: results)), error => \(String(describing: error))")
             }
         }
         healthKitStore.execute(query)
@@ -111,12 +110,12 @@ class ProgressViewController: UIViewController {
         
         let query = HKSampleQuery(sampleType: distanceType, predicate: nil, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, results, error) in
             if let result = results?.last as? HKQuantitySample{
-                print("weight => \(result.quantity)")
+                print("distance => \(result.quantity)")
                 DispatchQueue.main.async(execute: { () -> Void in
                     self.lblDistance.text = "\(result.quantity)"
                 });
             } else {
-                print("OOPS didn't get height \nResults => \(String(describing: results)), error => \(String(describing: error))")
+                print("OOPS didn't get distance \nResults => \(String(describing: results)), error => \(String(describing: error))")
             }
         }
         healthKitStore.execute(query)
