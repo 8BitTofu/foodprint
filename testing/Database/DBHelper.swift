@@ -122,7 +122,7 @@ class DBHelper
                     }
                 }
             }
-        }catch{
+        }catch let error{
             print("recipe retrieval error: \(error)")
             print(jsonString as Any)
         }
