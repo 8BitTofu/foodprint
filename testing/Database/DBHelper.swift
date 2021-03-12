@@ -122,8 +122,8 @@ class DBHelper
                     }
                 }
             }
-        }catch _{
-            print("error")
+        }catch let error{
+            print("recipe retrieval error: \(error)")
         }
         return recipe
     }
