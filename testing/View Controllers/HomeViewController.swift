@@ -455,6 +455,52 @@ class HomeViewController: UIViewController {
                     self.rec1CalorieLabel.text = rec1.nutrients["calories"]
                     self.rec2CalorieLabel.text = rec2.nutrients["calories"]
                     self.rec3CalorieLabel.text = rec3.nutrients["calories"]
+                    
+                    
+                    let rec1url = URL(string: rec1.image)!
+
+                    // Create Data Task
+                    let dataTask1 = URLSession.shared.dataTask(with: rec1url) { [weak self] (data, _, _) in
+                        if let data = data {
+                            DispatchQueue.main.async {
+                                // Create Image and Update Image View
+                                self?.rec1Image.image = UIImage(data: data)
+                            }
+                        }
+                    }
+                    
+                    dataTask1.resume()
+                    
+                    let rec2url = URL(string: rec2.image)!
+
+                    // Create Data Task
+                    let dataTask2 = URLSession.shared.dataTask(with: rec2url) { [weak self] (data, _, _) in
+                        if let data = data {
+                            DispatchQueue.main.async {
+                                // Create Image and Update Image View
+                                self?.rec2Image.image = UIImage(data: data)
+                            }
+                        }
+                    }
+                    
+                    dataTask2.resume()
+                    
+                    let rec3url = URL(string: rec3.image)!
+
+                    // Create Data Task
+                    let dataTask3 = URLSession.shared.dataTask(with: rec3url) { [weak self] (data, _, _) in
+                        if let data = data {
+                            DispatchQueue.main.async {
+                                // Create Image and Update Image View
+                                self?.rec3Image.image = UIImage(data: data)
+                            }
+                        }
+                    }
+                    
+                    dataTask3.resume()
+                    
+                    
+                    
                 } else {
                     print("Cannot access redo recommendation labels")
                 }
