@@ -24,7 +24,13 @@ class RecipeViewController: UIViewController {
     
     @IBOutlet weak var instructionsLabel: UILabel!
     
+    @IBOutlet weak var yieldLabel: UILabel!
     
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    
+    
+    @IBOutlet weak var logoLabel: UILabel!
     
     @IBOutlet weak var addMealButton: UIButton!
     
@@ -32,11 +38,29 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // MARK: UI / Aesthetics
+        
         backButton.tintColor = Constants.appColors.mustard
+        logoLabel.textColor = Constants.appColors.orangeRed
+        makeSolidLabel(label: recipeTitle, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        makeSolidButton(button: addMealButton, backgroundColor: Constants.appColors.orangeRed, textColor: .white)
+        makeSolidLabel(label: caloriesLabel, backgroundColor: Constants.appColors.mustard
+                       , textColor: Constants.appColors.softBlack)
+        makeSolidLabel(label: yieldLabel, backgroundColor: Constants.appColors.mustard
+                       , textColor: Constants.appColors.softBlack)
+        makeSolidLabel(label: timeLabel, backgroundColor: Constants.appColors.mustard
+                       , textColor: Constants.appColors.softBlack)
+        
+        caloriesLabel.numberOfLines = 0
+        yieldLabel.numberOfLines = 0
+        timeLabel.numberOfLines = 0
+        
         
         let db = Firestore.firestore()
         let userID : String = (Auth.auth().currentUser?.uid)!
         let userRef = db.collection("users").document(userID)
+        
+        // MARK: Setting Labels
         
         userRef.getDocument(source: .cache) { (document, error) in
             if let document = document {
@@ -47,10 +71,14 @@ class RecipeViewController: UIViewController {
                 
                 self.recipeTitle.text = recipeName
                 self.caloriesLabel.text = recipe.nutrients["calories"]
+                self.yieldLabel.text = recipe.yields
+                self.timeLabel.text = recipe.time
                 
                 let instructions:[String] = recipe.instructions
                 let stringRepresentation = instructions.joined(separator:" ")
                 self.instructionsLabel.text = stringRepresentation
+                
+                
                 
                 
                 // MARK: Image

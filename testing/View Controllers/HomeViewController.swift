@@ -242,6 +242,7 @@ class HomeViewController: UIViewController {
             }
         }
         
+        
         // MARK: Database / Get Recipes
         
         if refreshMeals == true {
