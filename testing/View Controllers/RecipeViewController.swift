@@ -22,7 +22,7 @@ class RecipeViewController: UIViewController {
     
     @IBOutlet weak var caloriesLabel: UILabel!
     
-    @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var instructionsLabel: UITextView!
     
     @IBOutlet weak var yieldLabel: UILabel!
     
