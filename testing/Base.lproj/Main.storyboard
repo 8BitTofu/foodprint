@@ -1972,6 +1972,14 @@ Covered</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvV-Ya-fyf">
+                                <rect key="frame" x="142" y="519" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get Latest Data"/>
+                                <connections>
+                                    <action selector="getDetails:" destination="BB4-T9-Bwm" eventType="touchUpInside" id="G8r-WS-OgB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8dR-tG-Fak"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

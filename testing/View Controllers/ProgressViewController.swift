@@ -28,6 +28,7 @@ class ProgressViewController: UIViewController {
     @IBOutlet weak var lblSteps: UILabel!
     @IBOutlet weak var txtWeight: UILabel!
     @IBOutlet weak var lblDistance: UILabel!
+
     
     let healthKitStore:HKHealthStore = HKHealthStore()
     var dailySteps = 0
